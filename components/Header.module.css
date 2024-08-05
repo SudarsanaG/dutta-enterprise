@@ -1,0 +1,213 @@
+/* src/components/Header.module.css */
+/* General Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+  background-color: #dde4e9;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  color: white;
+}
+
+.logo {
+  margin-right: 2rem;
+}
+
+.logo img {
+  height: 90px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  position: relative;
+  margin-left: 3rem;
+  cursor: pointer;
+}
+
+.navItem a,
+.navItem span {
+  text-decoration: none;
+  color: rgb(32, 33, 84);
+  font-weight: bold;
+  transition: color 0.3s ease;
+  font-size: 15px;
+}
+
+.navItem a:hover,
+.navItem span:hover {
+  color: white;
+}
+
+/* Dropdown styles */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  padding: 1rem;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  width: 200px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.show {
+  display: flex;
+}
+
+.dropdownItem {
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdownItem:hover {
+  background-color: rgb(32, 33, 84);
+}
+
+.dropdownItem:hover a {
+  color: white;
+}
+
+.dropdownItem a {
+  color: rgb(32, 33, 84);
+  text-decoration: none;
+  display: block;
+  transition: color 0.3s ease;
+  font-size: 15px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Media queries for mobile view */
+@media (max-width: 768px) {
+  .nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in;
+  }
+
+  .nav.open {
+    max-height: 500px;
+  }
+
+  .navList {
+    flex-direction: column;
+    width: 70%;
+    align-items: center;
+  }
+
+  .navItem {
+    margin: 1rem 0;
+    color: black;
+  }
+
+  .navItem a:hover,
+  .navItem span:hover {
+    color: rgb(32, 33, 84); /* Remove white hover effect on mobile */
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .dropdown {
+    position: relative;
+    background-color: white;
+    box-shadow: none;
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .dropdownItem {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .accordion {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .accordionItem {
+    background-color: white;
+    border: 1px solid #dde4e9;
+    padding: 1rem;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .accordionItem::after {
+    content: '\25BC'; /* Down arrow symbol */
+    position: absolute;
+    right: 1rem;
+    transition: transform 0.3s ease;
+  }
+
+  .accordionItem.active::after {
+    transform: rotate(180deg); /* Up arrow symbol */
+  }
+
+  .accordionContent {
+    display: none;
+    padding: 1rem;
+    background-color: #f1f1f1;
+  }
+
+  .accordionItem.active .accordionContent {
+    display: block;
+  }
+
+  .accordionItem a {
+    display: block;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: left;
+  }
+
+  .accordionItem a:hover {
+    background-color: rgb(32, 33, 84);
+    color: white;
+  }
+}

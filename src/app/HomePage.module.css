@@ -1,0 +1,65 @@
+/* src/app/HomePage.module.css */
+.container {
+    position: relative;
+    min-height: 100vh;
+    background: url('/background.jpg') no-repeat center center/cover;
+  }
+  
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  .tagline {
+    color: white;
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.9);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 1rem; /* Add some space below the tagline */
+  }
+  
+  .subtagline1{
+    color:black;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 2.5rem;
+    margin-left: 5rem;
+  }
+  /* Existing styles... */
+
+.aboutSection {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.aboutSection h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.aboutSection p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.readMoreButton {
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.readMoreButton:hover {
+  background-color: #005bb5;
+}
