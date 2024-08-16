@@ -1,0 +1,80 @@
+.container {
+    padding: 0 0px;
+    max-width: 100%;
+    margin: auto;
+    height:300vh;
+    
+    
+}
+
+.tagline {
+    padding: 2rem 10rem;
+    text-align: center;
+    margin-top: 9rem;
+    font-size: 3.5rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+    background-color: rgb(100, 130, 173);
+    
+}
+
+.subtagline1 {
+    padding: 1rem 5rem;
+    font-size: 1.3rem;
+    font-weight: normal;
+    text-align: left;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text {
+    padding: 1rem 5rem;
+    font-size: 1.4rem;
+    font-weight: normal;
+    text-align: left;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.cardtitle{
+    padding: 3rem 5rem;
+    font-size: 3.2rem;
+    font-weight: bold;
+    font-style: italic;
+    text-align: left;
+    color: rgb(32,33,84);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.catering1{
+    height: 60vh;
+    padding:2rem 2rem;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    
+}
+
+
+     
+
+.text1{
+    padding:0rem 5rem;
+    font-size: 1.6rem;
+    font-style: italic;
+    text-align: left;
+    color: black;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color:rgb(222, 228, 229); 
+    border-radius: 50%;
+}

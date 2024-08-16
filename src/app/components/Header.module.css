@@ -5,13 +5,14 @@
   justify-content: space-between;
   align-items: center;
   padding: 2rem 3rem;
-  background-color: #dde4e9;
+  background-color: rgb(222, 228, 229);
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 1000;
   color: white;
+  
 }
 
 .logo {
@@ -47,7 +48,8 @@
   color: rgb(32, 33, 84);
   font-weight: bold;
   transition: color 0.3s ease;
-  font-size: 15px;
+  font-size: 18px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .navItem a:hover,
@@ -70,7 +72,7 @@
 }
 
 .show {
-  display: flex;
+  display: block;
 }
 
 .dropdownItem {

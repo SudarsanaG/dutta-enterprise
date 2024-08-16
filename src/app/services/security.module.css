@@ -1,0 +1,110 @@
+.container {
+    padding: 0 0px;
+    max-width: 100%;
+    margin: auto;
+    height:350vh;
+    
+    
+}
+
+.tagline {
+    padding: 2rem 10rem;
+    text-align: center;
+    margin-top: 9rem;
+    font-size: 3.5rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+    background-color: rgb(100, 130, 173);
+    
+}
+
+.subtagline1 {
+    padding: 3rem 5rem;
+    font-size: 1.5rem;
+    font-weight: normal;
+    text-align: left;
+    font-style: italic;
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.subtagline2 {
+    padding: 1rem 5rem;
+    font-size: 1.3rem;
+    font-weight: normal;
+    text-align: left;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+.cardtitle{
+    padding: 3rem 5rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-style: italic;
+    text-align: left;
+    color: rgb(32,33,84);
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.cardtitle1{
+    padding: 1rem 5rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(32,33,84);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cardtitle1::before , .cardtitle1::after{
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 70px;
+    height: 2px;
+    background-color: #333;
+
+}
+.about{
+    display: flex; /* Flexbox for aligning content */
+    justify-content: space-between; /* Space between content and logo */
+    
+    align-items: center; /* Align content and logo vertically */
+  
+}
+.security{
+    height: 100vh;
+    padding:3rem 5rem;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.security1{
+    height: 60vh;
+    padding:3rem 10rem;
+    margin-left: auto;
+    margin-right: auto;
+  
+    
+    
+}
+.bold{
+    font-weight: bold;
+    color:rgb(32,33,84); 
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.text{
+    padding: 1rem 5rem;
+    font-size: 1.3rem;
+    font-weight: normal;
+    text-align: left;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    background-color:rgb(222, 228, 229);
+}
+
+.dog{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}

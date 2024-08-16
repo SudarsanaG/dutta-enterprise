@@ -1,0 +1,54 @@
+.container {
+    padding: 0 0px;
+    max-width: 100%;
+    margin: auto;
+    height:300vh;
+    
+    
+}
+
+.tagline {
+    padding: 2rem 10rem;
+    text-align: center;
+    margin-top: 9rem;
+    font-size: 3.5rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+    background-color: rgb(100, 130, 173);
+    
+}
+
+.subtagline1 {
+    padding: 2rem 5rem;
+    font-size: 1.3rem;
+    font-weight: normal;
+    text-align: left;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+.cardtitle{
+    padding: 3rem 5rem;
+    font-size: 3.2rem;
+    font-weight: bold;
+    font-style: italic;
+    text-align: left;
+    color: rgb(32,33,84);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.civilwork{
+    height: 100vh;
+    padding:2rem 2rem;
+    
+}
+.civilworktagline{
+    padding: 3rem 5rem;
+    font-size: 1.5rem;
+    font-weight: normal;
+    text-align: left;
+    font-style: italic;
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}

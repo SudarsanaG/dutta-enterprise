@@ -1,9 +1,8 @@
-"use client"
+"use client";
 // components/Header.tsx
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import styles from './Header.module.css';
-
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,14 +24,6 @@ export default function Header() {
     setIsOpen(!isOpen);
   };
 
-  const toggleServicesDropdown = () => {
-    setServicesDropdownOpen(!servicesDropdownOpen);
-  };
-
-  const toggleSectorDropdown = () => {
-    setSectorDropdownOpen(!sectorDropdownOpen);
-  };
-
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
@@ -41,97 +32,73 @@ export default function Header() {
       <nav className={`${styles.nav} ${isOpen ? styles.open : ''}`}>
         <ul className={styles.navList}>
           <li className={styles.navItem}>
-            <Link href="/">Home</Link>
+            <Link href="/">HOME</Link>
           </li>
           <li className={styles.navItem}>
-            <Link href="/about">About</Link>
+            <Link href="/about/detailed">ABOUT</Link>
           </li>
-          <li className={styles.navItem}>
-            <span onClick={isMobile ? toggleServicesDropdown : undefined}>
-              Services
-            </span>
-            <ul
-              className={`${styles.dropdown} ${
-                servicesDropdownOpen ? styles.show : ''
-              }`}
-              onMouseEnter={() => !isMobile && setServicesDropdownOpen(true)}
-              onMouseLeave={() => !isMobile && setServicesDropdownOpen(false)}
-            >
+          <li
+            className={styles.navItem}
+            onMouseEnter={() => !isMobile && setServicesDropdownOpen(true)}
+            onMouseLeave={() => !isMobile && setServicesDropdownOpen(false)}
+          >
+            <span>SERVICES</span>
+            <ul className={`${styles.dropdown} ${servicesDropdownOpen ? styles.show : ''}`}>
               <li className={styles.dropdownItem}>
-                <Link href="/service1">Service 1</Link>
+                <Link href="/services/ifms">Integrated Facility Management Services</Link>
               </li>
               <li className={styles.dropdownItem}>
-                <Link href="/service2">Service 2</Link>
+                <Link href="/services/staffing">Staffing Solutions and Payroll Management</Link>
               </li>
               <li className={styles.dropdownItem}>
-                <Link href="/service3">Service 3</Link>
+                <Link href="/services/security">Private Security and Manned Guarding</Link>
+              </li> <li className={styles.dropdownItem}>
+                <Link href="/services/catering">Catering</Link>
+              </li>
+              <li className={styles.dropdownItem}>
+                <Link href="/services/civilwork">Construction and Civil Work</Link>
+              </li>
+              <li className={styles.dropdownItem}>
+                <Link href="/services/otherservices">Other Services</Link>
+              </li>
+
+            </ul>
+          </li>
+          <li
+            className={styles.navItem}
+            onMouseEnter={() => !isMobile && setSectorDropdownOpen(true)}
+            onMouseLeave={() => !isMobile && setSectorDropdownOpen(false)}
+          >
+            <span>SECTORS</span>
+            <ul className={`${styles.dropdown} ${sectorDropdownOpen ? styles.show : ''}`}>
+              <li className={styles.dropdownItem}>
+                <Link href="/sector1">Hospitals and Healthcare</Link>
+              </li>
+              <li className={styles.dropdownItem}>
+                <Link href="/sector2">Education</Link>
+              </li>
+              <li className={styles.dropdownItem}>
+                <Link href="/sector3">Public Administration</Link>
+              </li>
+              <li className={styles.dropdownItem}>
+                <Link href="/sector3">Industrial</Link>
+              </li>
+              <li className={styles.dropdownItem}>
+                <Link href="/sector3">Retail</Link>
+              </li>
+              <li className={styles.dropdownItem}>
+                <Link href="/sector3">Other Sectors</Link>
               </li>
             </ul>
-            {isMobile && (
-              <div className={styles.accordion}>
-                <div
-                  className={`${styles.accordionItem} ${
-                    servicesDropdownOpen ? styles.active : ''
-                  }`}
-                  onClick={toggleServicesDropdown}
-                >
-                  Services
-                  <div className={styles.accordionContent}>
-                    <Link href="/service1">Service 1</Link>
-                    <Link href="/service2">Service 2</Link>
-                    <Link href="/service3">Service 3</Link>
-                  </div>
-                </div>
-              </div>
-            )}
           </li>
           <li className={styles.navItem}>
-            <span onClick={isMobile ? toggleSectorDropdown : undefined}>
-              Sectors
-            </span>
-            <ul
-              className={`${styles.dropdown} ${
-                sectorDropdownOpen ? styles.show : ''
-              }`}
-              onMouseEnter={() => !isMobile && setSectorDropdownOpen(true)}
-              onMouseLeave={() => !isMobile && setSectorDropdownOpen(false)}
-            >
-              <li className={styles.dropdownItem}>
-                <Link href="/sector1">Sector 1</Link>
-              </li>
-              <li className={styles.dropdownItem}>
-                <Link href="/sector2">Sector 2</Link>
-              </li>
-              <li className={styles.dropdownItem}>
-                <Link href="/sector3">Sector 3</Link>
-              </li>
-            </ul>
-            {isMobile && (
-              <div className={styles.accordion}>
-                <div
-                  className={`${styles.accordionItem} ${
-                    sectorDropdownOpen ? styles.active : ''
-                  }`}
-                  onClick={toggleSectorDropdown}
-                >
-                  Sectors
-                  <div className={styles.accordionContent}>
-                    <Link href="/sector1">Sector 1</Link>
-                    <Link href="/sector2">Sector 2</Link>
-                    <Link href="/sector3">Sector 3</Link>
-                  </div>
-                </div>
-              </div>
-            )}
+            <Link href="#career">CAREER</Link>
           </li>
           <li className={styles.navItem}>
-            <Link href="#contact">Career</Link>
+            <Link href="#clients">CLIENTS</Link>
           </li>
           <li className={styles.navItem}>
-            <Link href="#contact">Clients</Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link href="#contact">Contact</Link>
+            <Link href="#contact">CONTACT</Link>
           </li>
         </ul>
       </nav>
