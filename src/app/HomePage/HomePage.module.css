@@ -1,44 +1,76 @@
 /* src/app/HomePage.module.css */
+/* src/app/HomePage.module.css */
 .container {
-    position: relative;
-    min-height: 100vh;
-    background: url('/bg.png') no-repeat center center/cover;
-   
-    
-  }
-  
-  .main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-  }
-  
-  .tagline {
-    color: rgba(255,255,255,1);
-    font-size: 4.5rem;
-    font-weight: bold;
-    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.9);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-bottom: 1rem; /* Add some space below the tagline */
-    margin-top: 6.5rem;
-    ;
-    
-  }
-  
-  .subtagline1{
-    color:black;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-weight: bolder;
-    font-size: 2.5rem;
-    margin-left: 20rem;
-    margin-right: 20rem;
-    background-color: rgb(195, 213, 237);
-    border-radius: 20rem;
-    opacity: 50%;
-    
-  }
-  
+  position: relative;
+  min-height: 120vh;
+  background: url('/cov1.webp') no-repeat center center/cover;
+}
 
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.63); /* Dark overlay with 50% opacity */
+  z-index: 1; /* Place the overlay below the text */
+}
+
+.main {
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  z-index: 2; /* Ensure the text is above the overlay */
+  color: white;
+}
+
+.tagline {
+  font-size: 4.5rem;
+  font-weight: bold;
+ margin-top: 30%;
+ margin-bottom: 3%;
+}
+
+.subtagline1 {
+  color: white; /* Change text color to white for contrast */
+  font-family: Arial, Helvetica, sans-serif;
+ font-style: italic;
+ font-weight: bold;
+  font-size: 150%;
+     margin-top: 1rem;
+    z-index: 3; /* Ensure the subtagline text is above everything else */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tagline {
+    font-size: 2.5rem; /* Smaller font size for mobile */
+    margin-top: 3rem; /* Adjust top margin for mobile */
+  }
+
+  .subtagline1 {
+    font-size: 1.5rem; /* Smaller font size for mobile */
+    margin-left: 1rem; /* Adjust margins for mobile */
+    margin-right: 1rem; /* Adjust margins for mobile */
+    border-radius: 1rem; /* Adjust border-radius for mobile */
+   
+  }
+}
+
+@media (max-width: 480px) {
+  .tagline {
+    font-size: 1.8rem; /* Further smaller font size for very small screens */
+    margin-top: 1.5rem; /* Further adjust top margin for very small screens */
+  }
+
+  .subtagline1 {
+    font-size: 1rem; /* Further smaller font size for very small screens */
+    margin-left: 0.5rem; /* Further adjust margins for very small screens */
+    margin-right: 0.5rem; /* Further adjust margins for very small screens */
+    border-radius: 0.5rem; /* Further adjust border-radius for very small screens */
+  }
+}

@@ -41,22 +41,13 @@
 }
 
 
-.hospital1{
+.indus{
     height: 100vh;
     padding:2rem 2rem;
     
 }
-.hospital2{
+.industrial{
     height: 50vh;
     
     
-}
-.civilworktagline{
-    padding: 3rem 5rem;
-    font-size: 1.5rem;
-    font-weight: normal;
-    text-align: left;
-    font-style: italic;
-    color: black;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }

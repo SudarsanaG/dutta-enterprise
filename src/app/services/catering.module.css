@@ -78,3 +78,66 @@
     background-color:rgb(222, 228, 229); 
     border-radius: 50%;
 }
+@media (max-width: 1024px) {
+    .tagline {
+        padding: 1.5rem 5rem;
+        font-size: 2.8rem;
+        margin-top: 7rem;
+    }
+
+    .subtagline1, .text {
+        padding: 1rem 3rem;
+        font-size: 1.2rem;
+        margin-top: 4rem;
+        text-align: center;
+    }
+
+    .cardtitle {
+        padding: 2rem 4rem;
+        font-size: 2.8rem;
+    }
+
+    .catering1 {
+        height: 50vh;
+        padding: 1.5rem 1.5rem;
+    }
+
+    .text1 {
+        padding: 0.5rem 3rem;
+        font-size: 1.4rem;
+    }
+}
+
+/* Small screens (phones) */
+@media (max-width: 768px) {
+    .tagline {
+        padding: 1rem 2rem;
+        font-size: 2rem;
+        margin-top: 5rem;
+    }
+
+    .subtagline1, .text {
+        padding: 0.5rem 1rem;
+        font-size: 1.1rem;
+        margin-top: 2rem;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .cardtitle {
+        padding: 1rem 2rem;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .catering1 {
+        height: 40vh;
+        padding: 1rem 1rem;
+    }
+
+    .text1 {
+        padding: 0.5rem 2rem;
+        font-size: 1.2rem;
+        border-radius: 30%;
+    }
+}

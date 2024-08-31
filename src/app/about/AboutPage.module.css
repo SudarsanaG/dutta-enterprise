@@ -1,39 +1,51 @@
+
+
 /* Container for the entire page */
 .container {
-  padding: 0 20px;
+  
   max-width: 100%;
   margin: auto;
-  background-color:whitesmoke;
+  background-color: whitesmoke;
   height: 100vh;
-  
-  
-  
+  box-sizing: border-box; /* Ensure padding is included in the height calculation */
 }
-
+.main{
+  background-color: whitesmoke;
+ padding:2% 10%;
+}
 /* Main tagline at the top */
 .tagline {
-  padding: 5rem 5rem;
+  padding: 2% 10%;
   text-align: left;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-  color: rgb(25, 25, 97);
-
+   color: #003459;
+   line-height: 1.1;
 }
 
 /* Text below the tagline with introductory information */
 .subtagline1 {
-  padding: 0rem 5rem;
-  font-size: 1.3rem;
-  font-weight: normal;
+  padding:2% 10%;
+  font-size: 1.2rem;
+  font-weight: bold;
   text-align: left;
-  color: black;
+  color: #003459;
   font-family: Arial, Helvetica, sans-serif;
+ 
+}
+.subtagline2 {
+  padding:2% 10%;
+  font-size: 1rem;
+  font-weight: 350;
+  text-align: left;
+  color:#424952;
+  font-family: Arial, Helvetica, sans-serif;
+ 
 }
 
 /* Styles for the Read More/Read Less button */
 .readMoreButton {
-  background-color: rgb(25, 25, 97);
+  background-color: #003459;
   color: white;
   border: none;
   border-radius: 4px;
@@ -43,23 +55,109 @@
   margin-top: 0rem;
   margin-bottom: 1rem;
   display: block; /* Ensures the button is treated as a block element */
- margin-left: 5.3%;
- 
   text-align: center;
+  margin-left: 10%;
 }
 
 /* Button hover effect */
 .readMoreButton:hover {
   background-color: rgb(25, 25, 97);
 }
-.aboutpagephoto{
+
+/* About page photo container */
+.aboutpagephoto {
   margin-top: 3rem;
   display: flex; /* Flexbox for aligning content */
-  justify-content: space-between;
+  justify-content:space-evenly;
   align-items: center; /* Align content and logo vertically */
 }
-.aboutpagephoto1{
-  width: 700px; /* Adjust width as needed */
-  height: 50vh;
-  padding:0rem 5rem;
+
+/* About page photo styles */
+.aboutpage{
+  width: 50%;/* Adjust width as needed */
+  height: 50%;
+  border-top-left-radius: 30%;
+  border-bottom-right-radius: 30%;
+ 
+  
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1200px) {
+  .tagline {
+    font-size: 2.5rem;
+    padding: 4rem 4rem;
+  }
+
+  .subtagline1 {
+    font-size: 1.2rem;
+    padding: 0rem 4rem;
+  }
+
+  .aboutpagephoto1 {
+    width: 600px; /* Adjust width as needed */
+  }
+}
+
+@media (max-width: 992px) {
+  .tagline {
+    font-size: 2rem;
+    padding: 3rem 3rem;
+  }
+
+  .subtagline1 {
+    font-size: 1.1rem;
+    padding: 0rem 3rem;
+  }
+
+  .aboutpagephoto1 {
+    width: 500px; /* Adjust width as needed */
+  }
+}
+
+@media (max-width: 768px) {
+  .tagline {
+    font-size: 1.5rem;
+    padding: 2rem 2rem;
+    text-align: center;
+  }
+
+  .subtagline1 {
+    font-size: 1rem;
+    padding: 0rem 2rem;
+    text-align: center;
+  }
+
+  .readMoreButton {
+    margin-left: 0; /* Center button */
+    width: 100%;
+  }
+
+  .aboutpagephoto {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aboutpagephoto1 {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    padding: 0rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .tagline {
+    font-size: 1.2rem;
+    padding: 1rem 1rem;
+  }
+
+  .subtagline1 {
+    font-size: 0.9rem;
+    padding: 0rem 1rem;
+  }
+
+  .readMoreButton {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
 }

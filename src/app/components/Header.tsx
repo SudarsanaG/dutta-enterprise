@@ -1,5 +1,4 @@
 "use client";
-// components/Header.tsx
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import styles from './Header.module.css';
@@ -27,7 +26,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <img src="/logo.png" alt="Logo" />
+        <img src="/logo-black.svg" alt="Logo" />
       </div>
       <nav className={`${styles.nav} ${isOpen ? styles.open : ''}`}>
         <ul className={styles.navList}>
@@ -52,7 +51,8 @@ export default function Header() {
               </li>
               <li className={styles.dropdownItem}>
                 <Link href="/services/security">Private Security and Manned Guarding</Link>
-              </li> <li className={styles.dropdownItem}>
+              </li>
+              <li className={styles.dropdownItem}>
                 <Link href="/services/catering">Catering</Link>
               </li>
               <li className={styles.dropdownItem}>
@@ -61,7 +61,6 @@ export default function Header() {
               <li className={styles.dropdownItem}>
                 <Link href="/services/otherservices">Other Services</Link>
               </li>
-
             </ul>
           </li>
           <li
@@ -72,22 +71,22 @@ export default function Header() {
             <span>SECTORS</span>
             <ul className={`${styles.dropdown} ${sectorDropdownOpen ? styles.show : ''}`}>
               <li className={styles.dropdownItem}>
-                <Link href="/sector1">Hospitals and Healthcare</Link>
+                <Link href="/sectors/hospitals">Hospitals and Healthcare</Link>
               </li>
               <li className={styles.dropdownItem}>
-                <Link href="/sector2">Education</Link>
+                <Link href="/sectors/education">Education</Link>
               </li>
               <li className={styles.dropdownItem}>
-                <Link href="/sector3">Public Administration</Link>
+                <Link href="/sectors/publicadministration">Public Administration</Link>
               </li>
               <li className={styles.dropdownItem}>
-                <Link href="/sector3">Industrial</Link>
+                <Link href="/sectors/industrial">Industrial</Link>
               </li>
               <li className={styles.dropdownItem}>
-                <Link href="/sector3">Retail</Link>
+                <Link href="/sectors/retail">Retail</Link>
               </li>
               <li className={styles.dropdownItem}>
-                <Link href="/sector3">Other Sectors</Link>
+                <Link href="/sectors/othersectors">Other Sectors</Link>
               </li>
             </ul>
           </li>

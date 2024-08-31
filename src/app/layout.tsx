@@ -1,6 +1,6 @@
 import './globals.css';
 import Header from './components/Header';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 export const metadata = {
   title: 'My Next.js Website',
   description: 'Welcome to my Next.js website',
