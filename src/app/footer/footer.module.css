@@ -1,0 +1,147 @@
+/* src/app/components/footer.module.css */
+
+.footer {
+    background-color: #012E5A; /* Dark blue background */
+    color: white;
+    padding: 20px 40px;
+}
+
+.footerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.links, .contact {
+    flex: 1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.links h3, .contact h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    padding-bottom: 5px; /* Adjust spacing between text and line */
+}
+
+.contactInfo {
+    padding-top: 5%;
+}
+
+.links ul {
+    list-style: none;
+    padding: 0;
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 8px; /* Space between items */
+}
+
+.links ul li {
+    margin-bottom: 8px;
+}
+
+.links ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.links ul li a:hover {
+    color: #d1d1d1;
+}
+
+.contact p {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.map {
+    flex: 1;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mapImage {
+    width: 300px; /* Increased size for the map */
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.map:hover .mapImage {
+    transform: scale(1.05);
+}
+
+.footerBottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+.socialLinks {
+    display: flex;
+    gap: 10px;
+}
+
+.socialLinks img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .footerContent {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .links, .contact {
+        flex: none;
+        margin-bottom: 20px;
+    }
+
+    .links ul {
+        grid-template-columns: 1fr; /* Single column layout for small screens */
+    }
+
+    .map {
+        margin: 20px 0; /* Add margin for better spacing */
+    }
+
+    .mapImage {
+        width: 100%; /* Make map image responsive */
+        max-width: 300px; /* Limit maximum width */
+    }
+
+    .footerBottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .socialLinks {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .links h3, .contact h3 {
+        font-size: 24px; /* Smaller font size for smaller screens */
+    }
+
+    .footerBottom {
+        font-size: 12px; /* Smaller font size for footer bottom */
+    }
+}

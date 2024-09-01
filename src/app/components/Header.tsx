@@ -97,7 +97,7 @@ export default function Header() {
             <Link href="#clients">CLIENTS</Link>
           </li>
           <li className={styles.navItem}>
-            <Link href="#contact">CONTACT</Link>
+            <Link href="/contact/detailed">CONTACT</Link>
           </li>
         </ul>
       </nav>
