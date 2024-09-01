@@ -6,6 +6,7 @@ import Sectors from './sectors/page';
 import Head from 'next/head';
 import Contact from './contact/page';
 import Footer from './footer/page';
+import Careers from './careers/page';
 
 export default function Home() {
     return (
@@ -15,7 +16,7 @@ export default function Home() {
             <AboutPage/>
             <Services/>
             <Sectors/>
-            <Contact/>        
+            <Contact/> 
         </main>
     )
 }
