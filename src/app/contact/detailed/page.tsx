@@ -10,15 +10,15 @@ export default function ContactUs() {
                 <div className={styles.contactDetailsInfo}>
                     <p>
                         <span className={styles.icon}>📍</span>
-                        Krystal Integrated Services Ltd, 20th Floor, Kohinoor Square, Shivaji Park, Dadar, Mumbai - 400028
+                        Dutta Enterprise, Radhamohanpur, Debra, Pschim Midnapur, West Bengal, 721160
                     </p>
                     <p>
                         <span className={styles.icon}>📞</span>
-                        (022)-4747-1234
+                        +91 99331 95417
                     </p>
                     <p>
                         <span className={styles.icon}>✉️</span>
-                        info@krystal-group.com
+                        duttatendr@rediffmail.com
                     </p>
                 </div>
             </div>
