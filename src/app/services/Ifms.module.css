@@ -66,6 +66,10 @@
  padding:0% 0% 0% 1%;
     width: 40%;/* Adjust width as needed */
   height: 40%;
+  border-top-left-radius: 10%;
+  border-top-right-radius: 10%;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
  
 
 }
@@ -120,6 +124,7 @@
     padding:0% 0% 0% 1%;
     width: 40%;/* Adjust width as needed */
   height: 40%;
+ 
  
    
     

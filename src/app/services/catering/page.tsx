@@ -7,27 +7,33 @@ export default function catering() {
     <div className={styles.container}>
       
       <Header />
-      <h1 className={styles.tagline}> SERVICES</h1>
+      <div className={styles.container1}>
       
-      <main className={styles.main}>
-      <h2 className={styles.cardtitle}>Catering</h2>
-      
-            
+      <div className={styles.tagline1}>Catering</div>
+
+    </div>
+    <main className={styles.main}>
      
-                  <div className={styles.subtagline1}>
+     <div className ={styles.about}>
+       <div>
+       <div className={styles.subtagline1}> Dutta Enterprise </div>
+       <div className={styles.subtagline2}>
+      
+      </div>is a private corporate catering, banqueting, and events organization with a vision to provide heart-warming food combined with premium service.We provide delicious, inspiring, innovative food with cutting edge, spectacular presentation which enables us to be at the forefront of the industry.Our success is best attributed to our work style and relation with clients. Our ability and approach is one of partnership. We listen to clients' specific needs and respect their suggestions, helping us in the constant drive towards progress and expansion. This allows for a fully entrepreneurial and innovative style and enables both parties to deliver and exceed overall expectations. 
+      </div>
          
-          <div className={styles.text1}>DUTTA ENTERPRISE is a private corporate catering, banqueting, and events organization with a vision to provide heart-warming food combined with premium service. We provide delicious, inspiring, innovative food with cutting edge, spectacular presentation which enables us to be at the forefront of the industry.
+           <img src="../../catering2.jpg" alt="catering2" className={styles.catering2}/>
          </div>
-        
-          <img src="../../catering2.jpg" alt="catering1" className={styles.catering1}/>
-</div>
 
 <div className={styles.text}> 
-<img src="../../catering1.jpg" alt="catering1" className={styles.catering1}/>
-  Our success is best attributed to our work style and relation with clients. Our ability and approach is one of partnership. We listen to clients' specific needs and respect their suggestions, helping us in the constant drive towards progress and expansion. This allows for a fully entrepreneurial and innovative style and enables both parties to deliver and exceed overall expectations. 
-As the owner of Dutta Enterprise, I aim at developing the company into a world-class hospitality organization. We have the infrastructure and specialized knowledge to ensure excellence at both small and large catering and banqueting projects. Our professionalism, enthusiasm, and attention to details, prompt catering and banqueting services. not to mention our competitive prices will ensure that our clients come back time and again. The level of professionalism and experience provided means you can relax knowing you are in safe hands with Dutta Enterprise hospitality.
 
-            </div>
+<div>
+<div className={styles.subtagline3}>As the owner of Dutta Enterprise, I aim at developing the company into a world-class hospitality organization. </div>
+<div className={styles.subtagline2}> We have the infrastructure and specialized knowledge to ensure excellence at both small and large catering and banqueting projects. Our professionalism, enthusiasm, and attention to details, prompt catering and banqueting services. not to mention our competitive prices will ensure that our clients come back time and again. The level of professionalism and experience provided means you can relax knowing you are in safe hands with Dutta Enterprise hospitality.
+</div>
+</div>
+<img src="../../catering1.jpg" alt="catering2" className={styles.catering2}/>
+</div>
 
             
             

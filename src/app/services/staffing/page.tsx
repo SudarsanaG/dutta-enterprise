@@ -7,16 +7,21 @@ export default function staffing() {
     <div className={styles.container}>
       
       <Header />
-      <h1 className={styles.tagline}> SERVICES</h1>
+      <div className={styles.container1}>
       
+      <div className={styles.tagline}>Staffing Solutions and Payroll Management</div>
+      </div>
       <main className={styles.main}>
-      <h2 className={styles.cardtitle}>Staffing Solutions & Payroll Management</h2>
+    
         <div className ={styles.about}>
-          <p className={styles.subtagline1}>
-          These services generally comprise recruitment, payroll, and human resource services. As part of our staffing solutions and payroll management services, we provide skilled, semi-skilled and unskilled manpower to our customers as per their requirements. We also seek to ensure all staff are properly trained and equipped to carry out their duties, and that they have the necessary permits and licenses, where required.
+        <div>
+          <div className={styles.subtagline1}> Staffing solutions and payroll management services generally comprise recruitment, payroll, and human resource services.</div>
+          <div className={styles.subtagline2}>
+         
+          As part of our staffing solutions and payroll management services, we provide skilled, semi-skilled and unskilled manpower to our customers as per their requirements. We also seek to ensure all staff are properly trained and equipped to carry out their duties, and that they have the necessary permits and licenses, where required.
           Staffing solutions involve recruiting, hiring, and managing employees to meet a company's workforce needs. Payroll management involves handling all aspects of employee compensation, including salaries, wages, bonuses, deductions, and taxes. Effective payroll management ensures that employees are paid accurately and on time while complying with legal and regulatory requirements. 
-          </p>
-            
+          </div>
+            </div>
               <img src="../../payroll.jpeg" alt="payroll" className={styles.payroll}/>
             </div>
             </main>

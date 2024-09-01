@@ -7,19 +7,26 @@ export default function industrial() {
     <div className={styles.container}>
       
       <Header />
-      <h1 className={styles.tagline}> SECTORS</h1>
+      <div className={styles.container1}>
+      
+      <div className={styles.tagline1}>Industrial</div>
+
+    </div>
+  
       
       <main className={styles.main}>
-      <h2 className={styles.cardtitle}>Industrial</h2>
+      <div className ={styles.about}>
+          <div>
+          <div className={styles.subtagline1}> We provide our services to manufacturing companies.</div>
+         <div className={styles.subtagline2}> These services include the management of physical assets, such as machinery and infrastructure, ensuring optimal performance through regular maintenance and monitoring. IFMS also oversees security systems, energy management, and waste management, promoting sustainability and cost-effectiveness. Additionally, it facilitates compliance with industry regulations by tracking safety protocols and environmental standards. By integrating these services, IFMS allows industries to focus on their core operations while improving overall productivity, reducing downtime, and minimizing operational risks.
+              </div> 
+              </div>  
+      <img src="../../industrial.jpg" alt="edu1" className={styles.edu1}/>
+                       
+      </div>
       
-      <img src="../../indus.jpg" alt="indus" className={styles.indus}/>
-     
         
-          <div className={styles.subtagline1}>
-            <img src="../../industrial.jpg" alt="industrial" className={styles.industrial}/>
-          <p>
-          We provide our services to manufacturing companies.</p>
-            </div>
+       
             
             
             </main>

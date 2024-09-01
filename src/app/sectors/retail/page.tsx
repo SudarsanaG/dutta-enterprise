@@ -7,20 +7,28 @@ export default function retail() {
     <div className={styles.container}>
       
       <Header />
-      <h1 className={styles.tagline}> SECTORS</h1>
+      <div className={styles.container1}>
+      
+      <div className={styles.tagline1}>Retail</div>
+
+    </div>
+  
       
       <main className={styles.main}>
-      <h2 className={styles.cardtitle}>Retail</h2>
+      <div className ={styles.about}>
+          <div>
+          <div className={styles.subtagline1}>  We provide services to retail outlets and branch offices in this sector.</div>
+          <div className={styles.subtagline2}>
+          In addition to our regular service offerings, we provide certain specialized services that are customised for the client including administrative assistance and manned guarding.
+          </div>
+         </div>
+                 
+      <img src="../../retail.jpg" alt="edu1" className={styles.edu1}/>
+                       
+      </div>
       
-      <img src="../../retail.jpg" alt="retail" className={styles.retail}/>
-     
         
-          <div className={styles.subtagline1}>
-            <img src="../../retail1.webp" alt="retail" className={styles.retail}/>
-          <p>
-          We provide services to retail outlets and branch offices in this sector. In addition to our regular service offerings, we provide certain specialized services that are customised for the client including administrative assistance and manned guarding.
-          </p>
-            </div>
+       
             
             
             </main>

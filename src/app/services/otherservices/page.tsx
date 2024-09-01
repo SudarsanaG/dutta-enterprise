@@ -7,23 +7,27 @@ export default function otherservices() {
     <div className={styles.container}>
       
       <Header />
-      <h1 className={styles.tagline}> SERVICES</h1>
+      <div className={styles.container1}>
+      
+        <div className={styles.tagline1}>Other Services</div>
+
+      </div>
       
       <main className={styles.main}>
-      <h2 className={styles.cardtitle}>Other Services</h2>
-      <img src="../../OTHER SERVICES.jpg" alt="otherservices" className={styles.os}/>
+     <div className={styles.text1}>
+    
             
          
 
-<div className={styles.text}>
-    <div className={styles.bold}>Waste Management:</div> Waste management or waste disposal includes the processes and actions required to manage waste from its inception to its final disposal.
-    <div className={styles.bold}>Building Maintenance:</div> Building Technical Services, Utilities Operations & maintenance (BMS, HVAC, Electrical, Mechanical, Plumbing, Carpentry, Fire systems & Building life safety includes all preventative, remedial, and upgrades works required for the upkeep and improvement of buildings and their components.
-    <div className={styles.bold}>Property Management:</div> Property management is the operation, control, maintenance, and oversight of real estate and physical property. This can include residential, commercial, and land real estate.
-    <div className={styles.bold}>Landscaping:</div>Landscaping, decorating, catering services (including vending machines and water coolers),cleaning services, pest control, waste management and car parking.
+<div >
+    <div className={styles.bold}>1.Waste Management:</div> <div className={styles.text}>Waste management or waste disposal includes the processes and actions required to manage waste from its inception to its final disposal.</div>
+    <div className={styles.bold}>2.Building Maintenance:</div><div className={styles.text}> Building Technical Services, Utilities Operations & maintenance (BMS, HVAC, Electrical, Mechanical, Plumbing, Carpentry, Fire systems & Building life safety includes all preventative, remedial, and upgrades works required for the upkeep and improvement of buildings and their components.</div>
+    <div className={styles.bold}>3.Property Management:</div><div className={styles.text}> Property management is the operation, control, maintenance, and oversight of real estate and physical property. This can include residential, commercial, and land real estate.</div>
+    <div className={styles.bold}>4.Landscaping:</div><div className={styles.text}>Landscaping, decorating, catering services (including vending machines and water coolers),cleaning services, pest control, waste management and car parking.</div>
 
 </div>
-   
-
+<img src="../../OTHER SERVICES.jpg" alt="otherservices" className={styles.os}/>
+</div>
             
               
             </main>

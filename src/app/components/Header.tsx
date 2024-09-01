@@ -26,7 +26,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <img src="/logo-black.svg" alt="Logo" />
+        <img src="/logo.svg" alt="Logo" />
       </div>
       <nav className={`${styles.nav} ${isOpen ? styles.open : ''}`}>
         <ul className={styles.navList}>

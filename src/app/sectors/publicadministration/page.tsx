@@ -7,20 +7,29 @@ export default function publicadministration() {
     <div className={styles.container}>
       
       <Header />
-      <h1 className={styles.tagline}> SECTORS</h1>
+      <div className={styles.container1}>
+      
+      <div className={styles.tagline1}>Public Administration</div>
+
+    </div>
+  
       
       <main className={styles.main}>
-      <h2 className={styles.cardtitle}>Public Administration</h2>
-      
-      <img src="../../adm1.png" alt="adm1" className={styles.adm}/>
-     
-        
-          <div className={styles.subtagline1}>
-            <img src="../../adm2.jpg" alt="adm2" className={styles.adm2}/>
-          <p>
+      <div className ={styles.about}>
+          <div>
+          <div className={styles.subtagline1}>  Our services cover public administration sector too.</div>
+          <div className={styles.subtagline2}>
           We provide services to municipal, state government and government offices, electricity board and district consumer forums. In addition to our regular service offerings, we provide certain specialized services that are customised for the client including manpower.
-          </p>
-            </div>
+         
+          </div>
+         </div>
+                 
+      <img src="../../adm2.jpg" alt="edu1" className={styles.edu1}/>
+                       
+      </div>
+      
+        
+       
             
             
             </main>

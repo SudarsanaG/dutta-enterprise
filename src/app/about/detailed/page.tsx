@@ -8,16 +8,22 @@ export default function DetailedAboutPage() {
     <div className={styles.container}>
       
       <Header />
-      <h1 className={styles.tagline}>ABOUT US</h1>
+      <div className={styles.container1}>
       
+        <div className={styles.tagline1}>About Us</div>
+
+      </div>
       <main className={styles.main}>
         
         <div className ={styles.about}>
+          <div> <div className={styles.subtagline2}>Get To Know Us Better!</div>
+       
           <p className={styles.subtagline1}>
           Our range of service offerings include soft services such as housekeeping, sanitation, landscaping and gardening, hard services such as mechanical, electrical and plumbing services, solid, liquid and biomedical waste management, pest control and façade cleaning management services. We also provide staffing solutions and payroll management to our customers, as well as private security and manned guarding services and catering services.
                  
           The wide range of our integrated facility management services segment allows us to provide a bundled solution of services to each customer, tailored to its specific needs and requirements, making us a one-stop integrated solution for customers.
             </p>
+            </div>
             
               <img src="../../about.jpg" alt="about" className={styles.about1}/>
             </div>
@@ -50,7 +56,7 @@ export default function DetailedAboutPage() {
           </div>
         </div>
         <div className={styles.certificates}>
-          <h1>Certificates</h1>
+          Certificates
           </div>
           <div className={styles.certificates1}>
           <img src="../../certificate1.jpg" alt="certificate1" className={styles.certificates2}/>
