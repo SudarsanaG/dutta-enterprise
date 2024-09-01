@@ -51,3 +51,57 @@
     
     
 }
+@media screen and (max-width: 1024px) {
+    /* For medium screens (tablets, small desktops) */
+    .tagline {
+        padding: 2rem 3rem; /* Adjust padding */
+        font-size: 3rem;
+    }
+
+    .subtagline1 {
+        padding: 1.5rem 3rem;
+        font-size: 1.1rem;
+    }
+
+    .cardtitle {
+        padding: 2rem 3rem;
+        font-size: 2.8rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* For small screens (tablets, large phones) */
+    .tagline {
+        padding: 2rem;
+        font-size: 2.8rem;
+    }
+
+    .subtagline1 {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    .cardtitle {
+        padding: 2rem 1rem;
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* For extra small screens (mobile devices) */
+    .tagline {
+        padding: 1.5rem;
+        font-size: 2rem;
+    }
+
+    .subtagline1 {
+        padding: 1rem;
+        font-size: 0.9rem;
+        text-align: center; /* Center text on very small screens */
+    }
+
+    .cardtitle {
+        padding: 1.5rem;
+        font-size: 2rem;
+    }
+}

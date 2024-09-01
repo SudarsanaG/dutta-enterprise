@@ -60,3 +60,98 @@
     color: black;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+@media (max-width: 1024px) {
+    .tagline {
+        padding: 2rem 5rem;
+        font-size: 3rem; /* Adjust font size */
+    }
+
+    .subtagline1 {
+        padding: 1.5rem 3rem;
+        font-size: 1.1rem;
+    }
+
+    .cardtitle {
+        padding: 2.5rem 3rem;
+        font-size: 2.8rem;
+    }
+
+    .hospital1 {
+        height: 80vh;
+    }
+
+    .hospital2 {
+        height: 40vh;
+    }
+
+    .civilworktagline {
+        padding: 2rem 3rem;
+        font-size: 1.3rem;
+    }
+}
+
+/* Small screens (mobile phones, less than 768px) */
+@media (max-width: 768px) {
+    .tagline {
+        padding: 1.5rem 2rem;
+        font-size: 2.5rem; /* Smaller font size */
+    }
+
+    .subtagline1 {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center text */
+    }
+
+    .cardtitle {
+        padding: 2rem 2rem;
+        font-size: 2.5rem;
+    }
+
+    .hospital1 {
+        height: 60vh;
+    }
+
+    .hospital2 {
+        height: 30vh;
+    }
+
+    .civilworktagline {
+        padding: 1.5rem 2rem;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}
+
+/* Extra small screens (phones, less than 480px) */
+@media (max-width: 480px) {
+    .tagline {
+        padding: 1rem 1.5rem;
+        font-size: 2rem;
+    }
+
+    .subtagline1 {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .cardtitle {
+        padding: 1.5rem 1.5rem;
+        font-size: 2rem;
+    }
+
+    .hospital1 {
+        height: 50vh;
+    }
+
+    .hospital2 {
+        height: 25vh;
+    }
+
+    .civilworktagline {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+        text-align: center;
+    }
+}
