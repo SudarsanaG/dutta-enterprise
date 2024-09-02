@@ -3,9 +3,10 @@ import Header from './components/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './footer/page';
 export const metadata = {
-  title: 'My Next.js Website',
-  description: 'Welcome to my Next.js website',
+  title: 'Dutta Enterprise',
+  description: 'Dutta Enterprise',
 };
+
 
 export default function RootLayout({
   children,
@@ -14,6 +15,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="../../public/favicon.ico" />
+        <title>Dutta Enterprise</title>
+        <meta name="description" content="Dutta Enterprise" />
+      </head>
       <body>
         <Header />
         {children}
