@@ -49,7 +49,7 @@ export default function DetailedAboutPage() {
             <img src="../../logo2.png" alt="logo2" className={styles.logo2}/>
             </div>
             <p className={styles.cardContent}>
-            Forming new alliances in order to take advantage of emerging technologies. Make full use of the company's resources to come up with innovative new products and services. Utilise the already established clientele as a springboard for selling additional services to existing customers
+            Forming new alliances in order to take advantage of emerging technologies. Make full use of the company&apos;s resources to come up with innovative new products and services. Utilise the already established clientele as a springboard for selling additional services to existing customers
          </p>
          
            
