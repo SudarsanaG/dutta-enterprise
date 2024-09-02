@@ -7,6 +7,7 @@ export default function Careers() {
   return (
     <div className={styles.container}>
       <Header />
+     
       <h2 className={styles.title}>Job Positions</h2>
       <main className={styles.main}>
         <div className={styles.content}>
