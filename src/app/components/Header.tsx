@@ -26,7 +26,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <img src="/logo.svg" alt="Logo" />
+        <img src="/logo.jpg" alt="Logo" />
       </div>
       <nav className={`${styles.nav} ${isOpen ? styles.open : ''}`}>
         <ul className={styles.navList}>
@@ -94,7 +94,7 @@ export default function Header() {
             <Link href="/careers">CAREER</Link>
           </li>
           <li className={styles.navItem}>
-            <Link href="#clients">CLIENTS</Link>
+            <Link href="/clients">CLIENTS</Link>
           </li>
           <li className={styles.navItem}>
             <Link href="/contact/detailed">CONTACT</Link>
