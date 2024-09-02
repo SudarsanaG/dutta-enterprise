@@ -2,7 +2,7 @@
     padding: 0 0px;
     max-width: 100%;
     margin: auto;
-    height:350vh;
+    height:130vh;
     background-color: whitesmoke;
     
     
@@ -72,81 +72,103 @@
     
    
    }
- 
+ /* Medium screens (max-width: 1024px) */
 @media (max-width: 1024px) {
-    .tagline {
-        padding: 2rem 5rem;
+    .container1 {
+        position: relative;
+    }
+    .container1::before {
+        position: absolute;
+    }
+    .tagline1 {
+        padding: 5% 2%;
         font-size: 3rem;
+        margin-top: 2%;
     }
-
     .subtagline1 {
-        padding: 1.5rem 3rem;
-        font-size: 1.2rem;
+        padding: 1rem 2%;
+        font-size: 1.5rem;
     }
-
+    .subtagline2 {
+        padding: 2% 1%;
+        font-size: 1rem;
+    }
     .cardtitle {
-        padding: 2.5rem 3rem;
-        font-size: 2.8rem;
-    }
-
-    .retail {
-        height: 80vh;
-    }
-
-    .retail1 {
-        height: 40vh;
-    }
-}
-
-/* Responsive for small screens (mobile phones, less than 768px) */
-@media (max-width: 768px) {
-    .tagline {
         padding: 1.5rem 2rem;
         font-size: 2.5rem;
     }
+    .retail {
+        height: 70vh;
+    }
+    .retail1 {
+        height: 35vh;
+    }
+}
 
+/* Small screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .container1 {
+        position: relative;
+    }
+    .container1::before {
+        position: absolute;
+    }
+    .tagline1 {
+        padding: 4% 1%;
+        font-size: 2.5rem;
+        margin-top: 1%;
+    }
     .subtagline1 {
-        padding: 1rem 2rem;
-        font-size: 1rem;
-        flex-direction: column;
+        padding: 1rem;
+        font-size: 1.2rem;
         text-align: center;
     }
-
-    .cardtitle {
-        padding: 2rem 2rem;
-        font-size: 2.5rem;
+    .subtagline2 {
+        padding: 2% 1%;
+        font-size: 0.9rem;
     }
-
+    .cardtitle {
+        padding: 1.5rem 1.5rem;
+        font-size: 2rem;
+    }
     .retail {
         height: 60vh;
     }
-
     .retail1 {
         height: 30vh;
     }
 }
 
-/* Responsive for extra small screens (less than 480px) */
+/* Extra small screens (max-width: 480px) */
 @media (max-width: 480px) {
-    .tagline {
-        padding: 1rem 1.5rem;
-        font-size: 2rem;
+    .container1 {
+        position: relative;
     }
-
+    .container1::before {
+        position: absolute;
+    }
+    
+    .tagline1 {
+        padding: 15rem 5rem;
+        font-size: 2rem;
+       position: absolute;
+    }
     .subtagline1 {
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
+        padding: 0.5rem;
+        font-size: 1rem;
+        text-align: center;
     }
-
+    .subtagline2 {
+        padding: 1rem 0.5rem;
+        font-size: 0.8rem;
+    }
     .cardtitle {
-        padding: 1.5rem 1.5rem;
-        font-size: 2rem;
+        padding: 1rem;
+        font-size: 1.5rem;
     }
-
     .retail {
         height: 50vh;
     }
-
     .retail1 {
         height: 25vh;
     }

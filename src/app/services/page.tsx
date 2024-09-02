@@ -10,7 +10,7 @@ export default function Services() {
     <div className={styles.container}>
       <div className={styles.header}>
      
-        <h1 className={styles.tagline1}>  Services We Provide</h1>
+        <h1 className={styles.tagline1}>  Services </h1>
         </div>
       <div className={styles.cardcontainer}>
         <div className={styles.card1}>

@@ -2,128 +2,151 @@
     padding: 0 0px;
     max-width: 100%;
     margin: auto;
-    height:350vh;
+    height: 130vh;
     background-color: whitesmoke;
-    
-    
 }
-.container1::before{
+
+.container1::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6 ); /* Dark overlay with 50% opacity */
-    z-index: 1; /* Place the overlay below the text */}
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: 1; /* Place overlay below text */
+}
 
-.container1{
-    height:50vh;
+.container1 {
+    height: 50vh;
     background: url('/other sector.jpeg') no-repeat center center/cover;
     position: relative;
 }
 
 .tagline1 {
-    padding:10% 3%;
+    padding: 10% 3%;
     text-align: center;
-   margin-top: 5%;
+    margin-top: 5%;
     font-size: 4rem;
     font-weight: bold;
-    color: white; /* Keep text color white or adjust as needed */
-  
+    color: white;
 }
 
-    .subtagline1 {
-
-      
-        text-align: left;
-        font-size: 2rem;
-        font-weight: bold;
-         color: #003459;
-         line-height: 1;
+.subtagline1 {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #003459;
+    line-height: 1;
 }
 
 .subtagline2 {
-
- padding: 3% 0% 0% 0%;
+    padding: 3% 0 0;
     font-size: 1rem;
     font-weight: 350;
     text-align: left;
-    color:#424952;
+    color: #424952;
     font-family: Arial, Helvetica, sans-serif;
-   
 }
 
-
-.about{
-    display: flex; /* Flexbox for aligning content */
-    align-items: center; /* Align content and logo vertically */
+.about {
+    display: flex;
+    align-items: center;
     padding: 4% 10%;
-  
 }
-.edu1{
-    padding:0% 0% 0% 1%;
-       width: 50%;/* Adjust width as needed */
-     height: 50%;
-     border-top-left-radius: 10%;
-     border-top-right-radius: 10%;
-     border-bottom-left-radius: 10%;
-     border-bottom-right-radius: 10%;
-    
-   
-   }
- 
+
+.edu1 {
+    padding: 0 0 0 1%;
+    width: 50%; /* Adjust width as needed */
+    height: 50%;
+    border-radius: 10%;
+}
+
+/* Medium screens (tablets, small desktops) */
 @media screen and (max-width: 1024px) {
-    /* For medium screens (tablets, small desktops) */
-    .tagline {
-        padding: 2rem 3rem; /* Adjust padding */
+    .container1{
+        position: relative;
+       }
+       .container1::before{
+        position:absolute;
+       }
+
+    .tagline1 {
         font-size: 3rem;
+        padding: 10rem 5rem;
     }
 
     .subtagline1 {
-        padding: 1.5rem 3rem;
-        font-size: 1.1rem;
+        font-size: 1.5rem;
+        padding: 1.5rem 2rem;
     }
 
-    .cardtitle {
-        padding: 2rem 3rem;
-        font-size: 2.8rem;
+    .edu1 {
+        width: 70%;
+        height: auto; /* Let image scale */
+    }
+
+    .about {
+        padding: 3% 7%;
     }
 }
 
+/* Small screens (phones, tablets) */
 @media screen and (max-width: 768px) {
-    /* For small screens (tablets, large phones) */
-    .tagline {
-        padding: 2rem;
-        font-size: 2.8rem;
+    .container1{
+        position: relative;
+       }
+       .container1::before{
+        position:absolute;
+       }
+
+    .tagline1 {
+        font-size: 2.5rem;
+        padding: 10rem 5rem;
     }
 
     .subtagline1 {
+        font-size: 1.2rem;
         padding: 1rem;
-        font-size: 1rem;
     }
 
-    .cardtitle {
-        padding: 2rem 1rem;
-        font-size: 2.5rem;
+    .edu1 {
+        width: 80%;
+        height: auto;
+    }
+
+    .about {
+        padding: 3% 5%;
     }
 }
 
+/* Extra small screens (mobile devices) */
 @media screen and (max-width: 480px) {
-    /* For extra small screens (mobile devices) */
-    .tagline {
-        padding: 1.5rem;
+    .container1{
+        position: relative;
+       }
+       .container1::before{
+        position:absolute;
+       }
+       
+    .tagline1 {
         font-size: 2rem;
+        padding: 7rem 5rem;
     }
 
     .subtagline1 {
-        padding: 1rem;
-        font-size: 0.9rem;
-        text-align: center; /* Center text on very small screens */
+        font-size: 1rem;
+        padding: 0.5rem;
+        text-align: center;
     }
 
-    .cardtitle {
-        padding: 1.5rem;
-        font-size: 2rem;
+    .edu1 {
+        width: 70%;
+        height: auto;
+    }
+
+    .about {
+        padding: 3% 2%;
+        flex-direction: column; /* Stack content on top of each other */
     }
 }

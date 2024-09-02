@@ -5,6 +5,7 @@ import Services from './services/page';
 import Sectors from './sectors/page';
 import Head from 'next/head';
 import Contact from './contact/page';
+import Advantages from './advantages/page';
 import Footer from './footer/page';
 import Careers from './careers/page';
 
@@ -17,6 +18,8 @@ export default function Home() {
             <Services/>
             <Sectors/>
             <Contact/> 
+            <Advantages/>
+            
         </main>
     )
 }

@@ -2,7 +2,7 @@
     padding: 0 0px;
     max-width: 100%;
     margin: auto;
-    height:350vh;
+    height:130vh;
     background-color: whitesmoke;
     
     
@@ -67,81 +67,111 @@
     padding: 4% 10%;
   
 }
+/* Base styles are already present */
+
+/* Responsive for medium screens (tablets, 768px - 1024px) */
 @media (max-width: 1024px) {
-    .tagline {
-        padding: 2rem 5rem;
+    .container1{
+        position: relative;
+       }
+       .container1::before{
+        position:absolute;
+       }
+    .tagline1 {
+        padding: 10rem 5rem;
         font-size: 3rem;
     }
 
     .subtagline1 {
-        padding: 1.5rem 3rem;
-        font-size: 1.2rem;
+        padding: 1.5rem 2rem;
+        font-size: 1.5rem;
     }
 
-    .cardtitle {
-        padding: 2.5rem 3rem;
-        font-size: 2.8rem;
+    .subtagline2 {
+        padding: 2rem 1rem;
+        font-size: 0.9rem;
     }
 
-    .indus {
-        height: 80vh;
+    .edu1 {
+        width: 60%; /* Adjust the width for tablets */
+        height: auto;
+        padding: 0;
     }
 
-    .industrial {
-        height: 40vh;
+    .about {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; 
+        padding: 2% 5%; /* Adjust padding for medium screens */
     }
 }
 
 /* Responsive for small screens (mobile phones, less than 768px) */
 @media (max-width: 768px) {
-    .tagline {
-        padding: 1.5rem 2rem;
+    .container1{
+        position: relative;
+       }
+       .container1::before{
+        position:absolute;
+       }
+    .tagline1 {
+        padding: 10rem 5rem;
         font-size: 2.5rem;
     }
 
     .subtagline1 {
-        padding: 1rem 2rem;
-        font-size: 1rem;
-        flex-direction: column;
+        padding: 1rem 1rem;
+        font-size: 1.2rem;
         text-align: center;
     }
 
-    .cardtitle {
-        padding: 2rem 2rem;
-        font-size: 2.5rem;
+    .subtagline2 {
+        padding: 1rem 0.5rem;
+        font-size: 0.8rem;
     }
 
-    .indus {
-        height: 60vh;
+    .edu1 {
+        width: 80%; /* Increase width for better readability */
+        height: auto;
+        padding: 0;
     }
 
-    .industrial {
-        height: 30vh;
+    .about {
+        flex-direction: column;
+        padding: 2% 3%;
     }
 }
 
 /* Responsive for extra small screens (less than 480px) */
 @media (max-width: 480px) {
-    .tagline {
-        padding: 1rem 1.5rem;
+    .container1{
+        position: relative;
+       }
+       .container1::before{
+        position:absolute;
+       }
+    .tagline1 {
+        padding: 9rem 5rem;
         font-size: 2rem;
     }
 
     .subtagline1 {
         padding: 0.5rem 1rem;
-        font-size: 0.9rem;
+        font-size: 1rem;
+        text-align: center;
     }
 
-    .cardtitle {
-        padding: 1.5rem 1.5rem;
-        font-size: 2rem;
+    .subtagline2 {
+        padding: 0.5rem 0.5rem;
+        font-size: 0.7rem;
     }
 
-    .indus {
-        height: 50vh;
+    .edu1 {
+        width: 100%; /* Make the image take full width */
+        height: auto;
+        padding: 0;
     }
 
-    .industrial {
-        height: 25vh;
+    .about {
+        padding: 1% 2%; /* Reduce padding on small screens */
     }
 }
