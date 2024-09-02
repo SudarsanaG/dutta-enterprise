@@ -19,7 +19,7 @@ export default function catering() {
        <div className={styles.subtagline1}> Dutta Enterprise </div>
        <div className={styles.subtagline2}>
       
-      </div>is a private corporate catering, banqueting, and events organization with a vision to provide heart-warming food combined with premium service.We provide delicious, inspiring, innovative food with cutting edge, spectacular presentation which enables us to be at the forefront of the industry.Our success is best attributed to our work style and relation with clients. Our ability and approach is one of partnership. We listen to clients' specific needs and respect their suggestions, helping us in the constant drive towards progress and expansion. This allows for a fully entrepreneurial and innovative style and enables both parties to deliver and exceed overall expectations. 
+      </div>is a private corporate catering, banqueting, and events organization with a vision to provide heart-warming food combined with premium service.We provide delicious, inspiring, innovative food with cutting edge, spectacular presentation which enables us to be at the forefront of the industry.Our success is best attributed to our work style and relation with clients. Our ability and approach is one of partnership. We listen to clients&apos; specific needs and respect their suggestions, helping us in the constant drive towards progress and expansion. This allows for a fully entrepreneurial and innovative style and enables both parties to deliver and exceed overall expectations. 
       </div>
          
            <img src="../../catering2.jpg" alt="catering2" className={styles.catering2}/>
