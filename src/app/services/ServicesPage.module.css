@@ -305,7 +305,7 @@
 /* Mobile View CSS */
 @media (max-width: 768px) {
   .container {
-    padding: 0 10px; /* Adjust padding for mobile */
+    padding: 50px 10px 0px 3px; /* Adjust padding for mobile */
     height: auto; /* Allow height to adapt to content */
   }
 

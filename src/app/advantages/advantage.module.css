@@ -56,4 +56,46 @@ padding:2% 10%;
     color:#003459;
     font-family: Arial, Helvetica, sans-serif;
   }
-  
+  /* Responsive adjustments */
+@media (max-width: 1024px) {
+  .cardsContainer {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 30px;
+      padding: 2% 4%;
+  }
+
+  .tagline {
+      font-size: 2.5rem;
+  }
+
+  .cardTitle {
+      font-size: 1.25rem;
+  }
+
+  .cardContent {
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container{
+    height:auto;
+  }
+  .cardsContainer {
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+      padding: 2% 2%;
+  }
+
+  .tagline {
+      font-size: 2rem;
+  }
+
+  .cardTitle {
+      font-size: 1.1rem;
+  }
+
+  .cardContent {
+      font-size: 0.85rem;
+  }
+}
