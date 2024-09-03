@@ -164,7 +164,10 @@ height: 40%;
  /* Responsive Styling */
 @media (max-width: 1024px) {
   .container{
-    height:auto;
+    height:100%;
+  }
+  .container1{
+    height:60vh;
   }
   .tagline1 {
       font-size: 3rem;
@@ -187,6 +190,12 @@ height: 40%;
 }
 
 @media (max-width: 768px) {
+  .container{
+    height:100%;
+  }
+  .container1{
+    height:40vh;
+  }
   .tagline1 {
       font-size: 2.5rem;
       padding: 10rem;
@@ -219,6 +228,12 @@ height: 40%;
 }
 
 @media (max-width: 480px) {
+  .container{
+    height:100%;
+  }
+  .container1{
+    height:30vh;
+  }
   .tagline1 {
       font-size: 2rem;
       padding: 10rem;
