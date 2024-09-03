@@ -9,12 +9,13 @@ export default function publicadministration() {
       <Header />
       <div className={styles.container1}>
       
-      <div className={styles.tagline1}>Public Administration</div>
+      <div className={styles.tagline1}>Sectors</div>
 
     </div>
   
       
       <main className={styles.main}>
+      <div className={styles.heading}>Public Administration</div>
       <div className ={styles.about}>
           <div>
           <div className={styles.subtagline1}>  Our services cover public administration sector too.</div>

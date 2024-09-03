@@ -9,12 +9,13 @@ export default function hospitals() {
       <Header />
       <div className={styles.container1}>
       
-      <div className={styles.tagline1}>Hospitals and Healthcare</div>
+      <div className={styles.tagline1}>Sectors</div>
 
     </div>
   
       
       <main className={styles.main}>
+      <div className={styles.heading}>Hospitals and Healthcare</div>
       <div className ={styles.about}>
           <div>
           <div className={styles.subtagline1}>  We provide services to hospitals and medical institutes in this sector.</div>

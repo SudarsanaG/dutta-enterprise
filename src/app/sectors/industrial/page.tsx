@@ -9,12 +9,13 @@ export default function industrial() {
       <Header />
       <div className={styles.container1}>
       
-      <div className={styles.tagline1}>Industrial</div>
+      <div className={styles.tagline1}>Sectors</div>
 
     </div>
   
       
       <main className={styles.main}>
+      <div className={styles.heading}>Industrial</div>
       <div className ={styles.about}>
           <div>
           <div className={styles.subtagline1}> We provide our services to manufacturing companies.</div>

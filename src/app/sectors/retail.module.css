@@ -2,7 +2,7 @@
     padding: 0 0px;
     max-width: 100%;
     margin: auto;
-    height:130vh;
+    height:150vh;
     background-color: whitesmoke;
     
     
@@ -22,7 +22,15 @@
     background: url('/other sector.jpeg') no-repeat center center/cover;
     position: relative;
 }
-
+.heading{
+    padding:1% 10%;
+    text-align: center;
+ 
+    font-size: 3rem;
+    font-weight: bold;
+    color:#003459; 
+   
+}
 .tagline1 {
     padding:10% 3%;
     text-align: center;
@@ -74,14 +82,26 @@
    }
  /* Medium screens (max-width: 1024px) */
 @media (max-width: 1024px) {
+   .container{
+    height:100%;
+   }
     .container1 {
-        position: relative;
+       height:50vh;
     }
     .container1::before {
         position: absolute;
     }
+    .heading{
+        padding:2rem 10rem;
+        text-align: center;
+     
+        font-size: 2rem;
+        font-weight: bold;
+        color:#003459; 
+       
+    }
     .tagline1 {
-        padding: 5rem 10rem;
+        padding: 7rem 10rem;
         font-size: 3rem;
         margin-top: 2%;
     }
@@ -107,16 +127,28 @@
 
 /* Small screens (max-width: 768px) */
 @media (max-width: 768px) {
+   .container{
+    height:100%;
+   }
     .container1 {
-        position: relative;
+       height:30vh;
     }
     .container1::before {
         position: absolute;
     }
     .tagline1 {
-        padding: 5rem 10rem;
+        padding: 10rem 10rem;
         font-size: 2.5rem;
         margin-top: 1%;
+    }
+    .heading{
+        padding:2rem 10rem;
+        text-align: center;
+     
+        font-size: 2rem;
+        font-weight: bold;
+        color:#003459; 
+       
     }
     .subtagline1 {
         padding: 1rem;
@@ -142,17 +174,25 @@
 /* Extra small screens (max-width: 480px) */
 @media (max-width: 480px) {
    .container{
-    height:90vh;
+    height:100%;
    }
     .container1 {
-        position: relative;
+        height:30vh;
     }
     .container1::before {
         position: absolute;
     }
-    
+    .heading{
+        padding:2rem 9rem;
+        text-align: center;
+     
+        font-size: 3rem;
+        font-weight: bold;
+        color:#003459; 
+       
+    }
     .tagline1 {
-        padding: 15rem 8rem;
+        padding: 15rem 10rem;
         font-size: 2.5rem;
        position: absolute;
     }

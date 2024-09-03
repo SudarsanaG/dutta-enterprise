@@ -9,12 +9,13 @@ export default function othersectors() {
       <Header />
       <div className={styles.container1}>
       
-      <div className={styles.tagline1}>Other Sectors</div>
+      <div className={styles.tagline1}>Sectors</div>
 
     </div>
   
       
       <main className={styles.main}>
+      <div className={styles.heading}>Other Sectors</div>
       <div className ={styles.about}>
           <div>
           <div className={styles.subtagline1}> Our services are not limited to the sectors mentioned above.We have more in store!</div>

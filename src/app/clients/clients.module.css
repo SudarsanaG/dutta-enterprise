@@ -3,7 +3,7 @@
     padding: 0 0px;
     max-width: 100%;
     margin: auto;
-    height:180vh;
+    height:200vh;
     background-color: whitesmoke;
     
 }
@@ -33,14 +33,25 @@
   
   }
 .tagline{
-  padding:2% 5%;
+  padding:1% 5%;
   text-align: center;
  margin-top: 2%;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: #003459; /* Keep text color white or adjust as needed */
 
 }
+
+.tagline2{
+    padding:2% 12%;
+    text-align:start;
+ color:#003459;
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: italic;
+    
+  
+  }
 .cardsContainer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -55,7 +66,7 @@ width: 80%;
 /* Responsive styles for medium screens (tablets) */
 @media (max-width: 1024px) {
   .container {
-      height: auto; /* Allow dynamic height */
+      height: 100%; /* Allow dynamic height */
   }
 
   .container1 {
@@ -64,6 +75,7 @@ width: 80%;
 
   .tagline1 {
       font-size: 3rem; /* Adjust font size */
+      padding:2rem 10rem;
   }
 
   .tagline {
@@ -76,15 +88,15 @@ width: 80%;
   }
 
   .clients {
-      height: auto;
-      width: 100%; /* Adjust width */
+      height: 70%;
+      width: 70%; /* Adjust width */
   }
 }
 
 /* Responsive styles for small screens (mobile devices) */
 @media (max-width: 768px) {
   .container {
-      height: auto;
+      height: 100%;
   }
 
   .container1 {
@@ -93,7 +105,7 @@ width: 80%;
 
   .tagline1 {
       font-size: 2.5rem; /* Reduce font size */
-      padding: 6rem 8rem;
+      padding: 10rem 10rem;
        /* Narrow padding */
   }
 
@@ -108,7 +120,9 @@ width: 80%;
   }
 
   .clients {
-      width: 100%; /* Full width for clients */
-      height: auto; /* Adjust height */
+      width: 70%; 
+      height: 70%; 
+   padding: 3% 10% 0% 10%;
+
   }
 }

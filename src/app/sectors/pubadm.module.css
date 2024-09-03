@@ -2,7 +2,7 @@
     padding: 0 0px;
     max-width: 100%;
     margin: auto;
-    height:110vh;
+    height:130vh;
     background-color: whitesmoke;
     
     
@@ -22,7 +22,15 @@
     background: url('/other sector.jpeg') no-repeat center center/cover;
     position: relative;
 }
-
+.heading{
+    padding:1% 10%;
+    text-align: center;
+ 
+    font-size: 3rem;
+    font-weight: bold;
+    color:#003459; 
+   
+}
 .tagline1 {
     padding:10% 3%;
     text-align: center;
@@ -75,7 +83,7 @@
  
    @media screen and (max-width: 1024px) {
     .container1{
-        position: relative;
+        height:50vh;
        }
        .container1::before{
         position:absolute;
@@ -84,7 +92,15 @@
         padding: 10rem 5rem;
         font-size: 3rem;
     }
-
+    .heading{
+        padding:2rem 10rem;
+        text-align: center;
+     
+        font-size: 3rem;
+        font-weight: bold;
+        color:#003459; 
+       
+    }
     .subtagline1 {
         padding: 1.5rem 2rem;
         font-size: 1.5rem;
@@ -109,8 +125,11 @@
 
 /* Responsive for small screens (large phones, tablets) */
 @media screen and (max-width: 768px) {
+    .container{
+        height:100%;
+    }
     .container1{
-        position: relative;
+      height:30vh;
        }
        .container1::before{
         position:absolute;
@@ -124,7 +143,15 @@
         padding: 1rem;
         font-size: 1.2rem;
     }
-
+    .heading{
+        padding:2rem 10rem;
+        text-align: center;
+     
+        font-size: 2rem;
+        font-weight: bold;
+        color:#003459; 
+       
+    }
     .subtagline2 {
         padding: 1rem;
         font-size: 0.9rem;

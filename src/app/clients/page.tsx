@@ -13,6 +13,9 @@ export default function Advantages() {
 
     </div>
         <main className={styles.main}>
+        
+          <div className={styles.tagline2}>"Management is doing things right; leadership is doing the right things."</div>
+       
         <div className={styles.tagline}>We have clients both in government and corporate sectors.</div>
         <div className={styles.cardsContainer}>
         <img src="../../bdo.jpeg" alt="clients" className={styles.clients}/>
@@ -27,8 +30,8 @@ export default function Advantages() {
         <img src="../../wb pwd.png" alt="clients" className={styles.clients}/>
         <img src="../../wb rural.jpg" alt="clients" className={styles.clients}/>
         </div>
-      
-     
+
+ 
       
   </main>
   </div>

@@ -2,7 +2,7 @@
     padding: 0 0px;
     max-width: 100%;
     margin: auto;
-    height:120vh;
+    height:150vh;
     background-color: whitesmoke;
     
     
@@ -23,7 +23,15 @@
     background: url('/cov1.webp') no-repeat center center/cover;
     position: relative;
 }
-
+.heading{
+    padding:1% 10%;
+    text-align: center;
+ 
+    font-size: 3rem;
+    font-weight: bold;
+    color:#003459; 
+   
+}
 .tagline {
     padding:10% 3%;
     text-align: center;
@@ -77,13 +85,21 @@ padding: 5% 10%;
 /* Responsive styling for medium screens (tablets and smaller desktops) */
 @media (max-width: 1024px) {
     .container {
-        height: auto; /* Adjust height for medium screens */
+        height: 100%; /* Adjust height for medium screens */
     }
 
     .container1 {
         height: 40vh; /* Reduce height for medium screens */
     }
-
+    .heading{
+        padding:2rem 10rem;
+        text-align: center;
+     
+        font-size: 2rem;
+        font-weight: bold;
+        color:#003459; 
+       
+    }
     .tagline {
         font-size: 3rem; /* Adjust font size for medium screens */
     }
@@ -105,13 +121,21 @@ padding: 5% 10%;
 /* Responsive styling for small screens (mobile devices) */
 @media (max-width: 768px) {
     .container {
-        height: auto; /* Adjust height for small screens */
+        height: 100%; /* Adjust height for small screens */
     }
 
     .container1 {
         height: 30vh; /* Reduce height for small screens */
     }
-
+    .heading{
+        padding:2rem 10rem;
+        text-align: center;
+     
+        font-size: 2rem;
+        font-weight: bold;
+        color:#003459; 
+       
+    }
     .tagline {
         font-size: 2rem;
         padding:10rem 10rem; /* Adjust font size for small screens */

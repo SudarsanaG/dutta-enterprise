@@ -10,10 +10,11 @@ export default function civilwork() {
      
       <div className={styles.container1}>
       
-      <div className={styles.tagline1}>Construction and Civil Work</div>
+      <div className={styles.tagline1}>Services</div>
 
     </div>
       <main className={styles.main}>
+      <div className={styles.heading}>Construction and Civil Work</div>
       <div className ={styles.about}>
           <div>
           <div className={styles.subtagline1}> We are fast growing Civil Engineering and construction company in the state of West Bengal. </div>

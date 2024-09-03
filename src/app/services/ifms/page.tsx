@@ -10,11 +10,11 @@ export default function Ifms() {
       <Header />
       <div className={styles.container1}>
       
-        <div className={styles.tagline1}>Integrated Facility Management Services</div>
+        <div className={styles.tagline1}>Services</div>
 
       </div>
       <main className={styles.main}>
-     
+      <div className={styles.heading}>Integrated Facility Management Services</div>
         <div className ={styles.about}>
           <div>
           <div className={styles.subtagline1}> Our range of integrated service offerings include soft services as well as hard services.</div>

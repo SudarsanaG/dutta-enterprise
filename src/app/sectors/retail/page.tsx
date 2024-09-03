@@ -9,12 +9,13 @@ export default function retail() {
       <Header />
       <div className={styles.container1}>
       
-      <div className={styles.tagline1}>Retail</div>
+      <div className={styles.tagline1}>Sectors</div>
 
     </div>
   
       
       <main className={styles.main}>
+      <div className={styles.heading}>Retail</div>
       <div className ={styles.about}>
           <div>
           <div className={styles.subtagline1}>  We provide services to retail outlets and branch offices in this sector.</div>

@@ -2,7 +2,7 @@
     padding: 0 0px;
     max-width: 100%;
     margin: auto;
-    height: 130vh;
+    height: 150vh;
     background-color: whitesmoke;
 }
 
@@ -22,7 +22,15 @@
     background: url('/other sector.jpeg') no-repeat center center/cover;
     position: relative;
 }
-
+.heading{
+    padding:1% 10%;
+    text-align: center;
+ 
+    font-size: 3rem;
+    font-weight: bold;
+    color:#003459; 
+   
+}
 .tagline1 {
     padding: 10% 3%;
     text-align: center;
@@ -75,14 +83,22 @@
         font-size: 3rem;
         padding: 10rem 5rem;
     }
-
+    .heading{
+        padding:2rem 10rem;
+        text-align: center;
+     
+        font-size: 3rem;
+        font-weight: bold;
+        color:#003459; 
+       
+    }
     .subtagline1 {
         font-size: 1.5rem;
         padding: 1.5rem 2rem;
     }
 
     .edu1 {
-        width: 70%;
+        width: 60%;
         height: auto; /* Let image scale */
     }
 
@@ -93,8 +109,12 @@
 
 /* Small screens (phones, tablets) */
 @media screen and (max-width: 768px) {
+   .container{
+    height:100%;
+    
+   }
     .container1{
-        position: relative;
+        height:30vh;
        }
        .container1::before{
         position:absolute;
@@ -104,15 +124,23 @@
         font-size: 2.5rem;
         padding: 10rem 5rem;
     }
-
+    .heading{
+        padding:2rem 10rem;
+        text-align: center;
+     
+        font-size: 3rem;
+        font-weight: bold;
+        color:#003459; 
+       
+    }
     .subtagline1 {
         font-size: 1.2rem;
-        padding: 1rem;
+       
     }
 
     .edu1 {
-        width: 80%;
-        height: auto;
+        width: 60%;
+        height: 80%;
     }
 
     .about {
@@ -123,7 +151,7 @@
 /* Extra small screens (mobile devices) */
 @media screen and (max-width: 480px) {
     .container1{
-        position: relative;
+       height:40vh;
        }
        .container1::before{
         position:absolute;

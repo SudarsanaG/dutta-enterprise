@@ -9,10 +9,10 @@ export default function staffing() {
       <Header />
       <div className={styles.container1}>
       
-      <div className={styles.tagline}>Staffing Solutions and Payroll Management</div>
+      <div className={styles.tagline}>Services</div>
       </div>
       <main className={styles.main}>
-    
+      <div className={styles.heading}>Staffing Solutions and Payroll Management</div>
         <div className ={styles.about}>
         <div>
           <div className={styles.subtagline1}> Staffing solutions and payroll management services generally comprise recruitment, payroll, and human resource services.</div>

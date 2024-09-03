@@ -2,7 +2,7 @@
     padding: 0 0px;
     max-width: 100%;
     margin: auto;
-    height:180vh;
+    height:220vh;
     background-color: whitesmoke;
     
     
@@ -31,6 +31,15 @@
     font-weight: bold;
     color: white; /* Keep text color white or adjust as needed */
   
+}
+.heading{
+    padding:1% 10%;
+    text-align: center;
+ 
+    font-size: 3rem;
+    font-weight: bold;
+    color:#003459; 
+   
 }
 .subtagline1 {
 
@@ -143,13 +152,21 @@
 /* Responsive styling for medium screens (tablets and smaller desktops) */
 @media (max-width: 1024px) {
     .container {
-        height: auto;
+        height: 100%;
     }
 
     .container1 {
         height: 40vh;
     }
-
+    .heading{
+        padding:2rem 10rem;
+        text-align: center;
+     
+        font-size: 2rem;
+        font-weight: bold;
+        color:#003459; 
+       
+    }
     .tagline1 {
         font-size: 3rem;
     }
@@ -181,13 +198,21 @@
 /* Responsive styling for small screens (mobile devices) */
 @media (max-width: 768px) {
     .container {
-        height: auto;
+        height: 100%;
     }
 
     .container1 {
         height: 30vh;
     }
-
+    .heading{
+        padding:2rem 10rem;
+        text-align: center;
+     
+        font-size: 2rem;
+        font-weight: bold;
+        color:#003459; 
+       
+    }
     .tagline1 {
         font-size: 2.5rem;
         padding:10rem 10rem;

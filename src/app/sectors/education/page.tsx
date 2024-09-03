@@ -9,12 +9,13 @@ export default function education() {
       <Header />
       <div className={styles.container1}>
       
-      <div className={styles.tagline1}>Education</div>
+      <div className={styles.tagline1}>Sectors</div>
 
     </div>
   
       
       <main className={styles.main}>
+      <div className={styles.heading}>Education</div>
       <div className ={styles.about}>
           <div>
           <div className={styles.subtagline1}>  We provide services to private and government schools and colleges (including medical colleges) in this sector.</div>

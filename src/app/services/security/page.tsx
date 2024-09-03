@@ -9,12 +9,12 @@ export default function security() {
       <Header />
       <div className={styles.container1}>
       
-        <div className={styles.tagline1}>Private Security and Manned Guarding</div>
+        <div className={styles.tagline1}>Services</div>
 
       </div>
      
       <main className={styles.main}>
-     
+      <div className={styles.heading}>Private Security and Manned Guarding</div>
    
       <div className ={styles.about}>
           <div>

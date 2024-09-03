@@ -9,11 +9,12 @@ export default function otherservices() {
       <Header />
       <div className={styles.container1}>
       
-        <div className={styles.tagline1}>Other Services</div>
+        <div className={styles.tagline1}> Services</div>
 
       </div>
       
       <main className={styles.main}>
+      <div className={styles.heading}>Other Services</div>
      <div className={styles.text1}>
     
             

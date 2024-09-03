@@ -9,11 +9,11 @@ export default function catering() {
       <Header />
       <div className={styles.container1}>
       
-      <div className={styles.tagline1}>Catering</div>
+      <div className={styles.tagline1}>Services</div>
 
     </div>
     <main className={styles.main}>
-     
+     <div className={styles.heading}>Catering</div>
      <div className ={styles.about}>
        <div>
        <div className={styles.subtagline1}> Dutta Enterprise </div>
