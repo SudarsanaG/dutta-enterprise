@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <img src="../../public/favicon.ico" />
+        <link rel="icon" href="../../public/favicon.ico" />
         <title>Dutta Enterprise</title>
         <meta name="description" content="Dutta Enterprise" />
       </head>

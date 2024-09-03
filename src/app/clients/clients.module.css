@@ -52,3 +52,63 @@
 height: 50%;
 width: 80%;
 }
+/* Responsive styles for medium screens (tablets) */
+@media (max-width: 1024px) {
+  .container {
+      height: auto; /* Allow dynamic height */
+  }
+
+  .container1 {
+      height: 40vh; /* Adjust height */
+  }
+
+  .tagline1 {
+      font-size: 3rem; /* Adjust font size */
+  }
+
+  .tagline {
+      font-size: 2rem; /* Adjust font size */
+  }
+
+  .cardsContainer {
+      grid-template-columns: repeat(2, 1fr); /* Display 2 cards per row */
+      padding: 2% 10%;
+  }
+
+  .clients {
+      height: auto;
+      width: 100%; /* Adjust width */
+  }
+}
+
+/* Responsive styles for small screens (mobile devices) */
+@media (max-width: 768px) {
+  .container {
+      height: auto;
+  }
+
+  .container1 {
+      height: 30vh; /* Reduce height */
+  }
+
+  .tagline1 {
+      font-size: 2.5rem; /* Reduce font size */
+      padding: 10rem 10rem;
+       /* Narrow padding */
+  }
+
+  .tagline {
+      font-size: 1.5rem; /* Further reduce font size */
+      padding: 3% 2%; /* Narrow padding */
+  }
+
+  .cardsContainer {
+      grid-template-columns: 1fr; /* Display 1 card per row */
+      padding: 5% 5%; /* Narrow padding for small screens */
+  }
+
+  .clients {
+      width: 100%; /* Full width for clients */
+      height: auto; /* Adjust height */
+  }
+}
