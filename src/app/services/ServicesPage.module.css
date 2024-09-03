@@ -306,7 +306,7 @@
 @media (max-width: 768px) {
   .container {
     padding: 50px 10px 0px 3px; /* Adjust padding for mobile */
-    height: auto; /* Allow height to adapt to content */
+    height: 100%; /* Allow height to adapt to content */
   }
 
   .tagline {

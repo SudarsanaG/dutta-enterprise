@@ -63,7 +63,9 @@ padding:2% 10%;
       grid-gap: 30px;
       padding: 2% 4%;
   }
-
+.container{
+  height:100%;
+}
   .tagline {
       font-size: 2.5rem;
   }
@@ -79,7 +81,7 @@ padding:2% 10%;
 
 @media (max-width: 600px) {
   .container{
-    height:auto;
+    height:1005;
   }
   .cardsContainer {
       grid-template-columns: 1fr;

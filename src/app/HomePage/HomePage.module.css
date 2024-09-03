@@ -45,35 +45,48 @@
 }
 
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .container{
-    height:auto;
+/* Small screens */
+@media (max-width: 640px) {
+  .container {
+    height: 100%;
   }
+
+  .main {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
   .tagline {
-    font-size: 2.5rem; /* Smaller font size for mobile */
-    margin-top: 3rem; /* Adjust top margin for mobile */
+    font-size: 2.5rem;
+    margin-top: 20%;
   }
 
   .subtagline1 {
-    font-size: 1.5rem; /* Smaller font size for mobile */
-    margin-left: 1rem; /* Adjust margins for mobile */
-    margin-right: 1rem; /* Adjust margins for mobile */
-    border-radius: 1rem; /* Adjust border-radius for mobile */
-   
+    font-size: 1.2rem;
   }
 }
 
-@media (max-width: 480px) {
+/* Medium screens */
+@media (min-width: 641px) and (max-width: 1024px)
+ {
+  .container {
+    height: 100%;
+  }
+
+  .main {
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
   .tagline {
-    font-size: 1.8rem; /* Further smaller font size for very small screens */
-    margin-top: 1.5rem; /* Further adjust top margin for very small screens */
+    font-size: 3.5rem;
+    margin-top: 25%;
   }
 
   .subtagline1 {
-    font-size: 1rem; /* Further smaller font size for very small screens */
-    margin-left: 0.5rem; /* Further adjust margins for very small screens */
-    margin-right: 0.5rem; /* Further adjust margins for very small screens */
-    border-radius: 0.5rem; /* Further adjust border-radius for very small screens */
+    font-size: 1.5rem;
   }
 }
