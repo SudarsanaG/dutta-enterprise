@@ -29,7 +29,7 @@ export default function Footer() {
         <div className={styles.contact}>
           <h3>Contact Us</h3>
           <div className={styles.contactInfo}>
-            <p><FontAwesomeIcon icon={faMapMarkerAlt} className={styles.icon} /> Dutta Enterprise, Radhamohanpur, Debra, Pschim Midnapur, West Bengal, 721160</p>
+            <p><FontAwesomeIcon icon={faMapMarkerAlt} className={styles.icon} />Dutta House, Dutta Enterprise, Radhamohanpur, Debra, Paschim Midnapur, West Bengal, 721160</p>
             <p><FontAwesomeIcon icon={faPhone} className={styles.icon} /> +91 99331 95417</p>
             <p><FontAwesomeIcon icon={faEnvelope} className={styles.icon} /> duttatendr@rediffmail.com</p>
           </div>
@@ -39,7 +39,7 @@ export default function Footer() {
         </div>
       </div>
       <div className={styles.footerBottom}>
-        <p>© 2024 Dutta Enterprise Integrated Services Ltd. All Rights Reserved</p>
+        <p>© 2024 Dutta Enterprise. All Rights Reserved</p>
         <div className={styles.socialLinks}>
           <Link href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
             <img src="../../facebook.png" alt="Facebook" />
