@@ -81,7 +81,7 @@
         position: absolute;
     }
     .tagline1 {
-        padding: 5% 2%;
+        padding: 5rem 10rem;
         font-size: 3rem;
         margin-top: 2%;
     }
@@ -114,7 +114,7 @@
         position: absolute;
     }
     .tagline1 {
-        padding: 4% 1%;
+        padding: 5rem 10rem;
         font-size: 2.5rem;
         margin-top: 1%;
     }
@@ -141,6 +141,9 @@
 
 /* Extra small screens (max-width: 480px) */
 @media (max-width: 480px) {
+   .container{
+    height:90vh;
+   }
     .container1 {
         position: relative;
     }
@@ -149,8 +152,8 @@
     }
     
     .tagline1 {
-        padding: 15rem 5rem;
-        font-size: 2rem;
+        padding: 15rem 8rem;
+        font-size: 2.5rem;
        position: absolute;
     }
     .subtagline1 {

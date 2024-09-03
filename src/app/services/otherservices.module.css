@@ -15,8 +15,9 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6 ); /* Dark overlay with 50% opacity */
-    z-index: 1; /* Place the overlay below the text */}
+    background-color: rgba(0, 0, 0, 0.6 ); 
+    z-index: 1; 
+}
 
 .container1{
     height:50vh;
@@ -30,7 +31,7 @@
    margin-top: 5%;
     font-size: 4rem;
     font-weight: bold;
-    color: white; /* Keep text color white or adjust as needed */
+    color: white; 
   
 }
 .main{
@@ -66,50 +67,79 @@ border-bottom-right-radius: 10%;
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 2rem;
 }
- @media (max-width: 1024px) {
-    .tagline {
-        padding: 1.5rem 6rem;
-        font-size: 2.8rem;
-        margin-top: 7rem;
+ 
+/* Responsive styles for medium screens (tablets and smaller desktops) */
+@media (max-width: 1024px) {
+    .container {
+        height: auto; /* Allow dynamic height adjustment */
     }
 
-    .cardtitle {
-        padding: 2rem 4rem;
-        font-size: 2.2rem;
+    .container1 {
+        height: 40vh; /* Reduce height for medium screens */
+    }
+
+    .tagline1 {
+        font-size: 3rem; /* Adjust font size */
+    }
+
+    .main {
+        padding: 5% 5%; /* Adjust padding */
+    }
+
+    .text1 {
+        flex-direction: column; /* Stack text sections vertically */
+        text-align: left; /* Align text to the left */
     }
 
     .os {
-        height: 80vh;
-        padding: 2rem 4rem;
+        width: 70%; /* Increase image width for better layout */
+        height: auto; /* Adjust height */
+    }
+
+    .bold {
+        font-size: 1.3rem; /* Slightly smaller font for medium screens */
     }
 
     .text {
-        padding: 1rem 4rem;
-        font-size: 1.2rem;
+        font-size: 0.9rem; /* Slightly smaller text size */
     }
 }
 
-/* Small screens (phones) */
+/* Responsive styles for small screens (mobile devices) */
 @media (max-width: 768px) {
-    .tagline {
-        padding: 1rem 2rem;
-        font-size: 2rem;
-        margin-top: 5rem;
+    .container {
+        height: auto;
     }
 
-    .cardtitle {
-        padding: 1.5rem 2rem;
-        font-size: 1.8rem;
-        text-align: center;
+    .container1 {
+        height: 30vh; /* Further reduce height */
+    }
+
+    .tagline1 {
+        font-size: 2.5rem; /* Further reduce font size */
+        padding:10rem 10rem;
+    }
+
+    .main {
+        padding: 5% 3%; /* Narrow padding for smaller screens */
+    }
+
+    .text1 {
+        flex-direction: column; /* Stack text sections vertically */
+        text-align: left;
     }
 
     .os {
-        height: 60vh;
-        padding: 1.5rem 2rem;
+        width: 90%; /* Full width on small screens */
+        height: auto; /* Adjust height */
+        margin: 0 auto; /* Center the image */
+    }
+
+    .bold {
+        font-size: 1.2rem; /* Smaller font size */
     }
 
     .text {
-        padding: 0.5rem 2rem;
-        font-size: 1.1rem;
+        font-size: 0.8rem; /* Smaller text size */
     }
 }

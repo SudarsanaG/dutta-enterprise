@@ -74,60 +74,59 @@ padding: 5% 10%;
   border-bottom-right-radius: 10%;
  
 }
+/* Responsive styling for medium screens (tablets and smaller desktops) */
 @media (max-width: 1024px) {
+    .container {
+        height: auto; /* Adjust height for medium screens */
+    }
+
+    .container1 {
+        height: 40vh; /* Reduce height for medium screens */
+    }
+
     .tagline {
-        padding: 2rem 5rem;
-        font-size: 2.5rem;
+        font-size: 3rem; /* Adjust font size for medium screens */
     }
 
     .subtagline1 {
-        padding: 0 3rem;
-        font-size: 1.2rem;
-    }
-
-    .cardtitle {
-        padding: 2rem 3rem;
-        font-size: 2rem;
+        font-size: 2rem; /* Adjust font size for medium screens */
     }
 
     .about {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        flex-direction: column; /* Stack content vertically on medium screens */
+        padding: 3% 5%;
     }
 
     .payroll {
-        height: 40vh;
-        padding: 0 3rem;
+        width: 50%; /* Adjust image width for medium screens */
     }
 }
 
-/* Small screens (phones) */
+/* Responsive styling for small screens (mobile devices) */
 @media (max-width: 768px) {
+    .container {
+        height: auto; /* Adjust height for small screens */
+    }
+
+    .container1 {
+        height: 30vh; /* Reduce height for small screens */
+    }
+
     .tagline {
-        padding: 1rem 2rem;
         font-size: 2rem;
-        margin-top: 5rem;
+        padding:10rem 10rem; /* Adjust font size for small screens */
     }
 
     .subtagline1 {
-        padding: 0 1rem;
-        font-size: 1rem;
-    }
-
-    .cardtitle {
-        padding: 1rem 2rem;
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* Adjust font size for small screens */
     }
 
     .about {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        flex-direction: column; /* Stack content vertically on small screens */
+        padding: 3% 3%;
     }
 
     .payroll {
-        height: 30vh;
-        padding: 0 1rem;
+        width: 80%; /* Adjust image width for small screens */
     }
 }

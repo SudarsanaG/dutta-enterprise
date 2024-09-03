@@ -140,77 +140,86 @@
 } 
     
     
-
-
-
+/* Responsive styling for medium screens (tablets and smaller desktops) */
 @media (max-width: 1024px) {
-    .tagline {
-        padding: 2rem 5rem;
-        font-size: 2.5rem;
+    .container {
+        height: auto;
     }
 
-    .subtagline1, .subtagline2 {
-        padding: 0 3rem;
-        font-size: 1.2rem;
+    .container1 {
+        height: 40vh;
     }
 
-    .cardtitle, .cardtitle1 {
-        padding: 2rem 3rem;
+    .tagline1 {
+        font-size: 3rem;
+    }
+
+    .subtagline1 {
         font-size: 2rem;
     }
 
     .about {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        padding: 3% 5%;
     }
 
-    .security, .security1 {
-        height: 50vh;
-        padding: 2rem 3rem;
+    .soft1 {
+        flex-direction: column;
+        padding: 2% 5%;
+    }
+
+    .clean, .security1 {
+        width: 60%;
+        height: 35vh;
     }
 
     .text {
-        padding: 0.5rem 3rem;
-        font-size: 1.1rem;
+        flex-direction: column;
     }
 }
 
-/* Small screens (phones) */
+/* Responsive styling for small screens (mobile devices) */
 @media (max-width: 768px) {
-    .tagline {
-        padding: 1rem 2rem;
-        font-size: 2rem;
-        margin-top: 5rem;
+    .container {
+        height: auto;
     }
 
-    .subtagline1, .subtagline2 {
-        padding: 0 1rem;
-        font-size: 1rem;
+    .container1 {
+        height: 30vh;
     }
 
-    .cardtitle, .cardtitle1 {
-        padding: 1rem 2rem;
+    .tagline1 {
+        font-size: 2.5rem;
+        padding:10rem 10rem;
+    }
+
+    .subtagline1 {
         font-size: 1.5rem;
     }
 
     .about {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        padding: 3% 3%;
     }
 
-    .security, .security1 {
-        height: 40vh;
-        padding: 1rem 1rem;
+    .soft1 {
+        flex-direction: column;
+        padding: 3% 3%;
+    }
+
+    .clean, .security1 {
+        width: 80%;
+        height: 30vh;
     }
 
     .text {
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
-    }
-
-    .dog {
         flex-direction: column;
     }
+
+    .cardtitle1 {
+        font-size: 2rem;
+        padding: 2% 5%;
+    }
 }
+
+

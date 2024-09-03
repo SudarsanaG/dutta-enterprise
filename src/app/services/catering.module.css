@@ -88,100 +88,74 @@
     align-items: center;
     padding: 4% 10%;
 }
-/* Medium screens (tablets) */
+/* Responsive styling for medium screens (tablets and smaller desktops) */
 @media (max-width: 1024px) {
-    .tagline {
-        padding: 1.5rem 5rem;
-        font-size: 2.8rem;
-        margin-top: 7rem;
+    .container {
+        height: auto; /* Allow dynamic height adjustment */
     }
 
-    .subtagline1, .text {
-        padding: 1rem 3rem;
-        font-size: 1.2rem;
-        margin-top: 4rem;
-        text-align: center;
+    .container1 {
+        height: 40vh; /* Reduce height for medium screens */
     }
 
-    .cardtitle {
-        padding: 2rem 4rem;
-        font-size: 2.8rem;
+    .tagline1 {
+        font-size: 3rem; /* Adjust font size */
     }
 
-    .catering1 {
-        height: 50vh;
-        padding: 1.5rem 1.5rem;
+    .subtagline1, .subtagline3 {
+        font-size: 2rem; /* Adjust font size */
     }
 
-    .text1 {
-        padding: 0.5rem 3rem;
-        font-size: 1.4rem;
+    .about {
+        flex-direction: column; /* Stack items vertically */
+        padding: 3% 5%;
+    }
+
+    .text {
+        flex-direction: column; /* Stack text vertically */
+    }
+
+    .catering2 {
+        width: 60%;
+        height: 35vh; /* Adjust image size */
     }
 }
 
-/* Small screens (phones) */
+/* Responsive styling for small screens (mobile devices) */
 @media (max-width: 768px) {
-    .tagline {
-        padding: 1rem 2rem;
-        font-size: 2rem;
-        margin-top: 5rem;
+    .container {
+        height: auto;
     }
 
-    .subtagline1, .text {
-        padding: 0.5rem 1rem;
-        font-size: 1.1rem;
-        margin-top: 2rem;
-        text-align: center;
+    .container1 {
+        height: 30vh; /* Further reduce height */
+    }
+
+    .tagline1 {
+        font-size: 2.5rem; /* Reduce font size */
+        padding:10rem 10rem;
+    }
+
+    .subtagline1, .subtagline3 {
+        font-size: 1.5rem; /* Reduce font size */
+    }
+
+    .subtagline2 {
+        font-size: 0.9rem;
+    }
+
+    .about {
         flex-direction: column;
+        padding: 3% 3%;
     }
 
-    .cardtitle {
-        padding: 1rem 2rem;
-        font-size: 2rem;
-        text-align: center;
+    .text {
+        flex-direction: column;
+        padding: 2% 5%; /* Adjust padding for smaller screens */
     }
 
-    .catering1 {
-        height: 40vh;
-        padding: 1rem 1rem;
-    }
-
-    .text1 {
-        padding: 0.5rem 2rem;
-        font-size: 1.2rem;
-        border-radius: 30%;
-    }
-}
-
-/* Extra small screens (phones in portrait mode) */
-@media (max-width: 480px) {
-    .tagline {
-        padding: 0.5rem 1rem;
-        font-size: 1.5rem;
-        margin-top: 3rem;
-    }
-
-    .subtagline1, .text {
-        padding: 0.5rem 0.5rem;
-        font-size: 1rem;
-        margin-top: 1rem;
-        text-align: center;
-    }
-
-    .cardtitle {
-        padding: 0.5rem 1rem;
-        font-size: 1.5rem;
-        text-align: center;
-    }
-
-    .catering1 {
+    .catering2 {
+        width: 80%;
         height: 30vh;
-        padding: 0.5rem 0.5rem;
-    }
-
-    .text1 {
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
-        border-radius: 20%;
     }
 }

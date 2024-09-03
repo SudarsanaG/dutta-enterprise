@@ -182,74 +182,67 @@
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 2rem;
 } 
+/* Responsive styling for medium screens (tablets and smaller desktops) */
 @media (max-width: 1024px) {
-    .tagline {
-        padding: 2rem 5rem;
-        font-size: 2.5rem;
+    .container {
+        height: auto; /* Adjust height for medium screens */
+    }
+
+    .container1 {
+        height: 40vh; /* Reduce height for medium screens */
+    }
+
+    .tagline1 {
+        font-size: 3rem; /* Adjust font size for medium screens */
     }
 
     .subtagline1 {
-        padding: 0 3rem;
-        font-size: 1.2rem;
-    }
-
-    .cardtitle {
-        padding: 2rem 3rem;
-        font-size: 2rem;
+        font-size: 2rem; /* Adjust font size for medium screens */
     }
 
     .about, .soft1, .hard1 {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: column; /* Stack content vertically on medium screens */
+        padding: 3% 5%;
     }
 
     .ifms, .clean {
-        height: 40vh;
-        padding: 0 3rem;
-    }
-
-    .softskills, .hardskills {
-        padding: 4rem 3rem;
-        font-size: 2rem;
+        width: 50%; /* Adjust image width for medium screens */
     }
 }
 
-/* Small screens (phones) */
+/* Responsive styling for small screens (mobile devices) */
 @media (max-width: 768px) {
-    .tagline {
-        padding: 1rem 2rem;
+    .container {
+        height: auto; /* Adjust height for small screens */
+    }
+
+    .container1 {
+        height: 30vh; /* Reduce height for small screens */
+    }
+
+    .tagline1 {
         font-size: 2rem;
-        margin-top: 5rem;
+        padding: 10rem 10rem; /* Adjust font size for small screens */
     }
 
     .subtagline1 {
-        padding: 0 1rem;
-        font-size: 1rem;
-    }
-
-    .cardtitle {
-        padding: 1rem 2rem;
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* Adjust font size for small screens */
     }
 
     .about, .soft1, .hard1 {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        flex-direction: column; /* Stack content vertically on small screens */
+        padding: 3% 3%;
     }
 
     .ifms, .clean {
-        height: 30vh;
-        padding: 0 1rem;
+        width: 80%; /* Adjust image width for small screens */
     }
 
     .softskills, .hardskills {
-        padding: 3rem 1rem;
-        font-size: 1.8rem;
+        font-size: 1.8rem; /* Adjust headline sizes for small screens */
     }
 
     .soft2, .soft3, .soft4, .hard2, .hard3, .hard4 {
-        padding: 0 1rem;
-        font-size: 1rem;
+        font-size: 0.9rem; /* Adjust content font size for small screens */
     }
 }

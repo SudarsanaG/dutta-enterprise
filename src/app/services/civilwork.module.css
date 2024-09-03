@@ -67,51 +67,66 @@
    width: 50%;
  
 }
+
+/* Responsive styling for medium screens (tablets and smaller desktops) */
 @media (max-width: 1024px) {
-    .tagline {
-        padding: 1.5rem 5rem;
-        font-size: 2.8rem;
-        margin-top: 7rem;
+    .container {
+        height: auto; /* Allow dynamic height adjustment */
     }
 
-    .subtagline1, .civilworktagline {
-        padding: 1rem 3rem;
-        font-size: 1.2rem;
+    .container1 {
+        height: 40vh; /* Reduce height for medium screens */
     }
 
-    .cardtitle {
-        padding: 2rem 4rem;
-        font-size: 2.8rem;
+    .tagline1 {
+        font-size: 3rem; /* Adjust font size */
+    }
+
+    .subtagline1 {
+        font-size: 1.8rem; /* Adjust font size */
+    }
+
+    .about {
+        flex-direction: column; /* Stack items vertically */
+        padding: 3% 5%;
     }
 
     .civilwork {
-        height: 80vh;
-        padding: 1.5rem;
+        width: 70%; /* Increase width for better layout */
+        height: auto; /* Adjust height */
     }
 }
 
-/* Small screens (phones) */
+/* Responsive styling for small screens (mobile devices) */
 @media (max-width: 768px) {
-    .tagline {
-        padding: 1rem 2rem;
-        font-size: 2rem;
-        margin-top: 5rem;
+    .container {
+        height: auto;
     }
 
-    .subtagline1, .civilworktagline {
-        padding: 0.5rem 1rem;
-        font-size: 1.1rem;
-        text-align: center;
+    .container1 {
+        height: 30vh; /* Further reduce height */
     }
 
-    .cardtitle {
-        padding: 1rem 2rem;
-        font-size: 2rem;
-        text-align: center;
+    .tagline1 {
+        font-size: 2.5rem; /* Reduce font size */
+        padding:10rem 10rem;
+    }
+
+    .subtagline1 {
+        font-size: 1.5rem; /* Reduce font size */
+    }
+
+    .subtagline2 {
+        font-size: 0.9rem;
+    }
+
+    .about {
+        flex-direction: column;
+        padding: 3% 3%;
     }
 
     .civilwork {
-        height: 60vh;
-        padding: 1rem;
+        width: 90%; /* Full width on small screens */
+        height: auto; /* Adjust height */
     }
 }
