@@ -181,16 +181,10 @@
 
     .about {
         flex-direction: column; /* Stack vertically */
-        padding: 2% 3%; /* Adjust padding for small screens */
+        padding: 2% 10%; /* Adjust padding for small screens */
     }
 
-    .os {
-        height: 60vh; /* Adjust for small screens */
-    }
-
-    .othersectors {
-        height: 30vh;
-    }
+  
 }
 
 /* Responsive for extra small screens (less than 480px) */

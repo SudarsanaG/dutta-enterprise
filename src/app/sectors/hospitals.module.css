@@ -142,9 +142,13 @@
     }
     .subtagline1 {
         font-size: 1.2rem;
+        text-align: left;
        
     }
-
+.subtagline2 {
+    text-align: left;
+    font-size: 0.9rem;
+}
     .edu1 {
         width: 60%;
         height: 80%;

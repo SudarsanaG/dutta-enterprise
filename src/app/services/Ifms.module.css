@@ -234,23 +234,32 @@
 
     .container1 {
         height: 30vh; /* Reduce height for small screens */
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-    .heading{
-        padding:2rem 10rem;
-        text-align: center;
-     
-        font-size: 2rem;
-        font-weight: bold;
-        color:#003459; 
-       
-    }
+   .heading{
+    align-items: center;
+    line-height: 1;
+    font-size: 2rem;
+    font-weight: bold;
+    color:#003459;
+    justify-content: center;
+    
+   }
     .tagline1 {
         font-size: 2rem;
-        padding: 10rem 10rem; /* Adjust font size for small screens */
+        
+
     }
 
     .subtagline1 {
         font-size: 1.5rem; /* Adjust font size for small screens */
+        text-align: left;
+    }
+    .subtagline2{
+        font-size: 0.9rem;
+        text-align: left;
     }
 
     .about, .soft1, .hard1 {
