@@ -92,6 +92,13 @@
 .dropdownItem:hover a {
   color: white;
 }
+.dropdownItem1:hover {
+  background-color: rgb(32, 33, 84);
+}
+
+.dropdownItem1:hover a {
+  color: white;
+}
 
 .dropdownItem a {
   color: #003459;
@@ -194,8 +201,14 @@
   .dropdownItem:last-child {
     border-bottom: none;
   }
+  .dropdownItem1:last-child {
+    border-bottom: none;
+  }
 
   .dropdownItem:hover {
+    background-color: #007ea7;
+  }
+  .dropdownItem1:hover {
     background-color: #007ea7;
   }
 
