@@ -21,6 +21,9 @@
     height:50vh;
     background: url('/other sector.jpeg') no-repeat center center/cover;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .heading{
     padding:1% 10%;
@@ -84,6 +87,9 @@
    @media (max-width: 1024px) {
     .container1{
        height:40vh;
+       display: flex;
+       justify-content: center;
+       align-items: center;
        }
        .container1::before{
         position:absolute;
@@ -102,12 +108,12 @@
        
     }
     .subtagline1 {
-        padding: 1.5rem 2rem;
+        text-align: left;
         font-size: 1.5rem;
     }
 
     .subtagline2 {
-        padding: 2rem 1rem;
+        text-align: left;
         font-size: 0.9rem;
     }
 
@@ -138,6 +144,9 @@
    }
     .container1{
         height:30vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
        }
        .container1::before{
         position:absolute;
@@ -149,20 +158,19 @@
     .heading{
         
         text-align: center;
-     
         font-size: 2rem;
         font-weight: bold;
         color:#003459; 
        
     }
     .subtagline1 {
-        padding: 1rem 1rem;
+        
         font-size: 1.2rem;
-        text-align: center; /* Center text for small screens */
+        text-align: left; /* Center text for small screens */
     }
 
     .subtagline2 {
-        padding: 1rem 0.5rem;
+        text-align: left;
         font-size: 0.8rem;
     }
 
@@ -189,6 +197,9 @@
 @media (max-width: 480px) {
     .container1{
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
        }
        .container1::before{
         position:absolute;
@@ -199,13 +210,13 @@
     }
 
     .subtagline1 {
-        padding: 0.5rem 1rem;
+        
         font-size: 1rem;
-        text-align: center;
+        text-align: left;
     }
 
     .subtagline2 {
-        padding: 0.5rem 0.5rem;
+    text-align: left;
         font-size: 0.7rem;
     }
 

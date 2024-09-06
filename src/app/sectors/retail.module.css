@@ -21,6 +21,9 @@
     height:50vh;
     background: url('/other sector.jpeg') no-repeat center center/cover;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .heading{
     padding:1% 10%;
@@ -87,6 +90,9 @@
    }
     .container1 {
        height:50vh;
+       display: flex;
+       justify-content: center;
+       align-items: center;
     }
     .container1::before {
         position: absolute;
@@ -106,11 +112,11 @@
         margin-top: 2%;
     }
     .subtagline1 {
-        padding: 1rem 2%;
+        text-align: left;
         font-size: 1.5rem;
     }
     .subtagline2 {
-        padding: 2% 1%;
+        text-align: left;
         font-size: 1rem;
     }
     .cardtitle {
@@ -132,12 +138,15 @@
    }
     .container1 {
        height:30vh;
+       display: flex;
+       justify-content: center;
+       align-items: center;
     }
     .container1::before {
         position: absolute;
     }
     .tagline1 {
-        padding: 10rem 10rem;
+        padding: 6rem 10rem;
         font-size: 2.5rem;
         margin-top: 1%;
     }
@@ -150,12 +159,12 @@
        
     }
     .subtagline1 {
-        padding: 1rem;
+        
         font-size: 1.2rem;
-        text-align: center;
+        text-align: left;
     }
     .subtagline2 {
-        padding: 2% 1%;
+        text-align: left;
         font-size: 0.9rem;
     }
     .cardtitle {
@@ -177,6 +186,9 @@
    }
     .container1 {
         height:30vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .container1::before {
         position: absolute;
@@ -196,11 +208,12 @@
     .subtagline1 {
         padding: 0.5rem;
         font-size: 1rem;
-        text-align: center;
+        text-align: left;
     }
     .subtagline2 {
         padding: 1rem 0.5rem;
         font-size: 0.8rem;
+        text-align: left;
     }
     .cardtitle {
         padding: 1rem;

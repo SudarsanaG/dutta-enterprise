@@ -21,6 +21,9 @@
     height:50vh;
     background: url('/other sector.jpeg') no-repeat center center/cover;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .heading{
     padding:1% 10%;
@@ -84,6 +87,9 @@
    @media screen and (max-width: 1024px) {
     .container1{
         height:50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
        }
        .container1::before{
         position:absolute;
@@ -95,19 +101,18 @@
     .heading{
     
         text-align: center;
-     
         font-size: 3rem;
         font-weight: bold;
         color:#003459; 
        
     }
     .subtagline1 {
-        padding: 1.5rem 2rem;
+        text-align: left;
         font-size: 1.5rem;
     }
 
     .subtagline2 {
-        padding: 2% 1rem;
+        text-align: left;
         font-size: 1rem;
     }
 
@@ -127,33 +132,36 @@
 @media screen and (max-width: 768px) {
     .container{
         height:100%;
+        
     }
     .container1{
       height:30vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
        }
        .container1::before{
         position:absolute;
        }
     .tagline1 {
-        padding: 10rem 5rem;
-        font-size: 2.8rem;
+    text-align: center;
+    font-size: 2.8rem;
     }
 
     .subtagline1 {
-        padding: 1rem;
+        text-align: left;
         font-size: 1.2rem;
     }
     .heading{
     
         text-align: center;
-     
         font-size: 2rem;
         font-weight: bold;
         color:#003459; 
-       
+       line-height: 1;
     }
     .subtagline2 {
-        padding: 1rem;
+        text-align: left;
         font-size: 0.9rem;
     }
 
@@ -171,6 +179,9 @@
 @media screen and (max-width: 480px) {
    .container1{
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
    }
    .container1::before{
     position:absolute;
@@ -185,13 +196,13 @@
     }
 
     .subtagline1 {
-        padding: 1rem;
+        
         font-size: 1rem;
-        text-align: center;
+        text-align: left;
     }
 
     .subtagline2 {
-        padding: 1rem 0.5rem;
+        text-align: left;
         font-size: 0.8rem;
     }
 

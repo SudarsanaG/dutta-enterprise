@@ -21,6 +21,9 @@
     height: 50vh;
     background: url('/other sector.jpeg') no-repeat center center/cover;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .heading{
     padding:1% 10%;
@@ -78,6 +81,9 @@
     }
     .container1{
         height: 60vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
        }
        .container1::before{
         position:absolute;
@@ -118,6 +124,9 @@
     }
     .container1{
         height: 30vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
        }
        .container1::before{
         position:absolute;
@@ -160,7 +169,9 @@
     /* For extra small screens (mobile devices) */
     .container1{
         height:40vh;
-       
+        display: flex;
+      justify-content: center;
+      align-items: center;
         
        }
        .container1::before{
