@@ -45,10 +45,12 @@
 .tagline2{
     padding:2% 12%;
     text-align:start;
- color:#003459;
+    color:#003459;
     font-size: 2rem;
     font-weight: bold;
     font-style: italic;
+    display: block;
+    
     
   
   }

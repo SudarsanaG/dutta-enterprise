@@ -170,14 +170,16 @@ height: 40%;
     height:60vh;
   }
   .tagline1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       padding:10rem;
   }
   .subtagline2 {
       font-size: 2rem;
   }
   .cardsContainer {
-      padding: 2% 5%;
+      padding: 2% 15%;
+      grid-template-columns: repeat(1,1fr);
+      
   }
   .certificates {
       font-size: 2.5rem;
@@ -186,6 +188,19 @@ height: 40%;
       padding: 2rem 5rem;
       width:90%;
       height:30%;
+  }
+  .logo1{
+    width: 50%; /* Adjust width as needed */
+      height: auto; /* Maintain aspect ratio */
+  
+     
+      
+  }
+  .logo2{
+    width: 50%; /* Adjust width as needed */
+      height: auto; /* Maintain aspect ratio */
+    
+      
   }
 }
 
@@ -197,15 +212,17 @@ height: 40%;
     height:30vh;
   }
   .tagline1 {
-      font-size: 2.5rem;
+      font-size: 2rem;
       padding: 10rem;
   }
   .subtagline2 {
       font-size: 1.75rem;
   }
   .cardsContainer {
-      padding: 2% 3%;
-  }
+    padding: 2% 10%;
+    grid-template-columns: repeat(1,1fr);
+    
+}
   .about {
       flex-direction: column;
       padding: 3% 5%;
@@ -225,6 +242,19 @@ height: 40%;
     width:90%;
     height:30%;
 }
+.logo1{
+  width: 20%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+
+   
+    
+}
+.logo2{
+  width: 15%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+  
+    
+}
 }
 
 @media (max-width: 480px) {
@@ -235,14 +265,18 @@ height: 40%;
     height:30vh;
   }
   .tagline1 {
-      font-size: 2rem;
+      font-size: 1.5rem;
       padding: 10rem;
   }
   .subtagline2 {
       font-size: 1.5rem;
   }
   .cardsContainer {
-      padding: 2% 2%;
+    
+      padding: 2% 10%;
+      grid-template-columns: repeat(1,1fr);
+      
+  
   }
   .certificates {
       font-size: 1.5rem;
@@ -250,5 +284,18 @@ height: 40%;
   .certificates2 {
     width:90%;
     height:50%;
+  }
+  .logo1{
+    width: 30%; /* Adjust width as needed */
+      height: auto; /* Maintain aspect ratio */
+  
+     
+      
+  }
+  .logo2{
+    width: 20%; /* Adjust width as needed */
+      height: auto; /* Maintain aspect ratio */
+    
+      
   }
 }
