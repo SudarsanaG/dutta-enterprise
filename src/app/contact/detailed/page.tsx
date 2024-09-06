@@ -18,7 +18,7 @@ export default function ContactUs() {
                     </p>
                     <p>
                         <span className={styles.icon}>✉️</span>
-                        duttatendr@rediffmail.com
+                        info@duttaenterprise.com
                     </p>
                 </div>
             </div>
