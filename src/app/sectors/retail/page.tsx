@@ -24,7 +24,7 @@ export default function retail() {
           </div>
          </div>
                  
-      <img src="../../retail.jpg" alt="edu1" className={styles.edu1}/>
+      <img src="../../retail.jpg" alt="edu1" className={styles.retail1}/>
                        
       </div>
       

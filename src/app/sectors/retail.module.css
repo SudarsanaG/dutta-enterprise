@@ -172,11 +172,12 @@
         font-size: 2rem;
     }
     .retail {
-        height: 60vh;
+        width: 80%; /* Increase width for better readability */
+        height: auto;
+        padding: 0;
+
     }
-    .retail1 {
-        height: 30vh;
-    }
+    
 }
 
 /* Extra small screens (max-width: 480px) */

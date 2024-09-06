@@ -106,7 +106,9 @@
         font-size: 1.8rem;
         text-align: left;
     }
-
+.subtagline2{
+    text-align: left;
+}
     .about {
         padding: 3% 8%;
     }
@@ -152,6 +154,7 @@
     .subtagline2 {
         padding: 2% 0 0 0;
         font-size: 0.9rem;
+        text-align: left;
     }
 
     .about {
@@ -193,7 +196,7 @@
     .subtagline2 {
         padding: 1% 0 0 0;
         font-size: 0.8rem;
-        text-align: center; /* Center text for mobile */
+        text-align: left; /* Center text for mobile */
     }
 
     .about {
