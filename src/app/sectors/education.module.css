@@ -85,9 +85,10 @@
     .tagline1 {
         padding:10rem 5rem;
         font-size: 3.5rem;
+        
     }
     .heading{
-        padding:2rem 10rem;
+    
         text-align: center;
      
         font-size: 2rem;
@@ -97,6 +98,7 @@
     }
     .subtagline1 {
         font-size: 1.8rem;
+        text-align: left;
     }
 
     .about {
@@ -125,7 +127,7 @@
         font-size: 3rem;
     }
     .heading{
-        padding:2rem 10rem;
+        
         text-align: center;
      
         font-size: 2rem;
@@ -135,6 +137,7 @@
     }
     .subtagline1 {
         font-size: 1.5rem;
+        text-align: left;
     }
 
     .subtagline2 {
@@ -163,7 +166,9 @@
        .container1::before{
         position:absolute;
        }
-
+.heading{
+    text-align: center;
+}
     .tagline1 {
         padding: 10rem 5rem;
         font-size: 2.5rem;
@@ -171,7 +176,7 @@
 
     .subtagline1 {
         font-size: 1.2rem;
-        text-align: center; /* Center text for mobile */
+        text-align: left; /* Center text for mobile */
     }
 
     .subtagline2 {

@@ -92,10 +92,10 @@
         position: absolute;
     }
     .heading{
-        padding:2rem 10rem;
+        
         text-align: center;
      
-        font-size: 2rem;
+        font-size: 3rem;
         font-weight: bold;
         color:#003459; 
        
@@ -142,9 +142,8 @@
         margin-top: 1%;
     }
     .heading{
-        padding:2rem 10rem;
+        
         text-align: center;
-     
         font-size: 2rem;
         font-weight: bold;
         color:#003459; 
@@ -183,10 +182,8 @@
         position: absolute;
     }
     .heading{
-        padding:2rem 9rem;
         text-align: center;
-     
-        font-size: 3rem;
+        font-size: 2rem;
         font-weight: bold;
         color:#003459; 
        

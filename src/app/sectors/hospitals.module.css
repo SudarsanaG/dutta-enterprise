@@ -84,9 +84,8 @@
         padding: 10rem 5rem;
     }
     .heading{
-        padding:2rem 10rem;
+        
         text-align: center;
-     
         font-size: 3rem;
         font-weight: bold;
         color:#003459; 
@@ -125,10 +124,9 @@
         padding: 10rem 5rem;
     }
     .heading{
-        padding:2rem 10rem;
+        
         text-align: center;
-     
-        font-size: 3rem;
+        font-size: 2rem;
         font-weight: bold;
         color:#003459; 
        
@@ -161,7 +159,9 @@
         font-size: 2rem;
         padding: 7rem 5rem;
     }
-
+.heading{
+    text-align: center;
+}
     .subtagline1 {
         font-size: 1rem;
         padding: 0.5rem;
