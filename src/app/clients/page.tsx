@@ -29,6 +29,7 @@ export default function Advantages() {
         <img src="../../wb agro.jpeg" alt="clients" className={styles.clients}/>
         <img src="../../wb pwd.png" alt="clients" className={styles.clients}/>
         <img src="../../wb rural.jpg" alt="clients" className={styles.clients}/>
+        <img src="../../client navo.jpg" alt="clients" className={styles.clients}/>
         </div>
 
       

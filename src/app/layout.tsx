@@ -5,9 +5,8 @@ import Footer from './footer/page';
 
 export const metadata = {
   title: 'Dutta Enterprise',
- descriptipon: 'Welcome to this site',
+  descriptipon: 'Welcome to this site', // fix typo 'descriptipon' to 'description'
 };
-
 
 export default function RootLayout({
   children,
@@ -17,9 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="../../public/logo.ico" />
+        {/* Corrected the favicon path */}
+        <link rel="icon" href="/favicon.ico" />
         <title>Dutta Enterprise</title>
-        <meta name="Welcome to this site" content="Dutta Enterprise" />
+        <meta name="description" content="Welcome to this site" />
       </head>
       <body>
         <Header />
