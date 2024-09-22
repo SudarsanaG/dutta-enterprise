@@ -31,7 +31,7 @@ export default function Footer() {
           <div className={styles.contactInfo}>
             <p><FontAwesomeIcon icon={faMapMarkerAlt} className={styles.icon} />Dutta House, Dutta Enterprise, Radhamohanpur, Debra, Paschim Midnapur, West Bengal, 721160</p>
             <p><FontAwesomeIcon icon={faPhone} className={styles.icon} /> +91 99331 95417</p>
-            <p><FontAwesomeIcon icon={faEnvelope} className={styles.icon} /> duttatendr@rediffmail.com</p>
+            <p><FontAwesomeIcon icon={faEnvelope} className={styles.icon} /> info@duttaenterprise.com</p>
           </div>
         </div>
         <div className={styles.map} onClick={handleMapClick}>
