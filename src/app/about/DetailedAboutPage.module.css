@@ -4,7 +4,7 @@
     padding: 0 0px;
     max-width: 100%;
     margin: auto;
-    height:280vh;
+    min-height: 300vh;
     background-color: whitesmoke;
     
 }
@@ -21,18 +21,19 @@
 
 .container1{
   height:50vh;
-  background: url('/cov1.webp') no-repeat center center/cover;
+  background: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&h=1080&fit=crop&q=80') no-repeat center center/cover;
   position: relative;
 }
 
 .tagline1 {
   padding:10% 3%;
   text-align: center;
- margin-top: 5%;
+  margin-top: 5%;
   font-size: 4rem;
   font-weight: bold;
-  color: white; /* Keep text color white or adjust as needed */
-
+  color: white !important;
+  position: relative;
+  z-index: 2;
 }
 
 .subtagline1 {
@@ -41,7 +42,7 @@
   
   text-align: left;
   color:#424952;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
  
 }
 .subtagline2 {
@@ -54,6 +55,30 @@
    line-height: 1;
 }
 
+
+/* Vision/Mission Section with Background */
+.visionMissionSection {
+  width: 100%;
+  padding: 4% 0;
+  position: relative;
+  background: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1920&h=1080&fit=crop&q=80') no-repeat center center/cover;
+}
+
+.visionMissionSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.visionMissionSection > * {
+  position: relative;
+  z-index: 2;
+}
 
 /* Container for the cards */
 .cardsContainer {
@@ -68,18 +93,18 @@
   
 .cardContentContainer {
   display: flex; /* Flexbox for aligning content */
-  justify-content: space-between; /* Space between content and logo */
+  justify-content: flex-start; /* Align to start */
   align-items: center; /* Align content and logo vertically */
- 
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 .card {
-  background:linear-gradient(120deg, #003459, #00A8E8);
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-  border-radius: 8px; /* Rounded corners */
- /* Padding inside the card */
+  background: white;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 12px; /* Rounded corners */
   text-align: left;
-  transition: transform 0.3s ease; /* Smooth transform for hover effect */
-  padding: 2% 5%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transform for hover effect */
+  padding: 2.5rem;
 }
   
  
@@ -92,38 +117,36 @@
   /* Hover effect for the cards */
   .card:hover {
     transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
   }
   
   /* Card title styling */
   .cardTitle {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    margin-bottom: 1rem;
-    color:white; /* Same color as other text for consistency */
-
+    margin-bottom: 0;
+    color: #1a1a1a; /* Dark text color */
   }
   
   /* Card content text styling */
   .cardContent {
-    font-size: 1.1rem;
-    font-style: italic;
-    line-height: 1;
-    color:white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    line-height: 1.6;
+    color: #424952;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 1rem;
   }
   
 .logo1{
-  width: 130px; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
-
-   
-    
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
 }
 .logo2{
-  width: 100px; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
-  
-    
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
 }
 .about{
  
@@ -141,25 +164,41 @@ height: 40%;
   
 }
 .certificates{
-         
-    text-align: center;
-    font-size: 3rem;
-    font-weight: bold;
-     color: #003459;
-   
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #003459;
+  margin-bottom: 3rem;
+  padding-top: 4rem;
+}
+
+.certificatesSection {
+  background-color: white;
+  padding: 4rem 0;
+  width: 100%;
 }
 
 .certificates1{
-  margin-top: 3rem;
-  display: flex; /* Flexbox for aligning content */
-  justify-content: space-between;
-  align-items: center; /* Align content and logo vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
   padding: 2rem 8rem;
+  flex-wrap: wrap;
 }
+
 .certificates2{
-  width: 350px; /* Adjust width as needed */
-  height: auto; /* Maintain aspect ratio */
-  
+  width: 350px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover;
+}
+
+.certificates2:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
 }
  /* Responsive Styling */
 @media (max-width: 1024px) {
@@ -183,11 +222,14 @@ height: 40%;
   }
   .certificates {
       font-size: 2.5rem;
+      padding-top: 2rem;
+  }
+  .certificates1 {
+      gap: 2rem;
+      padding: 2rem 4rem;
   }
   .certificates2 {
-      padding: 2rem 5rem;
-      width:90%;
-      height:30%;
+      width: 300px;
   }
   .logo1{
     width: 50%; /* Adjust width as needed */
@@ -233,14 +275,16 @@ height: 40%;
   }
   .certificates {
       font-size: 2rem;
+      padding-top: 2rem;
   }
   .certificates1 {
       flex-direction: column;
+      gap: 2rem;
       padding: 2rem 3rem;
   }
   .certificates2 {
-    width:90%;
-    height:30%;
+    width: 100%;
+    max-width: 400px;
 }
 .logo1{
   width: 20%; /* Adjust width as needed */
@@ -280,10 +324,15 @@ height: 40%;
   }
   .certificates {
       font-size: 1.5rem;
+      padding-top: 2rem;
+  }
+  .certificates1 {
+      gap: 1.5rem;
+      padding: 2rem 1.5rem;
   }
   .certificates2 {
-    width:90%;
-    height:50%;
+    width: 100%;
+    max-width: 350px;
   }
   .logo1{
     width: 30%; /* Adjust width as needed */

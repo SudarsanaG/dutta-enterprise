@@ -7,9 +7,11 @@ export default function Careers() {
   return (
     <div className={styles.container}>
       <Header />
-     
-      <h2 className={styles.title}>Job Positions</h2>
+      <div className={styles.container1}>
+        <div className={styles.tagline1}>Careers</div>
+      </div>
       <main className={styles.main}>
+        <h2 className={styles.title}>Job Positions</h2>
         <div className={styles.content}>
           <table className={styles.table}>
             <thead>

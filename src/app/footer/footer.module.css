@@ -11,6 +11,31 @@
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 20px;
+    gap: 2rem;
+}
+
+.logoSection {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 10px;
+    max-width: 300px;
+}
+
+.logo {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.companyDescription {
+    color: white;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 .links, .contact {
@@ -22,7 +47,7 @@
 .links h3, .contact h3 {
     font-size: 30px;
     margin-bottom: 10px;
-    padding-bottom: 5px; /* Adjust spacing between text and line */
+    padding-bottom: 5px;
 }
 
 .contactInfo {
@@ -32,9 +57,9 @@
 .links ul {
     list-style: none;
     padding: 0;
-    display: grid; /* Use grid layout */
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
-    gap: 8px; /* Space between items */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
 }
 
 .links ul li {
@@ -58,7 +83,18 @@
 }
 
 .icon {
-    margin-right: 8px; /* Space between icon and text */
+    margin-right: 8px;
+}
+
+.emailLink {
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.emailLink:hover {
+    color: #d1d1d1;
+    text-decoration: underline;
 }
 
 .map {
@@ -70,7 +106,7 @@
 }
 
 .mapImage {
-    width: 300px; /* Increased size for the map */
+    width: 300px;
     height: auto;
     border-radius: 8px;
     transition: transform 0.3s ease;
@@ -107,22 +143,38 @@
         text-align: center;
     }
 
+    .logoSection {
+        margin-bottom: 20px;
+        max-width: 100%;
+        align-items: center;
+    }
+
+    .logo {
+        height: 60px;
+        margin-bottom: 1rem;
+    }
+
+    .companyDescription {
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
     .links, .contact {
         flex: none;
         margin-bottom: 20px;
     }
 
     .links ul {
-        grid-template-columns: 1fr; /* Single column layout for small screens */
+        grid-template-columns: 1fr;
     }
 
     .map {
-        margin: 20px 0; /* Add margin for better spacing */
+        margin: 20px 0;
     }
 
     .mapImage {
-        width: 100%; /* Make map image responsive */
-        max-width: 300px; /* Limit maximum width */
+        width: 100%;
+        max-width: 300px;
     }
 
     .footerBottom {
@@ -138,10 +190,10 @@
 
 @media (max-width: 480px) {
     .links h3, .contact h3 {
-        font-size: 24px; /* Smaller font size for smaller screens */
+        font-size: 24px;
     }
 
     .footerBottom {
-        font-size: 12px; /* Smaller font size for footer bottom */
+        font-size: 12px;
     }
 }

@@ -18,7 +18,7 @@ export default function AboutPage() {
       <main className={styles.main}>
                       
         <div className={styles.aboutpagephoto}>
-          <img src="../../about1.png" alt="aboutpage" className={styles.aboutpage}/>
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&h=1080&fit=crop&q=80" alt="aboutpage" className={styles.aboutpage}/>
           <div >
         <div className={styles.tagline}> Providing best facilities management services since 15+ years</div>
           <div className={styles.subtagline1}>We are among select companies in India that have a wide geographic
@@ -37,11 +37,8 @@ export default function AboutPage() {
          
         
           {!isExpanded && (
-            <Link href="/about/detailed">
-              <button className={styles.readMoreButton}>
-             
-                Read More
-              </button>
+            <Link href="/about/detailed" className={styles.readMoreButton}>
+              About Us
             </Link>
           )}
           </div>

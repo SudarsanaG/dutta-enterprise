@@ -13,14 +13,20 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContent}>
+        <div className={styles.logoSection}>
+          <img src="/logo.jpg" alt="Dutta Enterprise Logo" className={styles.logo} />
+          <p className={styles.companyDescription}>
+            Dutta Enterprise is a leading provider of integrated facility management services, delivering comprehensive solutions across multiple sectors.
+          </p>
+        </div>
         <div className={styles.links}>
           <h3>Links</h3>
           <div className={styles.contactInfo}>
             <ul>
                 <li><Link href="/">Home</Link></li>
                 <li><Link href="/about/detailed">About</Link></li>
-                <li><Link href="/services">Services</Link></li>
-                <li><Link href="/sectors">Sectors</Link></li>
+                <li><Link href="/#services">Services</Link></li>
+                <li><Link href="/#sectors">Sectors</Link></li>
                 <li><Link href="/career">Career</Link></li>
                 <li><Link href="/contact">Contact us</Link></li>
             </ul>
@@ -31,7 +37,7 @@ export default function Footer() {
           <div className={styles.contactInfo}>
             <p><FontAwesomeIcon icon={faMapMarkerAlt} className={styles.icon} />Dutta House, Dutta Enterprise, Radhamohanpur, Debra, Paschim Midnapur, West Bengal, 721160</p>
             <p><FontAwesomeIcon icon={faPhone} className={styles.icon} /> +91 99331 95417</p>
-            <p><FontAwesomeIcon icon={faEnvelope} className={styles.icon} /> info@duttaenterprise.com</p>
+            <p><FontAwesomeIcon icon={faEnvelope} className={styles.icon} /> <a href="mailto:info@duttaenterprise.com" className={styles.emailLink}>info@duttaenterprise.com</a></p>
           </div>
         </div>
         <div className={styles.map} onClick={handleMapClick}>

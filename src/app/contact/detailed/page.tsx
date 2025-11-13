@@ -1,9 +1,14 @@
+import Header from '../../components/Header';
 import styles from './contact.detailed.module.css';
 
 export default function ContactUs() {
   return (
-    <>
-        <div className={styles.container}>
+    <div className={styles.pageContainer}>
+      <Header />
+      <div className={styles.container1}>
+        <div className={styles.tagline1}>Contact Us</div>
+      </div>
+      <div className={styles.container}>
         <div className={styles.contactSection}>
             <div className={styles.contactDetails}>
             <h3>Contact Details</h3>
@@ -18,7 +23,7 @@ export default function ContactUs() {
                     </p>
                     <p>
                         <span className={styles.icon}>✉️</span>
-                        info@duttaenterprise.com
+                        <a href="mailto:info@duttaenterprise.com" className={styles.emailLink}>info@duttaenterprise.com</a>
                     </p>
                 </div>
             </div>
@@ -40,7 +45,7 @@ export default function ContactUs() {
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
+      </div>
     </div>
-  </>
   );
 }

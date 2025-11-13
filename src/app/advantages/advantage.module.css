@@ -1,103 +1,154 @@
 .container{
-height:120vh;
+min-height:120vh;
 background-color: whitesmoke;
 }
 .main{
-padding:2% 10%;
+padding:3% 10%;
 }
 .tagline{
-    
-        padding:1% 3%;
-        text-align: center;
-       
-        font-size: 3rem;
-        font-weight: bold;
-        color:#003459; /* Keep text color white or adjust as needed */
-      
-      }
+  padding:1% 3%;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
 
-      .cardsContainer {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 50px;
-        padding: 2% 6%;
-        margin-top: 2rem;
-    }
-    
-    .cardContentContainer {
-        position: relative; /* Required for absolute positioning of the pseudo-element */
-        padding-right: 1rem; /* Space for the vertical line */
-    }
-    
-    .cardContentContainer:not(:last-child)::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        height: calc(100% + 5px); 
-        width: 2px; /* Vertical line thickness */
-        background-color: #003459; /* Vertical line color */
-    }
-    
- 
-  /* Card title styling */
-  .cardTitle {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    color:#003459; /* Same color as other text for consistency */
+.taglineRed {
+  color: #003459; /* Website blue color */
+}
 
+.taglineBlack {
+  color: #000000; /* Black color */
+}
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  padding: 0 5%;
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  background-color: #003459;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover .cardTitle {
+  color: white;
+}
+
+.card:hover .cardContent {
+  color: white;
+}
+
+.card:hover .arrowIcon {
+  color: white;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.arrowIcon {
+  width: 24px;
+  height: 24px;
+  color: #003459; /* Website blue color */
+  flex-shrink: 0;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: #003459;
+}
+
+.cardContent {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333333;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .main {
+    padding: 3% 5%;
   }
   
-  /* Card content text styling */
-  .cardContent {
-    font-size: 1rem;
-     line-height: 1.5;
-    color:#003459;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  /* Responsive adjustments */
-@media (max-width: 1024px) {
   .cardsContainer {
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 30px;
-      padding: 2% 4%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+    padding: 0 2%;
   }
-.container{
-  height:100%;
-}
+  
+  .container {
+    min-height: 100%;
+  }
+  
   .tagline {
-      font-size: 2.5rem;
+    font-size: 3rem;
+  }
+
+  .card {
+    padding: 1.5rem;
   }
 
   .cardTitle {
-      font-size: 1.25rem;
+    font-size: 1.25rem;
   }
 
   .cardContent {
-      font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 }
 
 @media (max-width: 600px) {
-  .container{
-    height:1005;
+  .container {
+    min-height: 100%;
   }
+  
+  .main {
+    padding: 3% 3%;
+  }
+  
   .cardsContainer {
-      grid-template-columns: 1fr;
-      grid-gap: 20px;
-      padding: 2% 2%;
+    grid-template-columns: 1fr;
+    grid-gap: 1.5rem;
+    padding: 0;
   }
 
   .tagline {
-      font-size: 2rem;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .card {
+    padding: 1.5rem;
   }
 
   .cardTitle {
-      font-size: 1.1rem;
+    font-size: 1.1rem;
   }
 
   .cardContent {
-      font-size: 0.85rem;
+    font-size: 0.9rem;
+  }
+  
+  .arrowIcon {
+    width: 20px;
+    height: 20px;
   }
 }

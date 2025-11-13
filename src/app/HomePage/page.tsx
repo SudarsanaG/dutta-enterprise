@@ -1,32 +1,107 @@
-// src/app/page.tsx
+"use client";
 import Link from 'next/link';
 import Header from '../components/Header';
 import styles from './HomePage.module.css'
-import Head from 'next/head';
+import { useState, useEffect } from 'react';
 
 export default function HomePage() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
+  // Array of images for the slider - all conveying facility management services
+  const images = [
+    '/cov1.webp',
+    'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&h=1080&fit=crop&q=80', // Modern office building
+  ];
+
+  // Text content for each slide
+  const slideContent = [
+    {
+      tagline: 'Integrated Facility Management Services',
+      subtitle: '~Facilities You Can Rely On, Results You Can Trust.',
+    },
+    {
+      tagline: 'Comprehensive Facility Solutions',
+      subtitle: '~Excellence in Every Service, Trust in Every Detail.',
+    },
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => 
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000); // Change slide every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
+  };
+
+  const goToPrevious = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) => 
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
   return (
-    <>
-    <Head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap"
-          rel="stylesheet"
-        />
-        <meta name="description" content="Your description here" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Home Page</title>
-      </Head>
     <div className={styles.container}>
+      <div className={styles.sliderContainer}>
+        <div 
+          className={styles.sliderTrack}
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          {images.map((image, index) => (
+            <div key={index} className={styles.slide}>
+              <img src={image} alt={`Slide ${index + 1}`} className={styles.slideImage} />
+            </div>
+          ))}
+        </div>
+        <button className={styles.prevButton} onClick={goToPrevious} aria-label="Previous slide">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </button>
+        <button className={styles.nextButton} onClick={goToNext} aria-label="Next slide">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </button>
+        <div className={styles.dotsContainer}>
+          {images.map((_, index) => (
+            <button
+              key={index}
+              className={`${styles.dot} ${currentIndex === index ? styles.activeDot : ''}`}
+              onClick={() => goToSlide(index)}
+            />
+          ))}
+        </div>
+      </div>
+      <div className={styles.overlay}></div>
       <Header />
       <main className={styles.main}>
-        <div>
-          <h1 className={styles.tagline}>Integrated Facility Management Services</h1>
-          <div className={styles.subtagline1}>~Facilities You Can Rely On, Results You Can Trust.</div>
-          
-
+        <div key={currentIndex} className={styles.contentWrapper}>
+          <h1 className={styles.tagline}>{slideContent[currentIndex].tagline}</h1>
+          <div className={styles.subtagline1}>{slideContent[currentIndex].subtitle}</div>
+          <div className={styles.buttonContainer}>
+            <Link href="/services" className={styles.heroButton}>
+              OUR SERVICES
+              <span className={styles.arrow}>→</span>
+            </Link>
+            <Link href="/sectors" className={styles.heroButton}>
+              OUR SECTORS
+              <span className={styles.arrow}>→</span>
+            </Link>
+          </div>
         </div>
       </main>
     </div>
-    </>
   );
 }

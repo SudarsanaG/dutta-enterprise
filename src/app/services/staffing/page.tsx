@@ -1,30 +1,106 @@
 "use client";
 import Header from '../../components/Header';
+import { Users, FileText, DollarSign, CheckCircle } from 'lucide-react';
 import styles from '../staffing.module.css';
 
 export default function staffing() {
   return (
     <div className={styles.container}>
-      
       <Header />
       <div className={styles.container1}>
-      
-      <div className={styles.tagline}>Services</div>
+        <div className={styles.tagline}>Staffing Solutions and Payroll Management</div>
       </div>
       <main className={styles.main}>
-      <div className={styles.heading}>Staffing Solutions and Payroll Management</div>
-        <div className ={styles.about}>
-        <div>
-          <div className={styles.subtagline1}> Staffing solutions and payroll management services generally comprise recruitment, payroll, and human resource services.</div>
-          <div className={styles.subtagline2}>
-         
-          As part of our staffing solutions and payroll management services, we provide skilled, semi-skilled and unskilled manpower to our customers as per their requirements. We also seek to ensure all staff are properly trained and equipped to carry out their duties, and that they have the necessary permits and licenses, where required.
-          Staffing solutions involve recruiting, hiring, and managing employees to meet a company&apos;s workforce needs. Payroll management involves handling all aspects of employee compensation, including salaries, wages, bonuses, deductions, and taxes. Effective payroll management ensures that employees are paid accurately and on time while complying with legal and regulatory requirements. 
+        <div className={styles.introSection}>
+          <div className={styles.introContent}>
+            <h2 className={styles.subtagline1}>Comprehensive Staffing and Payroll Solutions</h2>
+            <p className={styles.introText}>
+              Staffing solutions and payroll management services generally comprise recruitment, payroll, and human resource services. We provide skilled, semi-skilled and unskilled manpower to our customers as per their requirements, ensuring all staff are properly trained and equipped to carry out their duties.
+            </p>
           </div>
+          <div className={styles.introImage}>
+            <img src="../../payroll.jpeg" alt="payroll" className={styles.payroll}/>
+          </div>
+        </div>
+
+        <div className={styles.servicesSection}>
+          <div className={styles.innerContainer}>
+            <div className={styles.servicesGrid}>
+              <div className={styles.serviceCard}>
+                <div className={styles.serviceIcon}>
+                  <Users />
+                </div>
+                <h3 className={styles.serviceTitle}>Staffing Solutions</h3>
+                <p className={styles.serviceContent}>
+                  Our comprehensive staffing solutions cover the entire employee lifecycle, from initial recruitment and onboarding to ongoing management and development. We work closely with our clients to understand their specific requirements, organizational culture, and business objectives to provide the most suitable candidates.
+                </p>
+                <div className={styles.serviceFeatures}>
+                  <div className={styles.featureItem}>
+                    <CheckCircle className={styles.checkIcon} />
+                    <span>Thorough screening and background verification</span>
+                  </div>
+                  <div className={styles.featureItem}>
+                    <CheckCircle className={styles.checkIcon} />
+                    <span>Skill assessment and interviews</span>
+                  </div>
+                  <div className={styles.featureItem}>
+                    <CheckCircle className={styles.checkIcon} />
+                    <span>Performance monitoring and development</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles.serviceCard}>
+                <div className={styles.serviceIcon}>
+                  <DollarSign />
+                </div>
+                <h3 className={styles.serviceTitle}>Payroll Management</h3>
+                <p className={styles.serviceContent}>
+                  Our payroll management services are designed to streamline the compensation process and ensure accuracy and compliance. We handle all aspects of payroll processing, including salary calculations, tax deductions, provident fund contributions, and statutory compliance.
+                </p>
+                <div className={styles.serviceFeatures}>
+                  <div className={styles.featureItem}>
+                    <CheckCircle className={styles.checkIcon} />
+                    <span>Accurate salary calculations</span>
+                  </div>
+                  <div className={styles.featureItem}>
+                    <CheckCircle className={styles.checkIcon} />
+                    <span>Tax deductions and compliance</span>
+                  </div>
+                  <div className={styles.featureItem}>
+                    <CheckCircle className={styles.checkIcon} />
+                    <span>Provident fund management</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles.serviceCard}>
+                <div className={styles.serviceIcon}>
+                  <FileText />
+                </div>
+                <h3 className={styles.serviceTitle}>Human Resource Services</h3>
+                <p className={styles.serviceContent}>
+                  We provide comprehensive human resource services, including employee relations, benefits administration, leave management, and policy implementation. Our HR services help organizations maintain a positive work environment and ensure compliance with labor laws.
+                </p>
+                <div className={styles.serviceFeatures}>
+                  <div className={styles.featureItem}>
+                    <CheckCircle className={styles.checkIcon} />
+                    <span>Employee relations management</span>
+                  </div>
+                  <div className={styles.featureItem}>
+                    <CheckCircle className={styles.checkIcon} />
+                    <span>Benefits administration</span>
+                  </div>
+                  <div className={styles.featureItem}>
+                    <CheckCircle className={styles.checkIcon} />
+                    <span>Leave and policy management</span>
+                  </div>
+                </div>
+              </div>
             </div>
-              <img src="../../payroll.jpeg" alt="payroll" className={styles.payroll}/>
-            </div>
-            </main>
-            </div>
+          </div>
+        </div>
+      </main>
+    </div>
   );
 }        

@@ -2,10 +2,13 @@
     padding: 0 0px;
     max-width: 100%;
     margin: auto;
-    height:220vh;
-    background-color: whitesmoke;
-    
-    
+    min-height: 220vh;
+    background-color: white;
+}
+
+.main {
+    padding: 4% 0;
+    background-color: white;
 }
 .container1::before{
     content: '';
@@ -19,18 +22,19 @@
 
 .container1{
     height:50vh;
-    background: url('/cov1.webp') no-repeat center center/cover;
+    background: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&h=1080&fit=crop&q=80') no-repeat center center/cover;
     position: relative;
 }
 
 .tagline1 {
     padding:10% 3%;
     text-align: center;
-   margin-top: 5%;
+    margin-top: 5%;
     font-size: 4rem;
     font-weight: bold;
-    color: white; /* Keep text color white or adjust as needed */
-  
+    color: white !important;
+    position: relative;
+    z-index: 2;
 }
 .heading{
     padding:1% 10%;
@@ -42,86 +46,165 @@
    
 }
 .subtagline1 {
-
-      padding:0% 0% 2% 0%;
     text-align: left;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
-     color: #003459;
-     line-height: 1;
+    color: #003459;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.subtagline1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #003459 0%, rgba(0, 52, 89, 0.3) 100%);
+    border-radius: 2px;
 }
 
 .subtagline2 {
+    font-size: 1rem;
+    line-height: 1.9;
+    color: #424952;
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #003459;
+    position: relative;
+    z-index: 1;
+}
+/* Services Section with Background */
+.servicesSection {
+    background-color: white;
+    padding: 3rem 0;
+    width: 100%;
+}
 
-    padding: 2% 0% 0% 0%;
-    font-size: 1rem;
-    font-weight: 350;
-    text-align: left;
-    color:#424952;
-    font-family: Arial, Helvetica, sans-serif;
-   
+.innerContainer {
+    background: url('/private security.jpeg') no-repeat center center/cover;
+    padding: 2rem;
+    margin: 3rem 5rem;
+    max-width: 95%;
+    position: relative;
+}
 
+.innerContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 1;
 }
-.soft1{
- 
-    display: flex; /* Flexbox for aligning content */
-    justify-content: space-between; /* Space between content and logo */
-    padding: 1% 10%;
-    align-items: center; /* Align content and logo vertically */
-  
+
+.innerContainer > * {
+    position: relative;
+    z-index: 2;
 }
-.soft2{
-  
-    font-size: 1rem;
-    font-weight: 350;
-    text-align: left;
-    color:#424952;
-    font-family: Arial, Helvetica, sans-serif;
-   
-} 
-.soft3{
-   
-    font-size: 1rem;
-    font-weight: 350;
-    text-align: left;
-    color:#424952;
-    font-family: Arial, Helvetica, sans-serif;
-    
-} 
-.soft4
-{
-  
-    font-size: 1rem;
-    font-weight: 350;
-    text-align: left;
-    color:#424952;
-    font-family: Arial, Helvetica, sans-serif;
-} 
-.soft5
-{
-  
-    font-size: 1rem;
-    font-weight: 350;
-    text-align: left;
-    color:#424952;
-    font-family: Arial, Helvetica, sans-serif;
-} 
-.clean{
-    height: 45vh;
-    border-radius: 10%;
-  padding: 0% 2% 0% 0%;
+
+.cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 2% 10%;
+    margin-bottom: 3rem;
 }
-.bold{
-    font-weight: bold;
-    color: #003459;
+
+.serviceCard {
+    background: transparent;
+    border-radius: 12px;
+    padding: 2rem;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.serviceCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+.serviceIcon {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.serviceIcon svg {
+    width: 32px;
+    height: 32px;
+}
+
+.cardTitle {
     font-size: 1.5rem;
-   
+    font-weight: bold;
+    color: white;
+    margin-bottom: 1rem;
 }
 
-.about{
-    display: flex; /* Flexbox for aligning content */
-    align-items: center; /* Align content and logo vertically */
-    padding: 4% 10%;
+.cardContent {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Intro Section */
+.about {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding: 5% 10%;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23003459" fill-opacity="0.03"><circle cx="30" cy="30" r="2"/></g></svg>');
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.introContent {
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.introImage {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 
@@ -137,15 +220,20 @@
 
 
 
-.security1{
-    height: 45vh;
-    border-radius: 10%;
-  padding: 0% 0% 0% 2%;
+.security1 {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid white;
 }
-.text{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+.security1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
 } 
     
     
@@ -177,21 +265,43 @@
 
     .about {
         flex-direction: column;
-        padding: 3% 5%;
+        padding: 4% 5%;
+        gap: 2.5rem;
     }
 
-    .soft1 {
-        flex-direction: column;
+    .subtagline1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .subtagline1::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .subtagline2 {
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .servicesSection {
+        padding: 2rem 0;
+    }
+
+    .innerContainer {
+        margin: 2rem 3rem;
+        padding: 1.5rem;
+    }
+
+    .cardsContainer {
+        grid-template-columns: repeat(2, 1fr);
         padding: 2% 5%;
+        gap: 1.5rem;
     }
 
-    .clean, .security1 {
-        width: 60%;
-        height: 35vh;
-    }
-
-    .text {
-        flex-direction: column;
+    .security1 {
+        width: 100%;
+        max-width: 100%;
     }
 }
 
@@ -224,15 +334,51 @@
 
     .about {
         flex-direction: column;
-        padding: 3% 3%;
+        padding: 4% 3%;
+        gap: 2rem;
     }
 
-    .soft1 {
-        flex-direction: column;
-        padding: 3% 3%;
+    .subtagline1 {
+        font-size: 1.75rem;
+        text-align: center;
     }
 
-    .clean, .security1 {
+    .subtagline1::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .subtagline2 {
+        font-size: 1rem;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .security1 {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .servicesSection {
+        padding: 1.5rem 0;
+    }
+
+    .innerContainer {
+        margin: 1.5rem 1rem;
+        padding: 1rem;
+    }
+
+    .cardsContainer {
+        grid-template-columns: 1fr;
+        padding: 2% 3%;
+        gap: 1.5rem;
+    }
+
+    .serviceCard {
+        padding: 1.5rem;
+    }
+
+    .security1 {
         width: 80%;
         height: 30vh;
     }

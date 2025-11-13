@@ -49,12 +49,12 @@ export default function Header() {
             <Link href="/about/detailed">ABOUT</Link>
           </li>
           <li
-            className={styles.navItem}
+            className={`${styles.navItem} ${servicesDropdownOpen ? styles.dropdownOpen : ''}`}
             onMouseEnter={() => !isMobile && setServicesDropdownOpen(true)}
             onMouseLeave={() => !isMobile && setServicesDropdownOpen(false)}
             onClick={toggleServicesDropdown}  // Handle click for mobile
           >
-            <span>SERVICES</span>
+            <span>SERVICES<span className={styles.dropdownIcon}></span></span>
             <ul className={`${styles.dropdown} ${servicesDropdownOpen ? styles.show : ''}`}>
               <li className={styles.dropdownItem1}>
                 <Link href="/services/ifms">Integrated Facility Management Services</Link>
@@ -77,12 +77,12 @@ export default function Header() {
             </ul>
           </li>
           <li
-            className={styles.navItem}
+            className={`${styles.navItem} ${sectorDropdownOpen ? styles.dropdownOpen : ''}`}
             onMouseEnter={() => !isMobile && setSectorDropdownOpen(true)}
             onMouseLeave={() => !isMobile && setSectorDropdownOpen(false)}
             onClick={toggleSectorDropdown}  // Handle click for mobile
           >
-            <span>SECTORS</span>
+            <span>SECTORS<span className={styles.dropdownIcon}></span></span>
             <ul className={`${styles.dropdown} ${sectorDropdownOpen ? styles.show : ''}`}>
               <li className={styles.dropdownItem}>
                 <Link href="/sectors/hospitals">Hospitals and Healthcare</Link>

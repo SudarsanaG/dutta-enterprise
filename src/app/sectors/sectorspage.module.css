@@ -2,175 +2,149 @@
     padding: 0 20px;
     max-width: 100%;
     margin: auto;
-    height: 170vh;
-    background-color: whitesmoke;
+    height: 88vh;
+    background-color:whitesmoke;
+    position: relative;
   }
   .header{
-    padding: 3%;
+    padding: 1% 9%;
   }
 
   
   .tagline1 {
-   
     text-align: center;
-    margin-top: 2%;
-    font-size: 3rem;
+    margin-top: 1%;
+    font-size: 3 rem;
     font-weight: bold;
     color: #003459;
-    
+    margin-bottom: 1.5rem;
   }
- 
+
   
-  .cardcontainer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 50px;
+  .carouselContainer {
     margin-top: 2rem;
-    padding: 0% 9%;
-    height: 130vh;
+    padding: 0% 5%;
+    position: relative;
+  }
+
+  .slider {
+    padding: 0 20px;
+  }
+
+  .slideWrapper {
+    padding: 0 15px;
+    outline: none;
   }
   .card1 {
     position: relative;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
     background: url('../../../public/hospital2.avif') center/cover no-repeat;
     color: #fff;
     display: flex;
-    align-items: center; /* Vertically center content */
-    justify-content: center; /* Horizontally center content */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    padding: 2rem;
+    min-height: 320px;
   }
   
   .card2 {
     position: relative;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
     background: url('../../../public/edu1.jpg') center/cover no-repeat;
     color: #fff;
     display: flex;
-    align-items: center; /* Vertically center content */
-    justify-content: center; /* Horizontally center content */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    padding: 2rem;
+    min-height: 320px;
   }
   .card3 {
     position: relative;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
     background: url('../../../public/adm2.jpg') center/cover no-repeat;
     color: #fff;
     display: flex;
-    align-items: center; /* Vertically center content */
-    justify-content: center; /* Horizontally center content */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    padding: 2rem;
+    min-height: 320px;
   }
   
   .card4 {
     position: relative;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
     background: url('../../../public/indus.jpg') center/cover no-repeat;
     color: #fff;
     display: flex;
-    align-items: center; /* Vertically center content */
-    justify-content: center; /* Horizontally center content */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    padding: 2rem;
+    min-height: 320px;
   }
   .card5 {
     position: relative;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
     background: url('../../../public/retail.jpg') center/cover no-repeat;
     color: #fff;
     display: flex;
-    align-items: center; /* Vertically center content */
-    justify-content: center; /* Horizontally center content */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    padding: 2rem;
+    min-height: 320px;
   }
   
   .card6 {
     position: relative;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
     background: url('../../../public/os.jpeg') center/cover no-repeat;
     color: #fff;
     display: flex;
-    align-items: center; /* Vertically center content */
-    justify-content: center; /* Horizontally center content */
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    padding: 2rem;
+    min-height: 320px;
   }
-  .card1::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay to make the text more readable */
-    transition: background-color 0.3s ease;
-    z-index: 1;
-  }
-  .card2::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay to make the text more readable */
-    transition: background-color 0.3s ease;
-    z-index: 1;
-  }
-  .card3::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay to make the text more readable */
-    transition: background-color 0.3s ease;
-    z-index: 1;
-  }
-  .card4::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay to make the text more readable */
-    transition: background-color 0.3s ease;
-    z-index: 1;
-  }
-  .card5::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay to make the text more readable */
-    transition: background-color 0.3s ease;
-    z-index: 1;
-  }
+  .card1::before,
+  .card2::before,
+  .card3::before,
+  .card4::before,
+  .card5::before,
   .card6::before {
     content: '';
     position: absolute;
@@ -178,177 +152,151 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay to make the text more readable */
-    transition: background-color 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.65); /* Dark semi-transparent overlay */
     z-index: 1;
   }
   
-  .cardHeading {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .cardIcon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    z-index: 2;
+    position: relative;
     color: white;
-    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cardHeading {
+    color: white;
+    font-size: 1.5rem;
     font-weight: bold;
-    z-index: 2; /* Ensure heading is above the overlay */
-    transition: opacity 0.3s ease; /* Smooth transition for disappearing effect */
-    text-align: left;
+    z-index: 2;
+    position: relative;
+    margin-bottom: 1rem;
+    text-align: center;
   }
   
-  .card1:hover .cardHeading {
-    opacity: 0; /* Make heading disappear on hover */
-  }
-  
-  .card1:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.9);
-  }
-  .card2:hover .cardHeading {
-    opacity: 0; /* Make heading disappear on hover */
-  }
-  
-  .card2:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.9);
-  }
-  .card3:hover .cardHeading {
-    opacity: 0; /* Make heading disappear on hover */
-  }
-  
-  .card3:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.9);
-  }
-  .card4:hover .cardHeading {
-    opacity: 0; /* Make heading disappear on hover */
-  }
-  
-  .card4:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.9);
-  }
-  .card5:hover .cardHeading {
-    opacity: 0; /* Make heading disappear on hover */
-  }
-  
-  .card5:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.9);
-  }
-  .card6:hover .cardHeading {
-    opacity: 0; /* Make heading disappear on hover */
-  }
-  
+  .card1:hover,
+  .card2:hover,
+  .card3:hover,
+  .card4:hover,
+  .card5:hover,
   .card6:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.9);
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
   }
   
   .cardContent {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
-    height: 100%;
-    background-color:rgba(0,0,0,0.6); /* Make content background darker on hover */
-    padding: 20px;
-    transform: translateY(100%);
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    opacity: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 8px;
     color: #fff;
-    z-index: 2; /* Ensure content is above overlay */
-    font-family: Arial, Helvetica, sans-serif;
+    z-index: 2;
+    font-family: 'Roboto', sans-serif;
+    flex-grow: 1;
+    margin-top: auto;
   }
-  
-  
-  .card1:hover .cardContent {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  .card2:hover .cardContent {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  .card3:hover .cardContent {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  .card4:hover .cardContent {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  .card5:hover .cardContent {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  .card6:hover .cardContent {
-    transform: translateY(0);
-    opacity: 1;
+
+  .cardContent p {
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
   }
   
   .readMore {
-    margin-top: 20px;
-    background-color: #fff;
-    display: inline-block;
+    background-color: white;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     text-decoration: none;
-    font-weight: bold;
-    color:black;
-    padding: 1% 5%;
+    font-weight: 600;
+    color: #333;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    margin-top: auto;
   }
-  
+
   .readMore:hover {
-    text-decoration: underline;
+    background-color: #f0f0f0;
+    transform: translateX(5px);
   }
+
+  .readMore .arrow {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+  }
+
+  .readMore:hover .arrow {
+    transform: translateX(3px);
+  }
+
+  /* Slick Carousel Custom Styles - will be added via global styles */
   
   /* Mobile View CSS */
+  @media (max-width: 1024px) {
+    .carouselContainer {
+      padding: 0% 3%;
+    }
+  }
+
   @media (max-width: 768px) {
     .container {
-      padding: 0 10px; /* Adjust padding for mobile */
-      height: auto; /* Allow height to adapt to content */
+      padding: 0 10px;
+      height: auto;
     }
   
-    .tagline {
-      padding: 1rem; /* Adjust padding for mobile */
-      font-size: 1.5rem; /* Smaller font size for mobile */
+    .tagline1 {
+      font-size: 2rem;
+      margin-top: 1%;
+    }
+
+    .carouselContainer {
+      padding: 0% 2%;
+    }
+
+    .slider {
+      padding: 0 10px;
+    }
+
+    .slideWrapper {
+      padding: 0 10px;
     }
   
-    .cardcontainer {
-      grid-template-columns: 1fr; /* Stack cards in a single column */
-      grid-gap: 15px; /* Adjust grid gap for mobile */
-      padding: 1rem; /* Adjust padding for mobile */
-      
+    .card1,
+    .card2,
+    .card3,
+    .card4,
+    .card5,
+    .card6 {
+      padding: 1.5rem;
+      min-height: 280px;
     }
-  
-    .card1{
-      padding: 0.5rem; /* Adjust padding for mobile */
+    
+    .cardIcon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
     }
-    .card2{
-      padding: 0.5rem; /* Adjust padding for mobile */
-    }
-    .card3{
-      padding: 0.5rem; /* Adjust padding for mobile */
-    }
-    .card4{
-      padding: 0.5rem; /* Adjust padding for mobile */
-    }
-    .card5{
-      padding: 0.5rem; /* Adjust padding for mobile */
-    }
-    .card6{
-      padding: 0.5rem; /* Adjust padding for mobile */
-    }
+    
     .cardHeading {
-      font-size: 1.2rem; /* Smaller font size for mobile */
+      font-size: 1.2rem;
+      margin-bottom: 0.75rem;
     }
-  
-    .cardContent {
-      padding: 0.5rem; /* Adjust padding for mobile */
+
+    .cardContent p {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+    
+    .readMore {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.85rem;
     }
   }
   

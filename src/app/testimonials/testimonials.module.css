@@ -1,0 +1,105 @@
+.container {
+  margin-top: 0;
+  padding: 3rem 0;
+  background-color: white;
+  overflow: hidden;
+  width: 100%;
+}
+
+.testimonialTitle {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #003459;
+  margin-bottom: 2rem;
+}
+
+.testimonialTrack {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.testimonialSlide {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  gap: 3rem;
+  width: fit-content;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.clientLogo {
+  flex-shrink: 0;
+  width: 180px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.clientLogo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.clientLogo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.clientLogo:hover img {
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  .testimonialTitle {
+    font-size: 1.75rem;
+  }
+  
+  .clientLogo {
+    width: 150px;
+    height: 100px;
+  }
+  
+  .testimonialSlide {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 2rem 0;
+  }
+  
+  .testimonialTitle {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .clientLogo {
+    width: 120px;
+    height: 80px;
+    padding: 0.75rem;
+  }
+  
+  .testimonialSlide {
+    gap: 1.5rem;
+  }
+}
+

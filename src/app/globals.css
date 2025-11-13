@@ -1,6 +1,10 @@
 /* src/app/globals.css */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
 }
@@ -37,6 +41,34 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+/* Slick Carousel Custom Styles for Sectors */
+.sectors-carousel .slick-dots {
+  bottom: -50px;
+}
+
+.sectors-carousel .slick-dots li button:before {
+  color: #003459;
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+.sectors-carousel .slick-dots li.slick-active button:before {
+  color: #003459;
+  opacity: 1;
+}
+
+.sectors-carousel .slick-prev,
+.sectors-carousel .slick-next {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+
+  .sectors-carousel .slick-dots {
+    bottom: -40px;
   }
 }
 

@@ -1,130 +1,225 @@
 .container {
-  
     padding: 0 0px;
     max-width: 100%;
     margin: auto;
-    height:200vh;
+    min-height: 200vh;
     background-color: whitesmoke;
-    
 }
 
-.container1::before{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6 ); /* Dark overlay with 50% opacity */
-  z-index: 1; /* Place the overlay below the text */}
-
-.container1{
-  height:50vh;
-  background: url('/cov1.webp') no-repeat center center/cover;
-  position: relative;
+.main {
+    padding: 4% 0;
+    background-color: whitesmoke;
 }
-.tagline1{
-    padding:10% 5%;
+
+.container1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.container1 {
+    height: 60vh;
+    background: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&h=1080&fit=crop&q=80') no-repeat center center/cover;
+    position: relative;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 2;
     text-align: center;
-   margin-top: 5%;
+    padding: 3% 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+}
+
+.tagline1 {
     font-size: 4rem;
     font-weight: bold;
-    color:white; /* Keep text color white or adjust as needed */
-  
-  }
-.tagline{
-  padding:1% 5%;
-  text-align: center;
- margin-top: 2%;
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #003459; /* Keep text color white or adjust as needed */
-
+    color: white !important;
+    margin-bottom: 1.5rem;
 }
 
-.tagline2{
-    padding:2% 12%;
-    text-align:start;
-    color:#003459;
-    font-size: 2rem;
-    font-weight: bold;
+.tagline2 {
+    padding: 0;
+    text-align: center;
+    color: white;
+    font-size: 1.75rem;
+    font-weight: 600;
     font-style: italic;
-    display: block;
-    
-    
-  
-  }
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    max-width: 900px;
+}
+
+.tagline {
+    padding: 0;
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    line-height: 1.5;
+    max-width: 800px;
+}
+
+/* Clients Section */
+.clientsSection {
+    padding: 3% 0;
+    background-color: whitesmoke;
+}
+
 .cardsContainer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
-    padding: 2% 15%;
+    gap: 2rem;
+    padding: 3% 10%;
     margin-top: 2rem;
 }
-.clients{
-height: 50%;
-width: 80%;
+
+.clientCard {
+    background-color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+    border: 1px solid #e0e0e0;
 }
+
+.clientCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    border-color: #003459;
+}
+
+.clientLogo {
+    max-width: 100%;
+    max-height: 100px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.clientCard:hover .clientLogo {
+    transform: scale(1.05);
+}
+
 /* Responsive styles for medium screens (tablets) */
 @media (max-width: 1024px) {
-  .container {
-      height: 100%; /* Allow dynamic height */
-  }
+    .container {
+        min-height: 100%;
+    }
 
-  .container1 {
-      height: 40vh; /* Adjust height */
-  }
+    .container1 {
+        height: 40vh;
+    }
 
-  .tagline1 {
-      font-size: 3rem; /* Adjust font size */
-      padding:2rem 10rem;
-  }
+    .tagline1 {
+        font-size: 3rem;
+    }
 
-  .tagline {
-      font-size: 2rem; /* Adjust font size */
-  }
+    .heroContent {
+        padding: 3% 5%;
+    }
 
-  .cardsContainer {
-      grid-template-columns: repeat(2, 1fr); /* Display 2 cards per row */
-      padding: 2% 10%;
-  }
+    .tagline2 {
+        font-size: 1.5rem;
+    }
 
-  .clients {
-      height: 70%;
-      width: 70%; /* Adjust width */
-  }
+    .tagline {
+        font-size: 1.25rem;
+    }
+
+    .cardsContainer {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 3% 5%;
+        gap: 1.5rem;
+    }
+
+    .clientCard {
+        padding: 1.5rem;
+        min-height: 120px;
+    }
+
+    .clientLogo {
+        max-height: 80px;
+    }
 }
 
 /* Responsive styles for small screens (mobile devices) */
 @media (max-width: 768px) {
-  .container {
-      height: 100%;
-  }
+    .container {
+        min-height: 100%;
+    }
 
-  .container1 {
-      height: 30vh; /* Reduce height */
-  }
+    .container1 {
+        height: 30vh;
+    }
 
-  .tagline1 {
-      font-size: 2.5rem; /* Reduce font size */
-      padding: 10rem 10rem;
-       /* Narrow padding */
-  }
+    .tagline1 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
 
-  .tagline {
-      font-size: 1.5rem; /* Further reduce font size */
-      padding: 3% 2%; /* Narrow padding */
-  }
+    .heroContent {
+        padding: 3% 3%;
+    }
 
-  .cardsContainer {
-      grid-template-columns: 1fr; /* Display 1 card per row */
-      padding: 5% 5%; /* Narrow padding for small screens */
-  }
+    .tagline2 {
+        font-size: 1.25rem;
+        padding: 1% 0;
+    }
 
-  .clients {
-      width: 70%; 
-      height: 70%; 
-   padding: 3% 10% 0% 10%;
+    .tagline {
+        font-size: 1.1rem;
+        padding: 2% 0;
+    }
 
-  }
+    .clientsSection {
+        padding: 2% 0;
+    }
+
+    .cardsContainer {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 3% 5%;
+        gap: 1.5rem;
+    }
+
+    .clientCard {
+        padding: 1.5rem;
+        min-height: 100px;
+    }
+
+    .clientLogo {
+        max-height: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cardsContainer {
+        grid-template-columns: 1fr;
+        padding: 3% 10%;
+        gap: 1.5rem;
+    }
+
+    .clientCard {
+        padding: 2rem;
+        min-height: 120px;
+    }
+
+    .clientLogo {
+        max-height: 80px;
+    }
 }
