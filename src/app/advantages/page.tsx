@@ -46,7 +46,7 @@ export default function Advantages() {
             <h2 className={styles.cardTitle}>Customized Solutions</h2>
           </div>
           <p className={styles.cardContent}>
-          A {'"'}customized solution{'"'} at Management Systems is made up of the tools (one or more) chosen to best meet the needs of the client and how these tools are packaged and delivered both inside and to the client.
+          A &quot;customized solution&quot; at Management Systems is made up of the tools (one or more) chosen to best meet the needs of the client and how these tools are packaged and delivered both inside and to the client.
           </p>
         </div>
 
@@ -56,7 +56,7 @@ export default function Advantages() {
             <h2 className={styles.cardTitle}>Experience & Expertise</h2>
           </div>
           <p className={styles.cardContent}>
-          The mastery of a discipline{'\''}s knowledge, abilities, and methodologies is referred to as content expertise. Graduate content expertise leads to students{'\''} scholarly efforts producing new knowledge.
+          The mastery of a discipline&apos;s knowledge, abilities, and methodologies is referred to as content expertise. Graduate content expertise leads to students&apos; scholarly efforts producing new knowledge.
           </p>
         </div>
 
@@ -66,7 +66,7 @@ export default function Advantages() {
             <h2 className={styles.cardTitle}>Cost Savings</h2>
           </div>
           <p className={styles.cardContent}>
-          Savings are the advantages obtained from actions that lower an organization{'\''}s overall outlay on assets, which have a direct bearing on its bottom line. Cost-saving measures can include increased productivity and negotiating lower supply purchase prices.
+          Savings are the advantages obtained from actions that lower an organization&apos;s overall outlay on assets, which have a direct bearing on its bottom line. Cost-saving measures can include increased productivity and negotiating lower supply purchase prices.
           </p>
         </div>
 

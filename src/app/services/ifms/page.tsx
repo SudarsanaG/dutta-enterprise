@@ -35,7 +35,7 @@ export default function Ifms() {
                   
                   <div className={styles.serviceCard}>
                     <div className={styles.cardTitle}>2. Landscaping and gardening</div>
-                    <div className={styles.cardContent}>We are responsible for the upkeep of landscapes and gardens at our customers{'\''} locations through, trimming of grass, setting up of new gardens and general maintenance.</div>
+                    <div className={styles.cardContent}>We are responsible for the upkeep of landscapes and gardens at our customers&apos; locations through, trimming of grass, setting up of new gardens and general maintenance.</div>
                   </div>
                  
                   <div className={styles.serviceCard}>
