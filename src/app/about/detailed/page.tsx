@@ -21,10 +21,10 @@ export default function DetailedAboutPage() {
           <div> <div className={styles.subtagline2}>Get To Know Us Better!</div>
        
           <p className={styles.subtagline1}>
-          Our range of service offerings include soft services such as housekeeping, sanitation, landscaping and gardening, hard services such as mechanical, electrical and plumbing services, solid, liquid and biomedical waste management, pest control and façade cleaning management services. We also provide staffing solutions and payroll management to our customers, as well as private security and manned guarding services and catering services.
-                 
-          The wide range of our integrated facility management services segment allows us to provide a bundled solution of services to each customer, tailored to its specific needs and requirements, making us a one-stop integrated solution for customers.
-            </p>
+  Our range of service offerings include soft services such as housekeeping, sanitation, landscaping &amp; gardening, hard services such as mechanical, electrical &amp; plumbing services, solid, liquid &amp; biomedical waste management, pest control &amp; fa&ccedil;ade cleaning management services. We also provide staffing solutions &amp; payroll management to our customers, as well as private security &amp; manned guarding services &amp; catering services.
+  The wide range of our integrated facility management services segment allows us to provide a bundled solution of services to each customer, tailored to its specific needs &amp; requirements, making us a one-stop integrated solution for customers.
+</p>
+
             </div>
             
               <img src="../../about.jpg" alt="about" className={styles.about1}/>
@@ -52,17 +52,18 @@ export default function DetailedAboutPage() {
                     <h2 className={advantageStyles.cardTitle}>Customized Solutions</h2>
                   </div>
                   <p className={advantageStyles.cardContent}>
-                    A "customized solution" at Management Systems is made up of the tools (one or more) chosen to best meet the needs of the client and how these tools are packaged and delivered both inside and to the client.
+                    A &quot;customized solution&quot; at Management Systems is made up of the tools (one or more) chosen to best meet the needs of the client and how these tools are packaged and delivered both inside and to the client.
                   </p>
                 </div>
 
                 <div className={advantageStyles.card}>
                   <div className={advantageStyles.cardHeader}>
                     <ArrowRight className={advantageStyles.arrowIcon} />
-                    <h2 className={advantageStyles.cardTitle}>Experience & Expertise</h2>
+                    <h2 className={advantageStyles.cardTitle}>Experience &amp; Expertise</h2>
+
                   </div>
                   <p className={advantageStyles.cardContent}>
-                    The mastery of a discipline's knowledge, abilities, and methodologies is referred to as content expertise. Graduate content expertise leads to students' scholarly efforts producing new knowledge.
+                    The mastery of a discipline&apos;s knowledge, abilities, and methodologies is referred to as content expertise. Graduate content expertise leads to students&apos; scholarly efforts producing new knowledge.
                   </p>
                 </div>
 
@@ -72,14 +73,15 @@ export default function DetailedAboutPage() {
                     <h2 className={advantageStyles.cardTitle}>Cost Savings</h2>
                   </div>
                   <p className={advantageStyles.cardContent}>
-                    Savings are the advantages obtained from actions that lower an organization's overall outlay on assets, which have a direct bearing on its bottom line. Cost-saving measures can include increased productivity and negotiating lower supply purchase prices.
+                    Savings are the advantages obtained from actions that lower an organization&apos;s overall outlay on assets, which have a direct bearing on its bottom line. Cost-saving measures can include increased productivity and negotiating lower supply purchase prices.
                   </p>
                 </div>
 
                 <div className={advantageStyles.card}>
                   <div className={advantageStyles.cardHeader}>
                     <ArrowRight className={advantageStyles.arrowIcon} />
-                    <h2 className={advantageStyles.cardTitle}>Real-Time Monitoring & Reporting</h2>
+                    <h2 className={advantageStyles.cardTitle}>Real-Time Monitoring &amp; Reporting</h2>
+
                   </div>
                   <p className={advantageStyles.cardContent}>
                     Real-time monitoring is a method that lets you know what the queues and channels within a queue manager are doing right now. The data returned is current as of when the command was given.
@@ -117,20 +119,22 @@ export default function DetailedAboutPage() {
                   <h2 className={styles.cardTitle}>Mission</h2>
                 </div>
                 <p className={styles.cardContent}>
-                  Forming new alliances in order to take advantage of emerging technologies. Make full use of the company&apos;s resources to come up with innovative new products and services. Utilise the already established clientele as a springboard for selling additional services to existing customers
+                  Forming new alliances in order to take advantage of emerging technologies. Make full use of the company&apos;s resources to come up with innovative new products and services. Utilise the already established clientele as a springboard for selling additional services to existing customers.
                 </p>
               </div>
             </div>
           </div>
 
           
-          <div className={styles.certificates}>
-          Certificates
-          </div>
-          <div className={styles.certificates1}>
-          <img src="../../certificate1.jpg" alt="certificate1" className={styles.certificates2}/>
-          <img src="../../certificate2.jpg" alt="certificate2" className={styles.certificates2}/>
-          <img src="../../certificate3.jpg" alt="certificate3" className={styles.certificates2}/>
+          <div className={styles.certificatesSection}>
+            <div className={styles.certificates}>
+              Certificates
+            </div>
+            <div className={styles.certificates1}>
+              <img src="../../certificate1.jpg" alt="certificate1" className={styles.certificates2}/>
+              <img src="../../certificate2.jpg" alt="certificate2" className={styles.certificates2}/>
+              <img src="../../certificate3.jpg" alt="certificate3" className={styles.certificates2}/>
+            </div>
           </div>
           
 
