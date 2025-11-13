@@ -17,11 +17,20 @@ export default function ContactSection() {
           <div className={styles.contactDetails}>
             <p className={styles.contactItem}>
               <FontAwesomeIcon icon={faMapMarkerAlt} className={styles.icon} />
-              <span>Dutta House, Dutta Enterprise, Radhamohanpur, Debra, Paschim Midnapur, West Bengal, 721160</span>
+              <span>
+                Dutta House, Dutta<br />
+                Enterprise,<br />
+                Radhamohanpur, Debra,<br />
+                Paschim Midnapur, West<br />
+                Bengal, 721160
+              </span>
             </p>
             <p className={styles.contactItem}>
               <FontAwesomeIcon icon={faPhone} className={styles.icon} />
-              <span>+91 99331 95417</span>
+              <span>
+                +91 99331<br />
+                95417
+              </span>
             </p>
             <p className={styles.contactItem}>
               <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />

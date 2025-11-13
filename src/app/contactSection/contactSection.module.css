@@ -1,22 +1,8 @@
 .container {
-  background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&h=1080&fit=crop&q=80');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: #003459;
   padding: 4rem 10%;
   width: 100%;
   position: relative;
-}
-
-.container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 0;
 }
 
 .content {
@@ -31,10 +17,10 @@
 }
 
 .title {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: bold;
   color: white;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -51,17 +37,18 @@
 .contactItem {
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
-  font-size: 1.1rem;
+  gap: 1.5rem;
+  font-size: 1.2rem;
   color: white;
-  line-height: 1.6;
+  line-height: 1.8;
   margin: 0;
+  margin-bottom: 2rem;
   font-family: 'Roboto', sans-serif;
 }
 
 .icon {
-  color: #007ea7;
-  font-size: 1.2rem;
+  color: white;
+  font-size: 2rem;
   margin-top: 0.2rem;
   flex-shrink: 0;
 }
