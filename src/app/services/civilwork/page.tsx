@@ -4,7 +4,7 @@ import { HardHat, Building, Wrench, CheckCircle } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 import styles from '../staffing.module.css';
 
-export default function civilwork() {
+export default function Civilwork() {
   const [hasAnimated, setHasAnimated] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 

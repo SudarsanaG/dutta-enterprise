@@ -4,7 +4,7 @@ import { UtensilsCrossed, Users, Award, CheckCircle } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 import styles from '../staffing.module.css';
 
-export default function catering() {
+export default function Catering() {
   const [hasAnimated, setHasAnimated] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 

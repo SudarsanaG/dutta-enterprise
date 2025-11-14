@@ -4,7 +4,7 @@ import { Trash2, Wrench, Building2, Trees, CheckCircle } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 import styles from '../staffing.module.css';
 
-export default function otherservices() {
+export default function Otherservices() {
   const [hasAnimated, setHasAnimated] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 

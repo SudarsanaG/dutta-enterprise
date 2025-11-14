@@ -4,7 +4,7 @@ import { Users, FileText, DollarSign, CheckCircle } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 import styles from '../staffing.module.css';
 
-export default function staffing() {
+export default function Staffing() {
   const [hasAnimated, setHasAnimated] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 

@@ -4,7 +4,7 @@ import { Shield, Eye, Search, AlertCircle, CheckCircle } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 import styles from '../staffing.module.css';
 
-export default function security() {
+export default function Security() {
   const [hasAnimated, setHasAnimated] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
 
