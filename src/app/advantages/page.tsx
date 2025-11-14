@@ -1,11 +1,36 @@
 "use client";
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Header from '../components/Header';
 import { ArrowRight } from 'lucide-react';
 import styles from './advantage.module.css';
 
 export default function Advantages() {
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            setHasAnimated(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [hasAnimated]);
     const clients = [
         { id: 1, logo: '/bdo.jpeg', name: 'BDO' },
         { id: 2, logo: '/kec.webp', name: 'KEC' },
@@ -22,15 +47,15 @@ export default function Advantages() {
     ];
 
     return (
-        <div className={styles.container}>
+        <div ref={sectionRef} className={styles.container}>
              <Header />
               <main className={styles.main}>
-                <div className={styles.tagline}>
+                <div className={`${styles.tagline} ${hasAnimated ? styles.animated : ''}`}>
                   <span className={styles.taglineRed}>Why</span> <span className={styles.taglineBlack}>Choose Us?</span>
                 </div>
         <div className={styles.cardsContainer}>
   
-        <div className={styles.card}>
+        <div className={`${styles.card} ${hasAnimated ? styles.animated : ''}`}>
           <div className={styles.cardHeader}>
             <ArrowRight className={styles.arrowIcon} />
             <h2 className={styles.cardTitle}>Comprehensive Approach</h2>
@@ -40,7 +65,7 @@ export default function Advantages() {
           </p>
         </div>
 
-        <div className={styles.card}>
+        <div className={`${styles.card} ${hasAnimated ? styles.animated : ''}`}>
           <div className={styles.cardHeader}>
             <ArrowRight className={styles.arrowIcon} />
             <h2 className={styles.cardTitle}>Customized Solutions</h2>
@@ -50,7 +75,7 @@ export default function Advantages() {
           </p>
         </div>
 
-        <div className={styles.card}>
+        <div className={`${styles.card} ${hasAnimated ? styles.animated : ''}`}>
           <div className={styles.cardHeader}>
             <ArrowRight className={styles.arrowIcon} />
             <h2 className={styles.cardTitle}>Experience & Expertise</h2>
@@ -60,7 +85,7 @@ export default function Advantages() {
           </p>
         </div>
 
-        <div className={styles.card}>
+        <div className={`${styles.card} ${hasAnimated ? styles.animated : ''}`}>
           <div className={styles.cardHeader}>
             <ArrowRight className={styles.arrowIcon} />
             <h2 className={styles.cardTitle}>Cost Savings</h2>
@@ -70,7 +95,7 @@ export default function Advantages() {
           </p>
         </div>
 
-        <div className={styles.card}>
+        <div className={`${styles.card} ${hasAnimated ? styles.animated : ''}`}>
           <div className={styles.cardHeader}>
             <ArrowRight className={styles.arrowIcon} />
             <h2 className={styles.cardTitle}>Real-Time Monitoring & Reporting</h2>
@@ -80,7 +105,7 @@ export default function Advantages() {
           </p>
         </div>
 
-        <div className={styles.card}>
+        <div className={`${styles.card} ${hasAnimated ? styles.animated : ''}`}>
           <div className={styles.cardHeader}>
             <ArrowRight className={styles.arrowIcon} />
             <h2 className={styles.cardTitle}>Access to Specialized Services</h2>

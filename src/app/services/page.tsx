@@ -1,6 +1,6 @@
 "use client"
 // src/app/page.tsx
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Header from '../components/Header';
 import { 
@@ -15,17 +15,43 @@ import styles from './ServicesPage.module.css';
 
 
 export default function Services() {
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            setHasAnimated(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [hasAnimated]);
+
   return (
-    <div id="services" className={styles.container}>
+    <div ref={sectionRef} id="services" className={styles.container}>
     
       <div className={styles.header}>
      
-        <h1 className={styles.tagline1}> Our Services </h1>
+        <h1 className={`${styles.tagline1} ${hasAnimated ? styles.animated : ''}`}> Our Services </h1>
         </div>
 
-        <p className={styles.tagline2}>We offer a wide range of specialised services to meet the diverse needs of our clients.</p>
+        <p className={`${styles.tagline2} ${hasAnimated ? styles.animated : ''}`}>We offer a wide range of specialised services to meet the diverse needs of our clients.</p>
       <div className={styles.cardcontainer}>
-        <div className={styles.card1}>
+        <div className={`${styles.card1} ${hasAnimated ? styles.animated : ''}`}>
           <div className={styles.cardIcon}>
             <Building2 />
           </div>
@@ -38,7 +64,7 @@ export default function Services() {
           </div>
         </div>
 
-        <div className={styles.card2}>
+        <div className={`${styles.card2} ${hasAnimated ? styles.animated : ''}`}>
           <div className={styles.cardIcon}>
             <Users />
           </div>
@@ -51,7 +77,7 @@ export default function Services() {
           </div>
         </div>
 
-        <div className={styles.card3}>
+        <div className={`${styles.card3} ${hasAnimated ? styles.animated : ''}`}>
           <div className={styles.cardIcon}>
             <Shield />
           </div>
@@ -64,7 +90,7 @@ export default function Services() {
           </div>
         </div>
 
-        <div className={styles.card4}>
+        <div className={`${styles.card4} ${hasAnimated ? styles.animated : ''}`}>
           <div className={styles.cardIcon}>
             <UtensilsCrossed />
           </div>
@@ -77,7 +103,7 @@ export default function Services() {
           </div>
         </div>
 
-        <div className={styles.card5}>
+        <div className={`${styles.card5} ${hasAnimated ? styles.animated : ''}`}>
           <div className={styles.cardIcon}>
             <HardHat />
           </div>
@@ -90,7 +116,7 @@ export default function Services() {
           </div>
         </div>
 
-        <div className={styles.card6}>
+        <div className={`${styles.card6} ${hasAnimated ? styles.animated : ''}`}>
           <div className={styles.cardIcon}>
             <Settings />
           </div>

@@ -18,19 +18,27 @@
 
 .container1 {
     height: 50vh;
+    min-height: 300px;
     background: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&h=1080&fit=crop&q=80') no-repeat center center/cover;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .tagline1 {
-    padding: 10% 3%;
+    padding: 0 3%;
     text-align: center;
-    margin-top: 5%;
+    margin: 0;
     font-size: 4rem;
     font-weight: bold;
     color: white !important;
     position: relative;
     z-index: 2;
+    line-height: 1.2;
+    word-wrap: break-word;
+    width: 100%;
 }
 
 .main {
@@ -124,97 +132,235 @@
   }
   
   /* For tablets and small screens */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .container1 {
         height: 40vh;
+        min-height: 280px;
     }
 
     .tagline1 {
         font-size: 3rem;
+        padding: 0 3%;
+    }
+
+    .main {
+      padding-left: 3%;
+      padding-right: 3%;
+    }
+  
+    .title {
+      font-size: 22px;
+    }
+  
+    .content {
+      gap: 15px;
+    }
+  
+    .table {
+      font-size: 14px;
+    }
+  }
+
+@media (max-width: 768px) {
+    .container1 {
+        height: 35vh;
+        min-height: 250px;
+    }
+
+    .tagline1 {
+        font-size: 2.25rem;
+        padding: 0 3%;
     }
 
     .main {
       flex-direction: column;
-      padding-top: 3%;
-      padding-left: 2%;
-      padding-right: 2%;
-      padding-bottom: 5%;
+      padding-top: 2%;
+      padding-left: 3%;
+      padding-right: 3%;
+      padding-bottom: 4%;
     }
   
     .title {
       padding-top: 1rem;
       padding-left: 0;
-      font-size: 22px;
+      font-size: 20px;
       text-align: center;
+      margin-bottom: 15px;
     }
   
     .content {
       flex-direction: column;
       width: 100%;
-      gap: 15px;
+      gap: 20px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
     }
-  
+
     .table {
       width: 100%;
-      font-size: 14px;
+      min-width: 600px;
+      font-size: 13px;
+    }
+
+    .table th,
+    .table td {
+      padding: 8px 6px;
+      font-size: 12px;
+    }
+
+    .table th {
+      font-size: 12px;
+      padding: 10px 6px;
     }
   
     .form {
       width: 100%;
     }
+
+    .form h3 {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+  
+    .input,
+    .textarea {
+      padding: 10px;
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+  
+    .fileInput {
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+  
+    .submitButton {
+      padding: 12px 20px;
+      font-size: 16px;
+      width: 100%;
+      align-self: stretch;
+    }
   }
   
   /* For mobile devices */
-  @media (max-width: 480px) {
+  @media (max-width: 576px) {
     .container1 {
         height: 30vh;
+        min-height: 220px;
     }
 
     .tagline1 {
-        font-size: 2rem;
-        padding: 10rem 10rem;
+        font-size: 1.75rem;
+        padding: 0 3%;
     }
 
-    .title {
-      padding-top: 1rem;
-      padding-left: 0;
-      font-size: 20px;
-      margin-bottom: 15px;
-      text-align: center;
+    .main {
+      padding-left: 2%;
+      padding-right: 2%;
+      padding-bottom: 3%;
     }
   
-    .main {
-      padding-left: 1%;
-      padding-right: 1%;
-      padding-bottom: 5%;
+    .title {
+      font-size: 18px;
+      margin-bottom: 12px;
     }
   
     .content {
-      flex-direction: column;
-      gap: 10px;
+      gap: 15px;
     }
   
     .table {
-      width: 100%;
       font-size: 12px;
     }
-  
+
     .table th,
     .table td {
-      padding: 4px 6px; /* Further reduce padding for smaller screens */
+      padding: 6px 4px;
+      font-size: 11px;
+    }
+
+    .table th {
+      font-size: 11px;
+    }
+  
+    .form h3 {
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+  
+    .input,
+    .textarea {
+      padding: 8px;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+  
+    .fileInput {
+      margin-bottom: 10px;
+      font-size: 13px;
+    }
+  
+    .submitButton {
+      padding: 10px 16px;
+      font-size: 15px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .container1 {
+        height: 28vh;
+        min-height: 200px;
+    }
+
+    .tagline1 {
+        font-size: 1.5rem;
+        padding: 0 3%;
+    }
+
+    .main {
+      padding-left: 1.5%;
+      padding-right: 1.5%;
+      padding-bottom: 3%;
+    }
+  
+    .title {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  
+    .table {
+      font-size: 11px;
+    }
+
+    .table th,
+    .table td {
+      padding: 5px 3px;
+      font-size: 10px;
+    }
+
+    .table th {
+      font-size: 10px;
+    }
+  
+    .form h3 {
+      font-size: 15px;
+      margin-bottom: 10px;
     }
   
     .input,
     .textarea {
       padding: 8px;
       margin-bottom: 8px;
-      font-size: 14px;
+      font-size: 13px;
     }
   
-    .customFileLabel,
+    .fileInput {
+      margin-bottom: 8px;
+      font-size: 12px;
+    }
+  
     .submitButton {
-      padding: 8px 12px;
+      padding: 10px 14px;
       font-size: 14px;
-      width: 100%; /* Full width buttons on mobile */
     }
   }

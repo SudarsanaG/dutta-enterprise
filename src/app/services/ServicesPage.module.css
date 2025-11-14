@@ -19,6 +19,14 @@
   font-weight: bold;
   color:#003459;
   margin-bottom: 1.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.tagline1.animated {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .tagline2 {
@@ -33,6 +41,14 @@
   max-width: 900px;
   line-height: 1.6;
   font-family: 'Roboto', sans-serif;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease 0.1s, transform 0.6s ease 0.1s;
+}
+
+.tagline2.animated {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .cardcontainer {
@@ -41,7 +57,7 @@
   grid-gap: 50px;
   margin-top: 2rem;
   padding: 0% 9%;
-  height: 100vh;
+  min-height: 100vh;
 }
 .card1 {
   position: relative;
@@ -55,10 +71,18 @@
   align-items: center;
   justify-content: flex-start;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease;
   cursor: pointer;
   padding: 2rem;
   min-height: 320px;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.card1.animated {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
 }
 
 .card2 {
@@ -73,10 +97,18 @@
   align-items: center;
   justify-content: flex-start;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease;
   cursor: pointer;
   padding: 2rem;
   min-height: 320px;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.card2.animated {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
 }
 .card3 {
   position: relative;
@@ -90,10 +122,18 @@
   align-items: center;
   justify-content: flex-start;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease;
   cursor: pointer;
   padding: 2rem;
   min-height: 320px;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.card3.animated {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
 }
 
 .card4 {
@@ -108,10 +148,18 @@
   align-items: center;
   justify-content: flex-start;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease;
   cursor: pointer;
   padding: 2rem;
   min-height: 320px;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.card4.animated {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s;
 }
 .card5 {
   position: relative;
@@ -125,10 +173,18 @@
   align-items: center;
   justify-content: flex-start;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease;
   cursor: pointer;
   padding: 2rem;
   min-height: 320px;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.card5.animated {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.6s;
 }
 
 .card6 {
@@ -143,10 +199,18 @@
   align-items: center;
   justify-content: flex-start;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease;
   cursor: pointer;
   padding: 2rem;
   min-height: 320px;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.card6.animated {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
 }
 .card1::before,
 .card2::before,
@@ -191,8 +255,9 @@
 .card4:hover,
 .card5:hover,
 .card6:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cardContent {
@@ -250,8 +315,10 @@
 /* Mobile View CSS */
 @media (max-width: 768px) {
   .container {
-    padding: 50px 10px 0px 3px; /* Adjust padding for mobile */
-    height: 100%; /* Allow height to adapt to content */
+    padding: 50px 10px 50px 3px; /* Adjust padding for mobile */
+    height: auto; /* Allow height to adapt to content */
+    min-height: 250vh; /* Increase minimum height to show all cards */
+    padding-bottom: 3rem; /* Add bottom padding */
   }
 
   .tagline {
@@ -267,9 +334,11 @@
 
   .cardcontainer {
     grid-template-columns: 1fr; /* Stack cards in a single column */
-    grid-gap: 15px; /* Adjust grid gap for mobile */
+    grid-gap: 20px; /* Adjust grid gap for mobile */
     padding: 1rem; /* Adjust padding for mobile */
-    
+    height: auto; /* Remove fixed height */
+    min-height: auto; /* Allow container to grow */
+    margin-bottom: 2rem; /* Add bottom margin */
   }
 
   .card1,

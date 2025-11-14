@@ -1,6 +1,6 @@
 "use client"
 // src/app/page.tsx
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Header from '../components/Header';
 import Slider from 'react-slick';
@@ -17,6 +17,31 @@ import {
 import styles from './sectorspage.module.css';
 
 export default function Sectors() {
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            setHasAnimated(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [hasAnimated]);
   const sectors = [
     {
       id: 1,
@@ -102,11 +127,11 @@ export default function Sectors() {
   };
 
   return (
-    <div id="sectors" className={styles.container}>
+    <div ref={sectionRef} id="sectors" className={styles.container}>
       <div className={styles.header}>
-        <h1 className={styles.tagline1}> Our Sectors</h1>
+        <h1 className={`${styles.tagline1} ${hasAnimated ? styles.animated : ''}`}> Our Sectors</h1>
       </div>
-      <div className={styles.carouselContainer}>
+      <div className={`${styles.carouselContainer} ${hasAnimated ? styles.animated : ''}`}>
         <Slider {...settings} className={`${styles.slider} sectors-carousel`}>
           {sectors.map((sector) => {
             const IconComponent = sector.icon;

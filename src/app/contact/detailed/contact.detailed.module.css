@@ -16,19 +16,27 @@
 
 .container1 {
     height: 50vh;
+    min-height: 300px;
     background: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&h=1080&fit=crop&q=80') no-repeat center center/cover;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .tagline1 {
-    padding: 10% 3%;
+    padding: 0 3%;
     text-align: center;
-    margin-top: 5%;
+    margin: 0;
     font-size: 4rem;
     font-weight: bold;
     color: white !important;
     position: relative;
     z-index: 2;
+    line-height: 1.2;
+    word-wrap: break-word;
+    width: 100%;
 }
 
 .container {
@@ -143,38 +151,213 @@
   @media screen and (max-width: 1024px) {
     .container1 {
       height: 40vh;
+      min-height: 280px;
     }
 
     .tagline1 {
       font-size: 3rem;
+      padding: 0 3%;
+    }
+
+    .container {
+      padding: 20px;
+      padding-top: 30px;
+    }
+
+    .contactSection {
+      gap: 15px;
+    }
+
+    .contactDetails h3 {
+      font-size: 24px;
+    }
+
+    .contactDetails p {
+      font-size: 16px;
     }
   }
 
   @media screen and (max-width: 768px) {
     .container1 {
-      height: 30vh;
+      height: 35vh;
+      min-height: 250px;
     }
 
     .tagline1 {
-      font-size: 2rem;
-      padding: 10rem 10rem;
+      font-size: 2.25rem;
+      padding: 0 3%;
+    }
+
+    .container {
+      padding: 15px;
+      padding-top: 25px;
     }
 
     .contactSection {
       flex-direction: column;
-      align-items: center;
+      align-items: stretch;
+      gap: 25px;
     }
   
     .contactDetails, .form {
       width: 100%;
     }
-  
-    .contactDetailsInfo {
+
+    .contactDetails h3 {
+      font-size: 22px;
+      margin-bottom: 15px;
       text-align: center;
+    }
+
+    .contactDetails p {
+      font-size: 15px;
+      margin: 8px 0;
+      line-height: 1.6;
+    }
+
+    .contactDetailsInfo {
+      padding-top: 5%;
+      text-align: center;
+    }
+
+    .icon {
+      margin-right: 8px;
+    }
+  
+    .form {
+      gap: 15px;
+    }
+
+    .inputField {
+      padding: 12px;
+      font-size: 15px;
     }
   
     .textArea {
+      height: 120px;
+      font-size: 15px;
+      padding: 12px;
+    }
+
+    .submitButton {
+      padding: 12px;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    .map iframe {
+      height: 300px;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    .container1 {
+      height: 30vh;
+      min-height: 220px;
+    }
+
+    .tagline1 {
+      font-size: 1.75rem;
+      padding: 0 3%;
+    }
+
+    .container {
+      padding: 12px;
+      padding-top: 20px;
+    }
+
+    .contactSection {
+      gap: 20px;
+    }
+
+    .contactDetails h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .contactDetails p {
+      font-size: 14px;
+      margin: 6px 0;
+      line-height: 1.5;
+    }
+
+    .contactDetailsInfo {
+      padding-top: 3%;
+    }
+
+    .form {
+      gap: 12px;
+    }
+
+    .inputField {
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    .textArea {
       height: 100px;
+      font-size: 14px;
+      padding: 10px;
+    }
+
+    .submitButton {
+      padding: 10px;
+      font-size: 15px;
+    }
+
+    .map iframe {
+      height: 250px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .container1 {
+      height: 28vh;
+      min-height: 200px;
+    }
+
+    .tagline1 {
+      font-size: 1.5rem;
+      padding: 0 3%;
+    }
+
+    .container {
+      padding: 10px;
+      padding-top: 15px;
+    }
+
+    .contactDetails h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .contactDetails p {
+      font-size: 13px;
+      margin: 5px 0;
+    }
+
+    .form {
+      gap: 10px;
+    }
+
+    .inputField {
+      padding: 10px;
+      font-size: 13px;
+    }
+
+    .textArea {
+      height: 90px;
+      font-size: 13px;
+      padding: 10px;
+    }
+
+    .submitButton {
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    .map iframe {
+      height: 220px;
     }
   }
   

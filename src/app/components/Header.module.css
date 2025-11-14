@@ -155,100 +155,185 @@
 
 /* Media queries for mobile view */
 @media (max-width: 768px) {
+  .header {
+    padding: 0.75rem 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .logo {
+    margin-right: 0;
+  }
+
+  .logo img {
+    height: 45px;
+  }
+
   .nav {
     position: absolute;
     top: 100%;
-    right: 0;
+    left: 0;
     width: 100%;
     background-color: white;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-in;
+    transition: max-height 0.4s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
 
   .nav.open {
-    max-height: 500px; /* Adjust based on content */
+    max-height: 100vh;
+    overflow-y: auto;
   }
 
   .navList {
     flex-direction: column;
     width: 100%;
-    align-items: center;
+    align-items: stretch;
     padding: 0;
+    margin: 0;
   }
 
   .navItem {
-    margin: 1rem 0;
-    color: black;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .navItem:last-child {
+    border-bottom: none;
+  }
+
+  .navItem a,
+  .navItem span {
+    display: block;
+    padding: 1rem 1.5rem;
+    font-size: 16px;
+    color: #003459;
+    text-align: left;
+    width: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   .navItem a:hover,
   .navItem span:hover {
-    color: #007ea7; /* Use consistent hover color */
+    background-color: #f5f5f5;
+    color: #003459;
+  }
+
+  .navItem.dropdownOpen > span {
+    background-color: #003459;
+    color: white;
+  }
+
+  .navItem.dropdownOpen .dropdownIcon {
+    border-top-color: white;
   }
 
   .hamburger {
     display: flex;
+    z-index: 1001;
+  }
+
+  .bar {
+    background-color: #003459;
+    width: 28px;
+    height: 3px;
+    margin: 3px 0;
+    border-radius: 2px;
   }
 
   /* Mobile dropdown specific styles */
   .dropdown {
     position: relative;
-    background-color:#003459;
+    background-color: #003459;
     box-shadow: none;
     margin-top: 0;
-    width: 100vw;
-    
-    
+    width: 100%;
+    padding: 0;
+    left: 0;
+    top: 0;
   }
 
-  .dropdownItem {
-    width: 100%;
-    
-    text-align: center;
-    
-    border-bottom: 1px solid #dde4e9;
-    
+  .dropdown.show {
+    display: block;
   }
+
+  .dropdownItem,
   .dropdownItem1 {
     width: 100%;
-    
-    text-align: center;
-    
-    border-bottom: 1px solid #dde4e9;
-    
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease;
   }
 
-  .dropdownItem:last-child {
-    border-bottom: none;
-  }
+  .dropdownItem:last-child,
   .dropdownItem1:last-child {
     border-bottom: none;
   }
 
-  .dropdownItem:hover {
-    background-color: #007ea7;
-  }
+  .dropdownItem:hover,
   .dropdownItem1:hover {
-    background-color: #007ea7;
+    background-color: rgba(255, 255, 255, 0.1);
   }
 
-  .dropdownItem a {
-    
-    display: block;
-    text-align: center;
-    font-size: 13px;
-    color: white;
-  }
+  .dropdownItem a,
   .dropdownItem1 a {
-    
     display: block;
-    text-align: center;
-    font-size: 15px;
+    text-align: left;
+    font-size: 14px;
     color: white;
+    padding: 1rem 1.5rem 1rem 3rem;
+    line-height: 1.5;
+    transition: padding-left 0.3s ease, background-color 0.3s ease;
   }
 
+  .dropdownItem a:hover,
+  .dropdownItem1 a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding-left: 2rem;
+  }
 
+  .dropdownIcon {
+    float: right;
+    margin-top: 0.5rem;
+    border-top-color: #003459;
+    transition: transform 0.3s ease;
+  }
+
+  .navItem.dropdownOpen .dropdownIcon {
+    border-top-color: white;
+    transform: rotate(180deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .navItem a,
+  .navItem span {
+    padding: 0.875rem 1.25rem;
+    font-size: 15px;
+  }
+
+  .dropdownItem a,
+  .dropdownItem1 a {
+    padding: 0.875rem 1.25rem 0.875rem 2.5rem;
+    font-size: 13px;
+  }
+
+  .bar {
+    width: 24px;
+    height: 2.5px;
+  }
 }

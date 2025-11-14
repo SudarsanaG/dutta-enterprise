@@ -137,63 +137,175 @@
 
 /* Responsive styles */
 @media (max-width: 768px) {
+    .footer {
+        padding: 1.5rem 5%;
+    }
+
     .footerContent {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        margin-bottom: 15px;
+        gap: 1.5rem;
     }
 
     .logoSection {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         max-width: 100%;
         align-items: center;
+        padding-top: 0;
     }
 
     .logo {
-        height: 60px;
-        margin-bottom: 1rem;
+        height: 50px;
+        margin-bottom: 0.75rem;
     }
 
     .companyDescription {
         text-align: center;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
+        line-height: 1.5;
     }
 
     .links, .contact {
         flex: none;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .links h3, .contact h3 {
+        font-size: 22px;
+        margin-bottom: 8px;
+        padding-bottom: 3px;
+    }
+
+    .contactInfo {
+        padding-top: 3%;
     }
 
     .links ul {
         grid-template-columns: 1fr;
+        gap: 6px;
+    }
+
+    .links ul li {
+        margin-bottom: 6px;
+    }
+
+    .contact p {
+        margin: 4px 0;
+        font-size: 0.85rem;
     }
 
     .map {
-        margin: 20px 0;
+        margin: 15px 0;
     }
 
     .mapImage {
         width: 100%;
-        max-width: 300px;
+        max-width: 250px;
     }
 
     .footerBottom {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding-top: 8px;
+        font-size: 12px;
     }
 
     .socialLinks {
-        margin-top: 10px;
+        margin-top: 8px;
+        gap: 8px;
+    }
+
+    .socialLinks img {
+        width: 20px;
+        height: 20px;
     }
 }
 
 @media (max-width: 480px) {
+    .footer {
+        padding: 1.25rem 4%;
+    }
+
+    .footerContent {
+        margin-bottom: 12px;
+        gap: 1.25rem;
+    }
+
+    .logoSection {
+        margin-bottom: 12px;
+    }
+
+    .logo {
+        height: 45px;
+        margin-bottom: 0.5rem;
+    }
+
+    .companyDescription {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+
+    .links, .contact {
+        margin-bottom: 12px;
+    }
+
     .links h3, .contact h3 {
-        font-size: 24px;
+        font-size: 20px;
+        margin-bottom: 6px;
+        padding-bottom: 2px;
+    }
+
+    .contactInfo {
+        padding-top: 2%;
+    }
+
+    .links ul {
+        gap: 5px;
+    }
+
+    .links ul li {
+        margin-bottom: 5px;
+    }
+
+    .links ul li a {
+        font-size: 0.85rem;
+    }
+
+    .contact p {
+        margin: 3px 0;
+        font-size: 0.8rem;
+    }
+
+    .icon {
+        margin-right: 6px;
+        font-size: 0.85rem;
+    }
+
+    .map {
+        margin: 12px 0;
+    }
+
+    .mapImage {
+        max-width: 200px;
     }
 
     .footerBottom {
-        font-size: 12px;
+        padding-top: 6px;
+        font-size: 11px;
+    }
+
+    .socialLinks {
+        margin-top: 6px;
+        gap: 6px;
+    }
+
+    .socialLinks img {
+        width: 18px;
+        height: 18px;
     }
 }

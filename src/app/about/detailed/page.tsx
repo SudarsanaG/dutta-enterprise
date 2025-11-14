@@ -3,7 +3,6 @@
 import Header from '../../components/Header';
 import { ArrowRight } from 'lucide-react';
 import styles from '../DetailedAboutPage.module.css';
-import advantageStyles from '../../advantages/advantage.module.css';
 
 export default function DetailedAboutPage() {
   return (
@@ -30,70 +29,68 @@ export default function DetailedAboutPage() {
               <img src="../../about.jpg" alt="about" className={styles.about1}/>
             </div>
 
-          <div className={advantageStyles.container} style={{ background: 'white', minHeight: 'auto' }}>
-            <div className={advantageStyles.main}>
-              <div className={advantageStyles.tagline}>
-                <span className={advantageStyles.taglineRed}>Why</span> <span className={advantageStyles.taglineBlack}>Choose Us?</span>
+          <div className={styles.whyChooseUsSection}>
+            <div className={styles.whyChooseUsContainer}>
+              <div className={styles.whyChooseUsTitle}>
+                <span className={styles.titleBlue}>Why</span> <span className={styles.titleBlack}>Choose Us?</span>
               </div>
-              <div className={advantageStyles.cardsContainer}>
-                <div className={advantageStyles.card}>
-                  <div className={advantageStyles.cardHeader}>
-                    <ArrowRight className={advantageStyles.arrowIcon} />
-                    <h2 className={advantageStyles.cardTitle}>Comprehensive Approach</h2>
+              <div className={styles.whyChooseUsCards}>
+                <div className={styles.whyChooseUsCard}>
+                  <div className={styles.whyChooseUsCardHeader}>
+                    <ArrowRight className={styles.whyChooseUsArrow} />
+                    <h2 className={styles.whyChooseUsCardTitle}>Comprehensive Approach</h2>
                   </div>
-                  <p className={advantageStyles.cardContent}>
+                  <p className={styles.whyChooseUsCardContent}>
                     The Comprehensive Approach focuses on creating cultures and mechanisms for communication, cooperation, and understanding both horizontally and vertically between nations and international organisations.
                   </p>
                 </div>
 
-                <div className={advantageStyles.card}>
-                  <div className={advantageStyles.cardHeader}>
-                    <ArrowRight className={advantageStyles.arrowIcon} />
-                    <h2 className={advantageStyles.cardTitle}>Customized Solutions</h2>
+                <div className={styles.whyChooseUsCard}>
+                  <div className={styles.whyChooseUsCardHeader}>
+                    <ArrowRight className={styles.whyChooseUsArrow} />
+                    <h2 className={styles.whyChooseUsCardTitle}>Customized Solutions</h2>
                   </div>
-                  <p className={advantageStyles.cardContent}>
+                  <p className={styles.whyChooseUsCardContent}>
                     A &quot;customized solution&quot; at Management Systems is made up of the tools (one or more) chosen to best meet the needs of the client and how these tools are packaged and delivered both inside and to the client.
                   </p>
                 </div>
 
-                <div className={advantageStyles.card}>
-                  <div className={advantageStyles.cardHeader}>
-                    <ArrowRight className={advantageStyles.arrowIcon} />
-                    <h2 className={advantageStyles.cardTitle}>Experience &amp; Expertise</h2>
-
+                <div className={styles.whyChooseUsCard}>
+                  <div className={styles.whyChooseUsCardHeader}>
+                    <ArrowRight className={styles.whyChooseUsArrow} />
+                    <h2 className={styles.whyChooseUsCardTitle}>Experience &amp; Expertise</h2>
                   </div>
-                  <p className={advantageStyles.cardContent}>
+                  <p className={styles.whyChooseUsCardContent}>
                     The mastery of a discipline&apos;s knowledge, abilities, and methodologies is referred to as content expertise. Graduate content expertise leads to students&apos; scholarly efforts producing new knowledge.
                   </p>
                 </div>
 
-                <div className={advantageStyles.card}>
-                  <div className={advantageStyles.cardHeader}>
-                    <ArrowRight className={advantageStyles.arrowIcon} />
-                    <h2 className={advantageStyles.cardTitle}>Cost Savings</h2>
+                <div className={styles.whyChooseUsCard}>
+                  <div className={styles.whyChooseUsCardHeader}>
+                    <ArrowRight className={styles.whyChooseUsArrow} />
+                    <h2 className={styles.whyChooseUsCardTitle}>Cost Savings</h2>
                   </div>
-                  <p className={advantageStyles.cardContent}>
+                  <p className={styles.whyChooseUsCardContent}>
                     Savings are the advantages obtained from actions that lower an organization&apos;s overall outlay on assets, which have a direct bearing on its bottom line. Cost-saving measures can include increased productivity and negotiating lower supply purchase prices.
                   </p>
                 </div>
 
-                <div className={advantageStyles.card}>
-                  <div className={advantageStyles.cardHeader}>
-                    <ArrowRight className={advantageStyles.arrowIcon} />
-                    <h2 className={advantageStyles.cardTitle}>Real-Time Monitoring &amp; Reporting</h2>
-
+                <div className={styles.whyChooseUsCard}>
+                  <div className={styles.whyChooseUsCardHeader}>
+                    <ArrowRight className={styles.whyChooseUsArrow} />
+                    <h2 className={styles.whyChooseUsCardTitle}>Real-Time Monitoring &amp; Reporting</h2>
                   </div>
-                  <p className={advantageStyles.cardContent}>
+                  <p className={styles.whyChooseUsCardContent}>
                     Real-time monitoring is a method that lets you know what the queues and channels within a queue manager are doing right now. The data returned is current as of when the command was given.
                   </p>
                 </div>
 
-                <div className={advantageStyles.card}>
-                  <div className={advantageStyles.cardHeader}>
-                    <ArrowRight className={advantageStyles.arrowIcon} />
-                    <h2 className={advantageStyles.cardTitle}>Access to Specialized Services</h2>
+                <div className={styles.whyChooseUsCard}>
+                  <div className={styles.whyChooseUsCardHeader}>
+                    <ArrowRight className={styles.whyChooseUsArrow} />
+                    <h2 className={styles.whyChooseUsCardTitle}>Access to Specialized Services</h2>
                   </div>
-                  <p className={advantageStyles.cardContent}>
+                  <p className={styles.whyChooseUsCardContent}>
                     It takes more than just installing ramps and enlarging doorways for wheelchair users to have access to services. All people with disabilities, including those who are blind, deaf, or have learning disabilities, should find it easier to use services.
                   </p>
                 </div>

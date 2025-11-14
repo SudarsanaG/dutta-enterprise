@@ -18,13 +18,28 @@
     font-weight: bold;
     color: #003459;
     margin-bottom: 1.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
   }
 
-  
+  .tagline1.animated {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   .carouselContainer {
     margin-top: 2rem;
     padding: 0% 5%;
     position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease 0.2s, transform 0.6s ease 0.2s;
+  }
+
+  .carouselContainer.animated {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .slider {
@@ -183,8 +198,9 @@
   .card4:hover,
   .card5:hover,
   .card6:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
   .cardContent {
@@ -250,6 +266,12 @@
     .container {
       padding: 0 10px;
       height: auto;
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+    }
+
+    .carouselContainer {
+      margin-bottom: 2rem;
     }
   
     .tagline1 {

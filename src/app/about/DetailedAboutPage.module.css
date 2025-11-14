@@ -1,12 +1,17 @@
 /* src/app/about/DetailedAboutPage.module.css */
 .container {
-  
-    padding: 0 0px;
+    padding: 0;
     max-width: 100%;
     margin: auto;
-    min-height: 300vh;
+    min-height: auto;
     background-color: whitesmoke;
-    
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.main {
+  width: 100%;
+  background-color: whitesmoke;
 }
 
 .container1::before{
@@ -17,42 +22,53 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6 ); /* Dark overlay with 50% opacity */
-  z-index: 1; /* Place the overlay below the text */}
+  z-index: -1; /* Place the overlay below the text */}
 
 .container1{
-  height:50vh;
+  height: 50vh;
+  min-height: 300px;
   background: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&h=1080&fit=crop&q=80') no-repeat center center/cover;
   position: relative;
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .tagline1 {
-  padding:10% 3%;
+  padding: 0 3%;
   text-align: center;
-  margin-top: 5%;
+  margin: 0;
   font-size: 4rem;
   font-weight: bold;
   color: white !important;
   position: relative;
   z-index: 2;
+  line-height: 1.2;
+  word-wrap: break-word;
+  width: 100%;
 }
 
 .subtagline1 {
   padding: 2% 0% 0% 0%;
   font-size: 1rem;
-  
   text-align: left;
-  color:#424952;
+  color: #424952;
   font-family: 'Roboto', sans-serif;
- 
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
-.subtagline2 {
 
-      
+.subtagline2 {
   text-align: left;
   font-size: 2.5rem;
   font-weight: bold;
-   color: #003459;
-   line-height: 1;
+  color: #003459;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  word-wrap: break-word;
 }
 
 
@@ -149,19 +165,22 @@
   object-fit: contain;
 }
 .about{
- 
-  display: flex; /* Flexbox for aligning content */
-  align-items: center; /* Align content and logo vertically */
+  display: flex;
+  align-items: center;
   padding: 4% 10%;
+  gap: 3rem;
+  flex-wrap: wrap;
 }
+
 .about1{
-  padding:0% 0% 0% 3%;
-  width: 40%;/* Adjust width as needed */
-height: 40%;
-
-
-  
-  
+  padding: 0;
+  width: 40%;
+  max-width: 500px;
+  height: auto;
+  min-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
 }
 .certificates{
   text-align: center;
@@ -200,151 +219,584 @@ height: 40%;
   transform: translateY(-8px);
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
 }
- /* Responsive Styling */
-@media (max-width: 1024px) {
-  .container{
-    height:100%;
+
+/* Why Choose Us Section */
+.whyChooseUsSection {
+  width: 100% !important;
+  background-color: white !important;
+  padding: 4rem 0 !important;
+  position: relative !important;
+  z-index: 1 !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  min-height: auto !important;
+}
+
+.whyChooseUsContainer {
+  padding: 0 10% !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.whyChooseUsTitle {
+  text-align: center !important;
+  font-size: 3rem !important;
+  font-weight: bold !important;
+  margin-bottom: 3rem !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+}
+
+.titleBlue {
+  color: #003459;
+}
+
+.titleBlack {
+  color: #000000;
+}
+
+.whyChooseUsCards {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  grid-gap: 2rem !important;
+  padding: 0 5% !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.whyChooseUsCard {
+  background-color: white !important;
+  border-radius: 8px !important;
+  padding: 2rem !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: block !important;
+  transform: none !important;
+}
+
+.whyChooseUsCard:hover {
+  background-color: #003459;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px) scale(1.02);
+}
+
+.whyChooseUsCard:hover .whyChooseUsCardTitle {
+  color: white;
+}
+
+.whyChooseUsCard:hover .whyChooseUsCardContent {
+  color: white;
+}
+
+.whyChooseUsCard:hover .whyChooseUsArrow {
+  color: white;
+}
+
+.whyChooseUsCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.whyChooseUsArrow {
+  width: 24px;
+  height: 24px;
+  color: #003459;
+  flex-shrink: 0;
+}
+
+.whyChooseUsCardTitle {
+  font-size: 1.5rem !important;
+  font-weight: bold !important;
+  margin: 0 !important;
+  color: #003459 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.whyChooseUsCardContent {
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+  color: #333333 !important;
+  font-family: 'Roboto', sans-serif !important;
+  margin: 0 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.whyChooseUsCardHeader {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.whyChooseUsArrow {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Responsive Styling */
+@media (max-width: 1200px) {
+  .container {
+    min-height: auto;
+    height: auto;
   }
-  .container1{
-    height:60vh;
+
+  .container1 {
+    height: 45vh;
+    min-height: 280px;
   }
+
   .tagline1 {
-      font-size: 2.5rem;
-      padding:10rem;
+    font-size: 3rem;
+    padding: 8% 3%;
+    margin-top: 3%;
   }
+
+  .about {
+    padding: 3% 8%;
+    gap: 2.5rem;
+  }
+
+  .about1 {
+    width: 45%;
+    max-width: 450px;
+  }
+
   .subtagline2 {
-      font-size: 2rem;
+    font-size: 2.25rem;
   }
+
+  .subtagline1 {
+    font-size: 0.95rem;
+  }
+
   .cardsContainer {
-      padding: 2% 15%;
-      grid-template-columns: repeat(1,1fr);
-      
+    padding: 2% 8%;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
   }
+
+  .whyChooseUsCards {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+    padding: 0 3%;
+  }
+
+  .whyChooseUsTitle {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .whyChooseUsContainer {
+    padding: 0 5% !important;
+  }
+
   .certificates {
-      font-size: 2.5rem;
-      padding-top: 2rem;
+    font-size: 2.5rem;
+    padding-top: 3rem;
   }
+
   .certificates1 {
-      gap: 2rem;
-      padding: 2rem 4rem;
+    gap: 2rem;
+    padding: 2rem 5rem;
   }
+
   .certificates2 {
-      width: 300px;
+    width: 300px;
+    max-width: 100%;
   }
-  .logo1{
-    width: 50%; /* Adjust width as needed */
-      height: auto; /* Maintain aspect ratio */
-  
-     
-      
+
+  .logo1, .logo2 {
+    width: 50px;
+    height: 50px;
   }
-  .logo2{
-    width: 50%; /* Adjust width as needed */
-      height: auto; /* Maintain aspect ratio */
-    
-      
+}
+
+@media (max-width: 1024px) {
+  .container1 {
+    height: 40vh;
+    min-height: 250px;
+  }
+
+  .tagline1 {
+    font-size: 2.75rem;
+    padding: 7% 3%;
+  }
+
+  .about {
+    padding: 3% 6%;
+    gap: 2rem;
+  }
+
+  .about1 {
+    width: 45%;
+    max-width: 400px;
+  }
+
+  .subtagline2 {
+    font-size: 2rem;
+  }
+
+  .cardsContainer {
+    padding: 2% 6%;
+  }
+
+  .whyChooseUsCards {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 2%;
+  }
+
+  .whyChooseUsTitle {
+    font-size: 2.25rem;
   }
 }
 
 @media (max-width: 768px) {
-  .container{
-    height:100%;
+  .container {
+    min-height: auto;
+    height: auto;
   }
-  .container1{
-    height:30vh;
+
+  .container1 {
+    height: 35vh;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+
   .tagline1 {
-      font-size: 2rem;
-      padding: 10rem;
+    font-size: 2rem;
+    padding: 0;
+    margin-top: 0;
+    position: relative;
+    z-index: 2;
   }
-  .subtagline2 {
-      font-size: 1.75rem;
-  }
-  .cardsContainer {
-    padding: 2% 10%;
-    grid-template-columns: repeat(1,1fr);
-    
-}
+
   .about {
-      flex-direction: column;
-      padding: 3% 5%;
+    flex-direction: column;
+    padding: 3% 5%;
+    gap: 2rem;
+    align-items: center;
   }
+
   .about1 {
-      width: 100%;
-      height: auto;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 250px;
+    padding: 0;
   }
+
+  .subtagline2 {
+    font-size: 1.75rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .subtagline1 {
+    font-size: 0.95rem;
+    text-align: center;
+    padding: 1rem 0 0 0;
+  }
+
+  .cardsContainer {
+    padding: 2% 5%;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+    min-height: auto;
+  }
+
+  .cardTitle {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .cardContent {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-top: 0.75rem;
+  }
+
+  .cardContentContainer {
+    margin-bottom: 0.75rem;
+  }
+
+  .whyChooseUsSection {
+    padding: 3rem 0 !important;
+  }
+
+  .whyChooseUsContainer {
+    padding: 0 5% !important;
+  }
+
+  .whyChooseUsCards {
+    grid-template-columns: 1fr !important;
+    grid-gap: 1.5rem !important;
+    padding: 0 !important;
+  }
+
+  .whyChooseUsTitle {
+    font-size: 2rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  .whyChooseUsCard {
+    padding: 1.5rem !important;
+  }
+
+  .whyChooseUsCardTitle {
+    font-size: 1.25rem !important;
+  }
+
+  .whyChooseUsCardContent {
+    font-size: 0.95rem !important;
+  }
+
+  .whyChooseUsArrow {
+    width: 22px;
+    height: 22px;
+  }
+
   .certificates {
-      font-size: 2rem;
-      padding-top: 2rem;
+    font-size: 2rem;
+    padding-top: 2rem;
+    margin-bottom: 2rem;
   }
+
+  .certificatesSection {
+    padding: 3rem 0;
+  }
+
   .certificates1 {
-      flex-direction: column;
-      gap: 2rem;
-      padding: 2rem 3rem;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 3rem;
+    align-items: center;
   }
+
   .certificates2 {
     width: 100%;
     max-width: 400px;
-}
-.logo1{
-  width: 20%; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
+  }
 
-   
-    
-}
-.logo2{
-  width: 15%; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
-  
-    
-}
+  .logo1, .logo2 {
+    width: 50px;
+    height: 50px;
+  }
 }
 
-@media (max-width: 480px) {
-  .container{
-    height:100%;
+@media (max-width: 576px) {
+  .container1 {
+    height: 30vh;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .container1{
-    height:30vh;
-  }
+
   .tagline1 {
-      font-size: 1.5rem;
-      padding: 10rem;
+    font-size: 1.75rem;
+    padding: 0;
+    margin-top: 0;
+    position: relative;
+    z-index: 2;
   }
+
+  .about {
+    padding: 2% 4%;
+    gap: 1.5rem;
+  }
+
+  .about1 {
+    min-height: 200px;
+  }
+
   .subtagline2 {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
   }
+
+  .subtagline1 {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
   .cardsContainer {
-    
-      padding: 2% 10%;
-      grid-template-columns: repeat(1,1fr);
-      
-  
+    padding: 2% 4%;
+    gap: 1.25rem;
   }
+
+  .card {
+    padding: 1.25rem;
+    min-height: auto;
+  }
+
+  .cardTitle {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .cardContent {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-top: 0.5rem;
+  }
+
+  .cardContentContainer {
+    margin-bottom: 0.5rem;
+  }
+
+  .whyChooseUsSection {
+    padding: 2.5rem 0 !important;
+  }
+
+  .whyChooseUsContainer {
+    padding: 0 4% !important;
+  }
+
+  .whyChooseUsTitle {
+    font-size: 1.75rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .whyChooseUsCard {
+    padding: 1.25rem !important;
+  }
+
+  .whyChooseUsCardTitle {
+    font-size: 1.1rem !important;
+  }
+
+  .whyChooseUsCardContent {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .whyChooseUsArrow {
+    width: 20px;
+    height: 20px;
+  }
+
   .certificates {
-      font-size: 1.5rem;
-      padding-top: 2rem;
+    font-size: 1.75rem;
+    padding-top: 2rem;
+    margin-bottom: 1.5rem;
   }
+
+  .certificatesSection {
+    padding: 2.5rem 0;
+  }
+
   .certificates1 {
-      gap: 1.5rem;
-      padding: 2rem 1.5rem;
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
   }
+
   .certificates2 {
     width: 100%;
     max-width: 350px;
   }
-  .logo1{
-    width: 30%; /* Adjust width as needed */
-      height: auto; /* Maintain aspect ratio */
-  
-     
-      
+
+  .logo1, .logo2 {
+    width: 45px;
+    height: 45px;
   }
-  .logo2{
-    width: 20%; /* Adjust width as needed */
-      height: auto; /* Maintain aspect ratio */
-    
-      
+}
+
+@media (max-width: 480px) {
+  .container1 {
+    height: 28vh;
+    min-height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tagline1 {
+    font-size: 1.5rem;
+    padding: 0;
+    margin-top: 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  .about {
+    padding: 2% 3%;
+  }
+
+  .subtagline2 {
+    font-size: 1.3rem;
+  }
+
+  .subtagline1 {
+    font-size: 0.85rem;
+  }
+
+  .cardsContainer {
+    padding: 2% 3%;
+  }
+
+  .card {
+    padding: 1rem;
+    min-height: auto;
+  }
+
+  .cardTitle {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .cardContent {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-top: 0.5rem;
+  }
+
+  .cardContentContainer {
+    margin-bottom: 0.5rem;
+  }
+
+  .whyChooseUsTitle {
+    font-size: 1.5rem !important;
+  }
+
+  .whyChooseUsCard {
+    padding: 1rem !important;
+  }
+
+  .whyChooseUsCardTitle {
+    font-size: 1rem !important;
+  }
+
+  .whyChooseUsCardContent {
+    font-size: 0.85rem !important;
+  }
+
+  .certificates {
+    font-size: 1.5rem;
+  }
+
+  .certificates1 {
+    padding: 1.5rem 1rem;
+  }
+
+  .certificates2 {
+    max-width: 300px;
+  }
+
+  .logo1, .logo2 {
+    width: 40px;
+    height: 40px;
   }
 }

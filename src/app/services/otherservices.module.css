@@ -2,7 +2,8 @@
     padding: 0 0px;
     max-width: 100%;
     margin: auto;
-    min-height: 180vh;
+    min-height: auto;
+    height: auto;
     background-color: white;
 }
 
@@ -24,19 +25,27 @@
 
 .container1 {
     height: 50vh;
+    min-height: 300px;
     background: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&h=1080&fit=crop&q=80') no-repeat center center/cover;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .tagline1 {
-    padding: 10% 3%;
+    padding: 0 3%;
     text-align: center;
-    margin-top: 5%;
+    margin: 0;
     font-size: 4rem;
     font-weight: bold;
     color: white !important;
     position: relative;
     z-index: 2;
+    line-height: 1.2;
+    word-wrap: break-word;
+    width: 100%;
 }
 
 /* Services Section with Background */
@@ -138,16 +147,14 @@
 
 /* Responsive styles for medium screens (tablets and smaller desktops) */
 @media (max-width: 1024px) {
-    .container {
-        min-height: 100%;
-    }
-
     .container1 {
         height: 40vh;
+        min-height: 280px;
     }
 
     .tagline1 {
         font-size: 3rem;
+        padding: 0 3%;
     }
 
     .servicesSection {
@@ -157,11 +164,13 @@
     .innerContainer {
         margin: 2rem 3rem;
         padding: 1.5rem;
+        max-width: calc(100% - 6rem);
     }
 
     .sectionTitle {
         font-size: 2rem;
         padding: 1% 5%;
+        text-align: center;
     }
 
     .cardsContainer {
@@ -173,21 +182,38 @@
     .serviceCard {
         padding: 1.5rem;
     }
+
+    .serviceIcon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 1rem;
+    }
+
+    .serviceIcon svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .cardTitle {
+        font-size: 1.15rem;
+    }
+
+    .cardContent {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
 }
 
 /* Responsive styles for small screens (mobile devices) */
 @media (max-width: 768px) {
-    .container {
-        min-height: 100%;
-    }
-
     .container1 {
-        height: 30vh;
+        height: 35vh;
+        min-height: 250px;
     }
 
     .tagline1 {
-        font-size: 2rem;
-        padding: 10rem 10rem;
+        font-size: 2.25rem;
+        padding: 0 3%;
     }
 
     .servicesSection {
@@ -197,11 +223,14 @@
     .innerContainer {
         margin: 1.5rem 1rem;
         padding: 1rem;
+        max-width: calc(100% - 2rem);
     }
 
     .sectionTitle {
         font-size: 1.75rem;
         padding: 1% 3%;
+        text-align: center;
+        margin-bottom: 1.5rem;
     }
 
     .cardsContainer {
@@ -214,11 +243,130 @@
         padding: 1.5rem;
     }
 
+    .serviceIcon {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 1rem;
+    }
+
+    .serviceIcon svg {
+        width: 26px;
+        height: 26px;
+    }
+
     .cardTitle {
         font-size: 1.1rem;
+        margin-bottom: 0.75rem;
     }
 
     .cardContent {
         font-size: 0.9rem;
+        line-height: 1.5;
+    }
+}
+
+/* Responsive styling for extra small screens */
+@media (max-width: 576px) {
+    .container1 {
+        height: 30vh;
+        min-height: 220px;
+    }
+
+    .tagline1 {
+        font-size: 1.75rem;
+        padding: 0 3%;
+    }
+
+    .innerContainer {
+        margin: 1rem 0.75rem;
+        padding: 0.75rem;
+        max-width: calc(100% - 1.5rem);
+    }
+
+    .sectionTitle {
+        font-size: 1.5rem;
+        padding: 1% 2%;
+        margin-bottom: 1rem;
+    }
+
+    .cardsContainer {
+        padding: 2% 2%;
+        gap: 1.25rem;
+    }
+
+    .serviceCard {
+        padding: 1.25rem;
+    }
+
+    .serviceIcon {
+        width: 45px;
+        height: 45px;
+        margin-bottom: 0.75rem;
+    }
+
+    .serviceIcon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .cardTitle {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .cardContent {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 480px) {
+    .container1 {
+        height: 28vh;
+        min-height: 200px;
+    }
+
+    .tagline1 {
+        font-size: 1.5rem;
+        padding: 0 3%;
+    }
+
+    .innerContainer {
+        margin: 0.75rem 0.5rem;
+        padding: 0.75rem;
+        max-width: calc(100% - 1rem);
+    }
+
+    .sectionTitle {
+        font-size: 1.25rem;
+        padding: 1% 2%;
+    }
+
+    .cardsContainer {
+        padding: 2% 1.5%;
+        gap: 1rem;
+    }
+
+    .serviceCard {
+        padding: 1rem;
+    }
+
+    .serviceIcon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 0.75rem;
+    }
+
+    .serviceIcon svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .cardTitle {
+        font-size: 0.95rem;
+    }
+
+    .cardContent {
+        font-size: 0.8rem;
     }
 }

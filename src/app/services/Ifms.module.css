@@ -199,37 +199,59 @@
 /* Responsive styling for medium screens (tablets and smaller desktops) */
 @media (max-width: 1024px) {
     .container {
-        height: 100%; /* Adjust height for medium screens */
+        min-height: auto;
+        height: auto;
     }
 
     .container1 {
-        height: 40vh; /* Reduce height for medium screens */
+        height: 40vh;
+        min-height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
-    .heading{
-        padding:2rem 10rem;
-        text-align: center;
-     
-        font-size: 2rem;
-        font-weight: bold;
-        color:#003459; 
-       
-    }
     .tagline1 {
-        font-size: 3rem; /* Adjust font size for medium screens */
+        font-size: 3rem;
+        padding: 0 3%;
+        margin-top: 0;
+        text-align: center;
     }
 
     .subtagline1 {
-        font-size: 2rem; /* Adjust font size for medium screens */
+        font-size: 1.75rem;
+        line-height: 1.3;
+    }
+
+    .subtagline2 {
+        font-size: 0.95rem;
+        line-height: 1.6;
     }
 
     .about {
-        flex-direction: column; /* Stack content vertically on medium screens */
+        flex-direction: column;
         padding: 3% 5%;
+        gap: 2rem;
+        align-items: center;
     }
 
     .ifms {
-        width: 50%; /* Adjust image width for medium screens */
+        width: 60%;
+        max-width: 500px;
+        height: auto;
+        padding: 0;
+    }
+
+    .innerContainer,
+    .innerContainerHard {
+        margin: 2rem 3rem;
+        padding: 1.5rem;
+    }
+
+    .softskills,
+    .hardskills {
+        font-size: 2rem;
+        padding: 1% 5%;
     }
 
     .cardsContainer {
@@ -237,61 +259,82 @@
         gap: 1.5rem;
         padding: 2% 5%;
     }
+
+    .serviceCard {
+        padding: 1.75rem;
+    }
 }
 
 /* Responsive styling for small screens (mobile devices) */
 @media (max-width: 768px) {
     .container {
-        height: 100%; /* Adjust height for small screens */
+        min-height: auto;
+        height: auto;
     }
 
     .container1 {
-        height: 30vh; /* Reduce height for small screens */
+        height: 35vh;
+        min-height: 200px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-   .heading{
-    align-items: center;
-    line-height: 1;
-    font-size: 2rem;
-    font-weight: bold;
-    color:#003459;
-    justify-content: center;
-    
-   }
+
     .tagline1 {
         font-size: 2rem;
-        
-
+        padding: 0 3%;
+        margin-top: 0;
+        text-align: center;
+        line-height: 1.2;
+        word-wrap: break-word;
     }
 
     .subtagline1 {
-        font-size: 1.5rem; /* Adjust font size for small screens */
-        text-align: left;
+        font-size: 1.5rem;
+        text-align: center;
+        line-height: 1.3;
+        margin-bottom: 1rem;
     }
-    .subtagline2{
+
+    .subtagline2 {
         font-size: 0.9rem;
-        text-align: left;
+        text-align: center;
+        line-height: 1.6;
+        padding: 1rem 0 0 0;
     }
 
     .about {
-        flex-direction: column; /* Stack content vertically on small screens */
-        padding: 3% 3%;
+        flex-direction: column;
+        padding: 3% 4%;
+        gap: 2rem;
+        align-items: center;
     }
 
     .ifms {
-        width: 80%; /* Adjust image width for small screens */
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        padding: 0;
     }
 
-    .softskills, .hardskills {
-        font-size: 1.8rem; /* Adjust headline sizes for small screens */
+    .innerContainer,
+    .innerContainerHard {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
+        max-width: calc(100% - 2rem);
+    }
+
+    .softskills,
+    .hardskills {
+        font-size: 1.75rem;
+        padding: 1% 5%;
+        text-align: center;
     }
 
     .cardsContainer {
         grid-template-columns: 1fr;
         gap: 1.5rem;
-        padding: 2% 5%;
+        padding: 2% 4%;
     }
 
     .serviceCard {
@@ -300,9 +343,121 @@
 
     .cardTitle {
         font-size: 1.1rem;
+        margin-bottom: 0.75rem;
     }
 
     .cardContent {
         font-size: 0.9rem;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 576px) {
+    .container1 {
+        height: 30vh;
+        min-height: 180px;
+    }
+
+    .tagline1 {
+        font-size: 1.75rem;
+        padding: 0 2%;
+    }
+
+    .subtagline1 {
+        font-size: 1.3rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .subtagline2 {
+        font-size: 0.85rem;
+    }
+
+    .about {
+        padding: 2% 3%;
+        gap: 1.5rem;
+    }
+
+    .innerContainer,
+    .innerContainerHard {
+        margin: 1.5rem 0.75rem;
+        padding: 1.25rem;
+        max-width: calc(100% - 1.5rem);
+    }
+
+    .softskills,
+    .hardskills {
+        font-size: 1.5rem;
+        padding: 1% 3%;
+    }
+
+    .cardsContainer {
+        padding: 2% 3%;
+        gap: 1.25rem;
+    }
+
+    .serviceCard {
+        padding: 1.25rem;
+    }
+
+    .cardTitle {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .cardContent {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container1 {
+        height: 28vh;
+        min-height: 160px;
+    }
+
+    .tagline1 {
+        font-size: 1.5rem;
+    }
+
+    .subtagline1 {
+        font-size: 1.2rem;
+    }
+
+    .subtagline2 {
+        font-size: 0.8rem;
+    }
+
+    .about {
+        padding: 2% 2%;
+    }
+
+    .innerContainer,
+    .innerContainerHard {
+        margin: 1.25rem 0.5rem;
+        padding: 1rem;
+        max-width: calc(100% - 1rem);
+    }
+
+    .softskills,
+    .hardskills {
+        font-size: 1.3rem;
+        padding: 1% 2%;
+    }
+
+    .cardsContainer {
+        padding: 2% 2%;
+        gap: 1rem;
+    }
+
+    .serviceCard {
+        padding: 1rem;
+    }
+
+    .cardTitle {
+        font-size: 0.95rem;
+    }
+
+    .cardContent {
+        font-size: 0.8rem;
     }
 }

@@ -1,6 +1,7 @@
 .container{
 min-height:120vh;
 background-color: whitesmoke;
+position: relative;
 }
 .main{
 padding:3% 10%;
@@ -11,6 +12,14 @@ padding:3% 10%;
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.tagline.animated {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .taglineRed {
@@ -34,12 +43,44 @@ padding:3% 10%;
   border-radius: 8px;
   padding: 2rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  transition: all 0.3s ease, opacity 0.6s ease, transform 0.6s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.card.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:nth-child(1).animated {
+  transition-delay: 0.1s;
+}
+
+.card:nth-child(2).animated {
+  transition-delay: 0.2s;
+}
+
+.card:nth-child(3).animated {
+  transition-delay: 0.3s;
+}
+
+.card:nth-child(4).animated {
+  transition-delay: 0.4s;
+}
+
+.card:nth-child(5).animated {
+  transition-delay: 0.5s;
+}
+
+.card:nth-child(6).animated {
+  transition-delay: 0.6s;
 }
 
 .card:hover {
   background-color: #003459;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px) scale(1.02);
 }
 
 .card:hover .cardTitle {
@@ -95,7 +136,9 @@ padding:3% 10%;
   }
   
   .container {
-    min-height: 100%;
+    min-height: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
   
   .tagline {
@@ -117,22 +160,26 @@ padding:3% 10%;
 
 @media (max-width: 600px) {
   .container {
-    min-height: 100%;
+    min-height: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
   
   .main {
-    padding: 3% 3%;
+    padding: 5% 3%;
   }
   
   .cardsContainer {
     grid-template-columns: 1fr;
     grid-gap: 1.5rem;
     padding: 0;
+    margin-top: 1.5rem;
   }
 
   .tagline {
     font-size: 2.5rem;
     margin-bottom: 2rem;
+    padding: 0;
   }
 
   .card {
