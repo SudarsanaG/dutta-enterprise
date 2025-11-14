@@ -128,8 +128,17 @@ export default function Sectors() {
 
   return (
     <div ref={sectionRef} id="sectors" className={styles.container}>
-      <div className={styles.header}>
-        <h1 className={`${styles.tagline1} ${hasAnimated ? styles.animated : ''}`}> Our Sectors</h1>
+       <div className={styles.headerGrid}>
+        <div className={styles.headerLeft}>
+          <div className={`${styles.sectorsLabel} ${hasAnimated ? styles.animated : ''}`}>SECTORS</div>
+          <div className={`${styles.tagline1} ${hasAnimated ? styles.animated : ''}`}>
+            <span className={styles.taglineBlue}>Where We </span>
+            <span className={styles.taglineOrange}>Operate</span>
+          </div>
+        </div>
+        <div className={styles.headerRight}>
+          <p className={`${styles.tagline2} ${hasAnimated ? styles.animated : ''}`}>Dutta Enterprise operates across diverse sectors, serving healthcare facilities, educational institutions, public administration offices, industrial complexes, and retail establishments. </p>
+        </div>
       </div>
       <div className={`${styles.carouselContainer} ${hasAnimated ? styles.animated : ''}`}>
         <Slider {...settings} className={`${styles.slider} sectors-carousel`}>

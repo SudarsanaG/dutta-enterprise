@@ -110,7 +110,7 @@ export default function Header() {
           <li className={styles.navItem}>
             <Link href="/clients">CLIENTS</Link>
           </li>
-          <li className={styles.navItem}>
+          <li className={`${styles.navItem} ${styles.contactButton}`}>
             <Link href="/contact/detailed">CONTACT</Link>
           </li>
         </ul>

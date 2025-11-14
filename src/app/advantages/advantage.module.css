@@ -1,17 +1,48 @@
 .container{
 min-height:120vh;
-background-color: whitesmoke;
+background-color: white;
 position: relative;
 }
 .main{
 padding:3% 10%;
 }
-.tagline{
-  padding:1% 3%;
-  text-align: center;
-  font-size: 3rem;
-  font-weight: bold;
+.headerGrid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: center;
   margin-bottom: 3rem;
+  padding: 0 3%;
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.whyUsLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #666666;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.whyUsLabel.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tagline{
+  padding: 0;
+  text-align: left;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease, transform 0.6s ease;
@@ -30,6 +61,53 @@ padding:3% 10%;
   color: #000000; /* Black color */
 }
 
+.taglineBlue {
+  color: #003459; /* Website blue color */
+}
+
+.taglineOrange {
+  color: #FF9500; /* Orange color */
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+}
+
+.contactButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  border: 2px solid #FF9500;
+  background-color: transparent;
+  color: #FF9500;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.05em;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.contactButton:hover {
+  background-color: #FF9500;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 149, 0, 0.3);
+}
+
+.buttonArrow {
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.contactButton:hover .buttonArrow {
+  transform: translate(2px, -2px);
+}
+
 .cardsContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -41,11 +119,37 @@ padding:3% 10%;
 .card {
   background-color: white;
   border-radius: 8px;
+  border: 2px solid #FF9500;
   padding: 2rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease, opacity 0.6s ease, transform 0.6s ease;
   opacity: 0;
   transform: translateY(30px);
+}
+
+.card:nth-child(2),
+.card:nth-child(4),
+.card:nth-child(6) {
+  background-color: #003459;
+  color: white;
+}
+
+.card:nth-child(2) .cardTitle,
+.card:nth-child(4) .cardTitle,
+.card:nth-child(6) .cardTitle {
+  color: white;
+}
+
+.card:nth-child(2) .cardContent,
+.card:nth-child(4) .cardContent,
+.card:nth-child(6) .cardContent {
+  color: white;
+}
+
+.card:nth-child(2) .arrowIcon,
+.card:nth-child(4) .arrowIcon,
+.card:nth-child(6) .arrowIcon {
+  color: #FF9500;
 }
 
 .card.animated {
@@ -77,23 +181,7 @@ padding:3% 10%;
   transition-delay: 0.6s;
 }
 
-.card:hover {
-  background-color: #003459;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  transform: translateY(-8px) scale(1.02);
-}
-
-.card:hover .cardTitle {
-  color: white;
-}
-
-.card:hover .cardContent {
-  color: white;
-}
-
-.card:hover .arrowIcon {
-  color: white;
-}
+/* Hover effects removed */
 
 .cardHeader {
   display: flex;
@@ -105,7 +193,7 @@ padding:3% 10%;
 .arrowIcon {
   width: 24px;
   height: 24px;
-  color: #003459; /* Website blue color */
+  color: #FF9500; /* Orange color */
   flex-shrink: 0;
 }
 
@@ -128,6 +216,16 @@ padding:3% 10%;
   .main {
     padding: 3% 5%;
   }
+
+  .headerGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .headerRight {
+    justify-content: flex-start;
+  }
   
   .cardsContainer {
     grid-template-columns: repeat(2, 1fr);
@@ -142,7 +240,7 @@ padding:3% 10%;
   }
   
   .tagline {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .card {
@@ -168,6 +266,21 @@ padding:3% 10%;
   .main {
     padding: 5% 3%;
   }
+
+  .headerGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0;
+  }
+
+  .headerRight {
+    justify-content: flex-start;
+  }
+
+  .contactButton {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.8rem;
+  }
   
   .cardsContainer {
     grid-template-columns: 1fr;
@@ -177,9 +290,8 @@ padding:3% 10%;
   }
 
   .tagline {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    padding: 0;
+    font-size: 1.75rem;
+    margin-bottom: 0;
   }
 
   .card {

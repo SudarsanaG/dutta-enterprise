@@ -9,8 +9,8 @@ export default function HomePage() {
   
   // Array of images for the slider - all conveying facility management services
   const images = [
-    '/cov1.webp',
     'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&h=1080&fit=crop&q=80', // Modern office building
+    'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1920&h=1080&fit=crop&q=80', // People working - team collaboration
   ];
 
   // Text content for each slide
@@ -87,7 +87,7 @@ export default function HomePage() {
       <div className={styles.overlay}></div>
       <Header />
       <main className={styles.main}>
-        <div key={currentIndex} className={styles.contentWrapper}>
+        <div key={currentIndex} className={`${styles.contentWrapper} ${currentIndex === 1 ? styles.slide2 : ''}`}>
           <h1 className={styles.tagline}>{slideContent[currentIndex].tagline}</h1>
           <div className={styles.subtagline1}>{slideContent[currentIndex].subtitle}</div>
           <div className={styles.buttonContainer}>

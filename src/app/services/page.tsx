@@ -44,12 +44,18 @@ export default function Services() {
   return (
     <div ref={sectionRef} id="services" className={styles.container}>
     
-      <div className={styles.header}>
-     
-        <h1 className={`${styles.tagline1} ${hasAnimated ? styles.animated : ''}`}> Our Services </h1>
+      <div className={styles.headerGrid}>
+        <div className={styles.headerLeft}>
+          <div className={`${styles.servicesLabel} ${hasAnimated ? styles.animated : ''}`}>SERVICES</div>
+          <div className={`${styles.tagline1} ${hasAnimated ? styles.animated : ''}`}>
+            <span className={styles.taglineBlue}>What We </span>
+            <span className={styles.taglineOrange}>Deliver</span>
+          </div>
         </div>
-
-        <p className={`${styles.tagline2} ${hasAnimated ? styles.animated : ''}`}>We offer a wide range of specialised services to meet the diverse needs of our clients.</p>
+        <div className={styles.headerRight}>
+          <p className={`${styles.tagline2} ${hasAnimated ? styles.animated : ''}`}>We provide comprehensive integrated facility management services across multiple sectors. From healthcare and education to public administration and retail, we deliver tailored solutions including staffing, security, catering, construction, and maintenance services. </p>
+        </div>
+      </div>
       <div className={styles.cardcontainer}>
         <div className={`${styles.card1} ${hasAnimated ? styles.animated : ''}`}>
           <div className={styles.cardIcon}>

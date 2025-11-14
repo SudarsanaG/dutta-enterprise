@@ -3,7 +3,7 @@
   max-width: 100%;
   margin: auto;
   height: 140vh;
-  background-color: white;
+  background-color: whitesmoke;
  
  position: relative;
 }
@@ -12,13 +12,44 @@
 .header{
   padding: 1% 9%;
 }
+
+.headerGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 3rem;
+  padding: 2% 9%;
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.servicesLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #666666;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.servicesLabel.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .tagline1 {
-  text-align: center;
-  margin-top: 1%;
-  font-size: 3 rem;
+  text-align: left;
+  margin-top: 0;
+  font-size: 2.5rem;
   font-weight: bold;
-  color:#003459;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease, transform 0.6s ease;
@@ -29,16 +60,26 @@
   transform: translateY(0);
 }
 
+.taglineBlue {
+  color: #003459; /* Website blue color */
+}
+
+.taglineOrange {
+  color: #FF9500; /* Orange color */
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+}
+
 .tagline2 {
-  padding: 0 12%;
-  text-align: center;
-  color:#003459;
-  font-size: 1.25rem;
+  padding: 0;
+  text-align: left;
+  color: #666666;
+  font-size: 1rem;
   font-weight: 400;
   font-style: normal;
-  display: block;
-  margin: 0 auto 3rem auto;
-  max-width: 900px;
   line-height: 1.6;
   font-family: 'Roboto', sans-serif;
   opacity: 0;
@@ -233,7 +274,7 @@
   margin-bottom: 1.5rem;
   z-index: 2;
   position: relative;
-  color: white;
+  color: #FF9500;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -284,13 +325,13 @@
 
 
 .readMore {
-  background-color: white;
+  background-color: #003459;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
   font-weight: 600;
-  color: #333;
+  color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 6px;
   transition: all 0.3s ease;
@@ -299,7 +340,7 @@
 }
 
 .readMore:hover {
-  background-color: #f0f0f0;
+  background-color:#FF9500;
   transform: translateX(5px);
 }
 
@@ -326,9 +367,19 @@
     font-size: 1rem; /* Smaller font size for mobile */
   }
 
+  .headerGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 2% 5%;
+  }
+
+  .tagline1 {
+    font-size: 2rem;
+  }
+
   .tagline2 {
-    padding: 1% 5%;
-    font-size: 1.2rem;
+    padding: 0;
+    font-size: 0.95rem;
     margin-bottom: 2rem;
   }
 

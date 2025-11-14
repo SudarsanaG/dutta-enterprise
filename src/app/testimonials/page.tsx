@@ -1,7 +1,34 @@
 "use client";
+import { useState, useEffect, useRef } from 'react';
 import styles from './testimonials.module.css';
 
 export default function Testimonials() {
+    const [hasAnimated, setHasAnimated] = useState(false);
+    const sectionRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting && !hasAnimated) {
+                        setHasAnimated(true);
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
+        }
+
+        return () => {
+            if (sectionRef.current) {
+                observer.unobserve(sectionRef.current);
+            }
+        };
+    }, [hasAnimated]);
+
     const clients = [
         { id: 1, logo: '/bdo.jpeg', name: 'BDO' },
         { id: 2, logo: '/kec.webp', name: 'KEC' },
@@ -18,8 +45,19 @@ export default function Testimonials() {
     ];
 
     return (
-        <div className={styles.container}>
-            <div className={styles.testimonialTitle}>Our Trusted Clients</div>
+        <div ref={sectionRef} className={styles.container}>
+            <div className={styles.headerGrid}>
+                <div className={styles.headerLeft}>
+                    <div className={`${styles.clientsLabel} ${hasAnimated ? styles.animated : ''}`}>CLIENTS</div>
+                    <div className={`${styles.testimonialTitle} ${hasAnimated ? styles.animated : ''}`}>
+                        <span className={styles.taglineBlue}>Our Trusted </span>
+                        <span className={styles.taglineOrange}>Clients</span>
+                    </div>
+                </div>
+                <div className={styles.headerRight}>
+                    <p className={`${styles.tagline2} ${hasAnimated ? styles.animated : ''}`}>We are proud to serve a diverse portfolio of clients across government and corporate sectors. </p>
+                </div>
+            </div>
             <div className={styles.testimonialTrack}>
                 <div className={styles.testimonialSlide}>
                     {clients.map((client) => (

@@ -38,7 +38,11 @@ export default function Contact() {
       <main className={styles.main}>
                     
        
-        <div className={`${styles.tagline} ${hasAnimated ? styles.animated : ''}`}> Interested in our facility management services?</div>
+        <div className={`${styles.tagline} ${hasAnimated ? styles.animated : ''}`}>
+          <span className={styles.taglineBlue}>Interested in our </span>
+          <span className={styles.taglineOrange}>facility management </span>
+          <span className={styles.taglineBlue}>services?</span>
+        </div>
                      
         <Link href="/contact/detailed">
               <button className={`${styles.readMoreButton} ${hasAnimated ? styles.animated : ''}`}>

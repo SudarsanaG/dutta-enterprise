@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5% 15%;
+  padding: 0.25% 15% 0.25% 8%;
   background-color: white;
   position: fixed;
   width: 100%;
@@ -20,7 +20,7 @@
 }
 
 .logo img {
-  height: 60px;
+  height: 80px;
 }
 
 .nav {
@@ -59,11 +59,29 @@
 
 .navItem a:hover,
 .navItem span:hover {
-  color: #007ea7;
+  color: #FF9500;
 }
 
 .navItem:hover .dropdownIcon {
-  border-top-color: #007ea7;
+  border-top-color: #FF9500;
+}
+
+.contactButton {
+  margin-left: 3rem;
+}
+
+.contactButton a {
+  background-color: #FF9500;
+  color: white !important;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contactButton a:hover {
+  background-color: #e6850e;
+  color: white !important;
+  transform: translateY(-2px);
 }
 
 .dropdownIcon {
@@ -156,7 +174,7 @@
 /* Media queries for mobile view */
 @media (max-width: 768px) {
   .header {
-    padding: 0.75rem 1rem;
+    padding: 0.5rem 1rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
 
@@ -165,7 +183,7 @@
   }
 
   .logo img {
-    height: 45px;
+    height: 60px;
   }
 
   .nav {
@@ -221,6 +239,21 @@
   .navItem span:hover {
     background-color: #f5f5f5;
     color: #003459;
+  }
+
+  .contactButton a {
+    background-color: #FF9500;
+    color: white !important;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin: 0.5rem 1.5rem;
+    text-align: center;
+    display: block;
+  }
+
+  .contactButton a:hover {
+    background-color: #e6850e;
+    color: white !important;
   }
 
   .navItem.dropdownOpen > span {
@@ -313,11 +346,11 @@
 
 @media (max-width: 480px) {
   .header {
-    padding: 0.5rem 0.75rem;
+    padding: 0.4rem 0.75rem;
   }
 
   .logo img {
-    height: 40px;
+    height: 50px;
   }
 
   .navItem a,

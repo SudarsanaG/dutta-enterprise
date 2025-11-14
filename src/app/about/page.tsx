@@ -43,22 +43,8 @@ export default function AboutPage() {
       <main className={styles.main}>
                       
         <div className={styles.aboutpagephoto}>
-          <div className={styles.imageCollage}>
-            <div className={styles.collageItem}>
-              <img src="/about.jpg" alt="About Dutta Enterprise" className={`${styles.collageImage} ${styles.collageImage1} ${hasAnimated ? styles.animated : ''}`}/>
-            </div>
-            <div className={styles.collageItem}>
-              <img src="/hospital2.avif" alt="Healthcare Services" className={`${styles.collageImage} ${styles.collageImage2} ${hasAnimated ? styles.animated : ''}`}/>
-            </div>
-            <div className={styles.collageItem}>
-              <img src="/ifms.jpg" alt="Facility Management" className={`${styles.collageImage} ${styles.collageImage3} ${hasAnimated ? styles.animated : ''}`}/>
-            </div>
-            <div className={styles.collageItem}>
-              <img src="/clean.jpg" alt="Professional Services" className={`${styles.collageImage} ${styles.collageImage4} ${hasAnimated ? styles.animated : ''}`}/>
-            </div>
-          </div>
           <div className={styles.contentSection}>
-            <div className={`${styles.tagline} ${hasAnimated ? styles.animated : ''}`}> Providing best facilities management services since 15+ years</div>
+            <div className={`${styles.tagline} ${hasAnimated ? styles.animated : ''}`}>Get To Know Us <span className={styles.taglineOrange}>Better!</span></div>
             <div className={`${styles.subtagline1} ${hasAnimated ? styles.animated : ''}`}>We are among select companies in India that have a wide geographic
             presence and customer base, catering to almost all end-user segments.
             </div>
@@ -79,6 +65,9 @@ export default function AboutPage() {
                 About Us
               </Link>
             )}
+          </div>
+          <div className={styles.imageSection}>
+            <img src="/about.jpg" alt="About Dutta Enterprise" className={`${styles.aboutImage} ${hasAnimated ? styles.animated : ''}`}/>
           </div>
         </div>
           </main>

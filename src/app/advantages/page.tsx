@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Header from '../components/Header';
-import { ArrowRight } from 'lucide-react';
+import { ArrowLeftRight, Wrench, ShieldCheck, DollarSign, Monitor, Users } from 'lucide-react';
 import styles from './advantage.module.css';
 
 export default function Advantages() {
@@ -50,14 +50,26 @@ export default function Advantages() {
         <div ref={sectionRef} className={styles.container}>
              <Header />
               <main className={styles.main}>
-                <div className={`${styles.tagline} ${hasAnimated ? styles.animated : ''}`}>
-                  <span className={styles.taglineRed}>Why</span> <span className={styles.taglineBlack}>Choose Us?</span>
+                <div className={`${styles.headerGrid} ${hasAnimated ? styles.animated : ''}`}>
+                  <div className={styles.headerLeft}>
+                    <div className={`${styles.whyUsLabel} ${hasAnimated ? styles.animated : ''}`}>WHY US</div>
+                    <div className={`${styles.tagline} ${hasAnimated ? styles.animated : ''}`}>
+                      <span className={styles.taglineBlue}>What Sets Us </span>
+                      <span className={styles.taglineOrange}>Apart</span>
+                    </div>
+                  </div>
+                  <div className={styles.headerRight}>
+                    <Link href="/contact" className={styles.contactButton}>
+                      CONTACT US
+                      <span className={styles.buttonArrow}>↗</span>
+                    </Link>
+                  </div>
                 </div>
         <div className={styles.cardsContainer}>
   
         <div className={`${styles.card} ${hasAnimated ? styles.animated : ''}`}>
           <div className={styles.cardHeader}>
-            <ArrowRight className={styles.arrowIcon} />
+            <ArrowLeftRight className={styles.arrowIcon} />
             <h2 className={styles.cardTitle}>Comprehensive Approach</h2>
           </div>
           <p className={styles.cardContent}>
@@ -67,7 +79,7 @@ export default function Advantages() {
 
         <div className={`${styles.card} ${hasAnimated ? styles.animated : ''}`}>
           <div className={styles.cardHeader}>
-            <ArrowRight className={styles.arrowIcon} />
+            <Wrench className={styles.arrowIcon} />
             <h2 className={styles.cardTitle}>Customized Solutions</h2>
           </div>
           <p className={styles.cardContent}>
@@ -77,7 +89,7 @@ export default function Advantages() {
 
         <div className={`${styles.card} ${hasAnimated ? styles.animated : ''}`}>
           <div className={styles.cardHeader}>
-            <ArrowRight className={styles.arrowIcon} />
+            <ShieldCheck className={styles.arrowIcon} />
             <h2 className={styles.cardTitle}>Experience & Expertise</h2>
           </div>
           <p className={styles.cardContent}>
@@ -87,7 +99,7 @@ export default function Advantages() {
 
         <div className={`${styles.card} ${hasAnimated ? styles.animated : ''}`}>
           <div className={styles.cardHeader}>
-            <ArrowRight className={styles.arrowIcon} />
+            <DollarSign className={styles.arrowIcon} />
             <h2 className={styles.cardTitle}>Cost Savings</h2>
           </div>
           <p className={styles.cardContent}>
@@ -97,8 +109,8 @@ export default function Advantages() {
 
         <div className={`${styles.card} ${hasAnimated ? styles.animated : ''}`}>
           <div className={styles.cardHeader}>
-            <ArrowRight className={styles.arrowIcon} />
-            <h2 className={styles.cardTitle}>Real-Time Monitoring & Reporting</h2>
+            <Monitor className={styles.arrowIcon} />
+            <h2 className={styles.cardTitle}>Real-Time Monitoring </h2>
           </div>
           <p className={styles.cardContent}>
           Real-time monitoring is a method that lets you know what the queues and channels within a queue manager are doing right now. The data returned is current as of when the command was given.
@@ -107,7 +119,7 @@ export default function Advantages() {
 
         <div className={`${styles.card} ${hasAnimated ? styles.animated : ''}`}>
           <div className={styles.cardHeader}>
-            <ArrowRight className={styles.arrowIcon} />
+            <Users className={styles.arrowIcon} />
             <h2 className={styles.cardTitle}>Access to Specialized Services</h2>
           </div>
           <p className={styles.cardContent}>

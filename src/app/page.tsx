@@ -15,10 +15,10 @@ export default function Home() {
             <Header/>
             <HomePage/>
             <AboutPage/>
+            <Advantages/>
             <Services/>
             <Sectors/>
             <Contact/> 
-            <Advantages/>
             <Testimonials/>
         </main>
     )
