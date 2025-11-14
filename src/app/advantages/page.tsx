@@ -59,7 +59,7 @@ export default function Advantages() {
                     </div>
                   </div>
                   <div className={styles.headerRight}>
-                    <Link href="/contact" className={styles.contactButton}>
+                    <Link href="/contact/detailed" className={styles.contactButton}>
                       CONTACT US
                       <span className={styles.buttonArrow}>↗</span>
                     </Link>

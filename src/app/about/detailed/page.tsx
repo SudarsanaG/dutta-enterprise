@@ -1,10 +1,63 @@
 // src/app/about/detailed/page.tsx
 "use client";
 import Header from '../../components/Header';
-import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
+import { useState, useEffect, useRef } from 'react';
+import { ArrowLeftRight, Wrench, ShieldCheck, DollarSign, Monitor, Users } from 'lucide-react';
 import styles from '../DetailedAboutPage.module.css';
 
 export default function DetailedAboutPage() {
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const [certificatesAnimated, setCertificatesAnimated] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const certificatesRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            setHasAnimated(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [hasAnimated]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !certificatesAnimated) {
+            setCertificatesAnimated(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (certificatesRef.current) {
+      observer.observe(certificatesRef.current);
+    }
+
+    return () => {
+      if (certificatesRef.current) {
+        observer.unobserve(certificatesRef.current);
+      }
+    };
+  }, [certificatesAnimated]);
+
   return (
     <div className={styles.container}>
       
@@ -16,28 +69,40 @@ export default function DetailedAboutPage() {
       </div>
       <main className={styles.main}>
         
-        <div className ={styles.about}>
-          <div> <div className={styles.subtagline2}>Get To Know Us Better!</div>
-       
-          <p className={styles.subtagline1}>
-  Our range of service offerings include soft services such as housekeeping, sanitation, landscaping &amp; gardening, hard services such as mechanical, electrical &amp; plumbing services, solid, liquid &amp; biomedical waste management, pest control &amp; fa&ccedil;ade cleaning management services. We also provide staffing solutions &amp; payroll management to our customers, as well as private security &amp; manned guarding services &amp; catering services.
-  The wide range of our integrated facility management services segment allows us to provide a bundled solution of services to each customer, tailored to its specific needs &amp; requirements, making us a one-stop integrated solution for customers.
-</p>
+        <div className={styles.about}>
+          <div className={styles.aboutLeft}>
+            <div className={styles.subtagline2}>Get To Know Us Better!</div>
+            <p className={styles.subtagline1}>
+              Our range of service offerings include soft services such as housekeeping, sanitation, landscaping &amp; gardening, hard services such as mechanical, electrical &amp; plumbing services, solid, liquid &amp; biomedical waste management, pest control &amp; fa&ccedil;ade cleaning management services. We also provide staffing solutions &amp; payroll management to our customers, as well as private security &amp; manned guarding services &amp; catering services.
+              The wide range of our integrated facility management services segment allows us to provide a bundled solution of services to each customer, tailored to its specific needs &amp; requirements, making us a one-stop integrated solution for customers.
+            </p>
+          </div>
+          <div className={styles.aboutRight}>
+            <img src="../../about.jpg" alt="about" className={styles.about1}/>
+          </div>
+        </div>
 
-            </div>
-            
-              <img src="../../about.jpg" alt="about" className={styles.about1}/>
-            </div>
-
-          <div className={styles.whyChooseUsSection}>
+          <div ref={sectionRef} className={styles.whyChooseUsSection}>
             <div className={styles.whyChooseUsContainer}>
-              <div className={styles.whyChooseUsTitle}>
-                <span className={styles.titleBlue}>Why</span> <span className={styles.titleBlack}>Choose Us?</span>
-              </div>
+            <div className={`${styles.headerGrid} ${hasAnimated ? styles.animated : ''}`}>
+                  <div className={styles.headerLeft}>
+                    <div className={`${styles.whyUsLabel} ${hasAnimated ? styles.animated : ''}`}>WHY US</div>
+                    <div className={`${styles.tagline} ${hasAnimated ? styles.animated : ''}`}>
+                      <span className={styles.taglineBlue}>What Sets Us </span>
+                      <span className={styles.taglineOrange}>Apart</span>
+                    </div>
+                  </div>
+                  <div className={styles.headerRight}>
+                    <Link href="/contact/detailed" className={styles.contactButton}>
+                      CONTACT US
+                      <span className={styles.buttonArrow}>↗</span>
+                    </Link>
+                  </div>
+                </div>
               <div className={styles.whyChooseUsCards}>
                 <div className={styles.whyChooseUsCard}>
                   <div className={styles.whyChooseUsCardHeader}>
-                    <ArrowRight className={styles.whyChooseUsArrow} />
+                    <ArrowLeftRight className={styles.whyChooseUsArrow} />
                     <h2 className={styles.whyChooseUsCardTitle}>Comprehensive Approach</h2>
                   </div>
                   <p className={styles.whyChooseUsCardContent}>
@@ -47,7 +112,7 @@ export default function DetailedAboutPage() {
 
                 <div className={styles.whyChooseUsCard}>
                   <div className={styles.whyChooseUsCardHeader}>
-                    <ArrowRight className={styles.whyChooseUsArrow} />
+                    <Wrench className={styles.whyChooseUsArrow} />
                     <h2 className={styles.whyChooseUsCardTitle}>Customized Solutions</h2>
                   </div>
                   <p className={styles.whyChooseUsCardContent}>
@@ -57,7 +122,7 @@ export default function DetailedAboutPage() {
 
                 <div className={styles.whyChooseUsCard}>
                   <div className={styles.whyChooseUsCardHeader}>
-                    <ArrowRight className={styles.whyChooseUsArrow} />
+                    <ShieldCheck className={styles.whyChooseUsArrow} />
                     <h2 className={styles.whyChooseUsCardTitle}>Experience &amp; Expertise</h2>
                   </div>
                   <p className={styles.whyChooseUsCardContent}>
@@ -67,7 +132,7 @@ export default function DetailedAboutPage() {
 
                 <div className={styles.whyChooseUsCard}>
                   <div className={styles.whyChooseUsCardHeader}>
-                    <ArrowRight className={styles.whyChooseUsArrow} />
+                    <DollarSign className={styles.whyChooseUsArrow} />
                     <h2 className={styles.whyChooseUsCardTitle}>Cost Savings</h2>
                   </div>
                   <p className={styles.whyChooseUsCardContent}>
@@ -77,7 +142,7 @@ export default function DetailedAboutPage() {
 
                 <div className={styles.whyChooseUsCard}>
                   <div className={styles.whyChooseUsCardHeader}>
-                    <ArrowRight className={styles.whyChooseUsArrow} />
+                    <Monitor className={styles.whyChooseUsArrow} />
                     <h2 className={styles.whyChooseUsCardTitle}>Real-Time Monitoring &amp; Reporting</h2>
                   </div>
                   <p className={styles.whyChooseUsCardContent}>
@@ -87,7 +152,7 @@ export default function DetailedAboutPage() {
 
                 <div className={styles.whyChooseUsCard}>
                   <div className={styles.whyChooseUsCardHeader}>
-                    <ArrowRight className={styles.whyChooseUsArrow} />
+                    <Users className={styles.whyChooseUsArrow} />
                     <h2 className={styles.whyChooseUsCardTitle}>Access to Specialized Services</h2>
                   </div>
                   <p className={styles.whyChooseUsCardContent}>
@@ -123,9 +188,18 @@ export default function DetailedAboutPage() {
           </div>
 
           
-          <div className={styles.certificatesSection}>
-            <div className={styles.certificates}>
-              Certificates
+          <div ref={certificatesRef} className={styles.certificatesSection}>
+            <div className={`${styles.certificatesHeaderGrid} ${certificatesAnimated ? styles.animated : ''}`}>
+              <div className={styles.certificatesHeaderLeft}>
+                <div className={`${styles.certificatesLabel} ${certificatesAnimated ? styles.animated : ''}`}>CERTIFICATES</div>
+                <div className={`${styles.certificatesTitle} ${certificatesAnimated ? styles.animated : ''}`}>
+                  <span className={styles.taglineBlue}>Our </span>
+                  <span className={styles.taglineOrange}>Certifications</span>
+                </div>
+              </div>
+              <div className={styles.certificatesHeaderRight}>
+                <p className={`${styles.certificatesDescription} ${certificatesAnimated ? styles.animated : ''}`}>We are proud to showcase our certifications and accreditations that demonstrate our commitment to quality, compliance, and excellence in facility management services.</p>
+              </div>
             </div>
             <div className={styles.certificates1}>
               <img src="../../certificate1.jpg" alt="certificate1" className={styles.certificates2}/>

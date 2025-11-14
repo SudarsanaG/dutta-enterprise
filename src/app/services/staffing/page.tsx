@@ -1,9 +1,36 @@
 "use client";
 import Header from '../../components/Header';
 import { Users, FileText, DollarSign, CheckCircle } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
 import styles from '../staffing.module.css';
 
 export default function staffing() {
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            setHasAnimated(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, [hasAnimated]);
+
   return (
     <div className={styles.container}>
       <Header />
@@ -11,15 +38,29 @@ export default function staffing() {
         <div className={styles.tagline}>Staffing Solutions and Payroll Management</div>
       </div>
       <main className={styles.main}>
-        <div className={styles.introSection}>
-          <div className={styles.introContent}>
-            <h2 className={styles.subtagline1}>Comprehensive Staffing and Payroll Solutions</h2>
-            <p className={styles.introText}>
-              Staffing solutions and payroll management services generally comprise recruitment, payroll, and human resource services. We provide skilled, semi-skilled and unskilled manpower to our customers as per their requirements, ensuring all staff are properly trained and equipped to carry out their duties.
-            </p>
+        <div ref={sectionRef} className={styles.introSection}>
+          <div className={`${styles.headerGrid} ${hasAnimated ? styles.animated : ''}`}>
+            <div className={styles.headerLeft}>
+              <div className={`${styles.staffingLabel} ${hasAnimated ? styles.animated : ''}`}>STAFFING</div>
+              <div className={`${styles.tagline1} ${hasAnimated ? styles.animated : ''}`}>
+                <span className={styles.taglineBlue}>Comprehensive </span>
+                <span className={styles.taglineOrange}>Solutions</span>
+              </div>
+            </div>
+            <div className={styles.headerRight}>
+              <p className={`${styles.tagline2} ${hasAnimated ? styles.animated : ''}`}>Staffing solutions and payroll management services generally comprise recruitment, payroll, and human resource services. We provide skilled, semi-skilled and unskilled manpower to our customers as per their requirements, ensuring all staff are properly trained and equipped to carry out their duties.</p>
+            </div>
           </div>
-          <div className={styles.introImage}>
-            <img src="../../payroll.jpeg" alt="payroll" className={styles.payroll}/>
+          <div className={styles.imageGallery}>
+            <div className={styles.galleryItem}>
+              <img src="../../payroll.jpeg" alt="Payroll Management" className={styles.galleryImage}/>
+            </div>
+            <div className={styles.galleryItem}>
+              <img src="../../payroll1.jpg" alt="Payroll Management" className={styles.galleryImage}/>
+            </div>
+            <div className={styles.galleryItem}>
+              <img src="../../payroll2.jpg" alt="Payroll Management" className={styles.galleryImage}/>
+            </div>
           </div>
         </div>
 

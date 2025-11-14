@@ -165,36 +165,109 @@
   object-fit: contain;
 }
 .about{
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   padding: 4% 10%;
   gap: 3rem;
-  flex-wrap: wrap;
+}
+
+.aboutLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.aboutRight {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .about1{
   padding: 0;
-  width: 40%;
-  max-width: 500px;
+  width: 100%;
+  max-width: 100%;
   height: auto;
   min-height: 300px;
   object-fit: cover;
   border-radius: 8px;
-  flex-shrink: 0;
 }
-.certificates{
-  text-align: center;
-  font-size: 3rem;
-  font-weight: bold;
-  color: #003459;
-  margin-bottom: 3rem;
-  padding-top: 4rem;
-}
-
 .certificatesSection {
   background-color: white;
   padding: 4rem 0;
   width: 100%;
+}
+
+.certificatesHeaderGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 3rem;
+  padding: 0 9%;
+}
+
+.certificatesHeaderLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.certificatesLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #666666;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.certificatesLabel.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.certificatesTitle {
+  text-align: left;
+  margin-top: 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.certificatesTitle.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.certificatesHeaderRight {
+  display: flex;
+  align-items: center;
+}
+
+.certificatesDescription {
+  padding: 0;
+  text-align: left;
+  color: #666666;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.6;
+  font-family: 'Roboto', sans-serif;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease 0.1s, transform 0.6s ease 0.1s;
+}
+
+.certificatesDescription.animated {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .certificates1{
@@ -240,22 +313,98 @@
   opacity: 1 !important;
 }
 
-.whyChooseUsTitle {
-  text-align: center !important;
-  font-size: 3rem !important;
-  font-weight: bold !important;
-  margin-bottom: 3rem !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  display: block !important;
+.headerGrid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 3rem;
+  padding: 0 3%;
 }
 
-.titleBlue {
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.whyUsLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #666666;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.whyUsLabel.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.tagline {
+  padding: 0;
+  text-align: left;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.tagline.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.taglineBlue {
   color: #003459;
 }
 
-.titleBlack {
-  color: #000000;
+.taglineOrange {
+  color: #FF9500;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+}
+
+.contactButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  border: 2px solid #FF9500;
+  background-color: transparent;
+  color: #FF9500;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.05em;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.contactButton:hover {
+  background-color: #FF9500;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 149, 0, 0.3);
+}
+
+.buttonArrow {
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.contactButton:hover .buttonArrow {
+  transform: translate(2px, -2px);
 }
 
 .whyChooseUsCards {
@@ -279,6 +428,25 @@
   transform: none !important;
 }
 
+.whyChooseUsCard:nth-child(2),
+.whyChooseUsCard:nth-child(4),
+.whyChooseUsCard:nth-child(6) {
+  background-color: #003459 !important;
+  color: white !important;
+}
+
+.whyChooseUsCard:nth-child(2) .whyChooseUsCardTitle,
+.whyChooseUsCard:nth-child(4) .whyChooseUsCardTitle,
+.whyChooseUsCard:nth-child(6) .whyChooseUsCardTitle {
+  color: white !important;
+}
+
+.whyChooseUsCard:nth-child(2) .whyChooseUsCardContent,
+.whyChooseUsCard:nth-child(4) .whyChooseUsCardContent,
+.whyChooseUsCard:nth-child(6) .whyChooseUsCardContent {
+  color: white !important;
+}
+
 .whyChooseUsCard:hover {
   background-color: #003459;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
@@ -294,7 +462,7 @@
 }
 
 .whyChooseUsCard:hover .whyChooseUsArrow {
-  color: white;
+  color: #FF9500;
 }
 
 .whyChooseUsCardHeader {
@@ -307,7 +475,7 @@
 .whyChooseUsArrow {
   width: 24px;
   height: 24px;
-  color: #003459;
+  color: #FF9500;
   flex-shrink: 0;
 }
 
@@ -359,13 +527,14 @@
   }
 
   .about {
+    grid-template-columns: 1fr 1fr;
     padding: 3% 8%;
     gap: 2.5rem;
   }
 
   .about1 {
-    width: 45%;
-    max-width: 450px;
+    width: 100%;
+    max-width: 100%;
   }
 
   .subtagline2 {
@@ -388,19 +557,24 @@
     padding: 0 3%;
   }
 
-  .whyChooseUsTitle {
-    font-size: 2.5rem;
-    margin-bottom: 2.5rem;
+  .headerGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .headerRight {
+    justify-content: flex-start;
+  }
+
+  .tagline {
+    font-size: 2rem;
   }
 
   .whyChooseUsContainer {
     padding: 0 5% !important;
   }
 
-  .certificates {
-    font-size: 2.5rem;
-    padding-top: 3rem;
-  }
 
   .certificates1 {
     gap: 2rem;
@@ -447,13 +621,24 @@
     padding: 2% 6%;
   }
 
-  .whyChooseUsCards {
+  .headerGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .headerRight {
+    justify-content: flex-start;
+  }
+
+  .cardsContainer {
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
     padding: 0 2%;
   }
 
-  .whyChooseUsTitle {
-    font-size: 2.25rem;
+  .tagline {
+    font-size: 2rem;
   }
 }
 
@@ -480,10 +665,13 @@
   }
 
   .about {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     padding: 3% 5%;
     gap: 2rem;
-    align-items: center;
+  }
+
+  .aboutRight {
+    order: -1;
   }
 
   .about1 {
@@ -568,10 +756,14 @@
     height: 22px;
   }
 
-  .certificates {
-    font-size: 2rem;
-    padding-top: 2rem;
-    margin-bottom: 2rem;
+  .certificatesHeaderGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 5%;
+  }
+
+  .certificatesTitle {
+    font-size: 1.75rem;
   }
 
   .certificatesSection {
@@ -665,9 +857,24 @@
     padding: 0 4% !important;
   }
 
-  .whyChooseUsTitle {
-    font-size: 1.75rem !important;
-    margin-bottom: 1.5rem !important;
+  .headerGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0;
+  }
+
+  .headerRight {
+    justify-content: flex-start;
+  }
+
+  .contactButton {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  .tagline {
+    font-size: 1.5rem;
+    margin-bottom: 0;
   }
 
   .whyChooseUsCard {
@@ -683,16 +890,6 @@
     line-height: 1.5 !important;
   }
 
-  .whyChooseUsArrow {
-    width: 20px;
-    height: 20px;
-  }
-
-  .certificates {
-    font-size: 1.75rem;
-    padding-top: 2rem;
-    margin-bottom: 1.5rem;
-  }
 
   .certificatesSection {
     padding: 2.5rem 0;
@@ -732,7 +929,12 @@
   }
 
   .about {
+    grid-template-columns: 1fr;
     padding: 2% 3%;
+  }
+
+  .aboutRight {
+    order: -1;
   }
 
   .subtagline2 {
@@ -783,9 +985,6 @@
     font-size: 0.85rem !important;
   }
 
-  .certificates {
-    font-size: 1.5rem;
-  }
 
   .certificates1 {
     padding: 1.5rem 1rem;
